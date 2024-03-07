@@ -1,0 +1,6 @@
+{
+    "ab6475898c71d570": {
+        "user": "${AUTHDB-MONGO-USER-NAME}",
+        "password": "${AUTHDB-MONGO-PASSWORD}"
+    }
+}
