@@ -713,7 +713,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 130,
-        "y": 80,
+        "y": 120,
         "wires": [
             [
                 "b871b51b65519561",
@@ -738,7 +738,7 @@
             }
         ],
         "x": 370,
-        "y": 80,
+        "y": 120,
         "wires": [
             [
                 "b871b51b65519561",
@@ -757,7 +757,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 590,
-        "y": 80,
+        "y": 120,
         "wires": [
             [
                 "b871b51b65519561",
@@ -778,7 +778,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 160,
-        "y": 120,
+        "y": 160,
         "wires": []
     },
     {
@@ -789,7 +789,7 @@
         "statusCode": "",
         "headers": {},
         "x": 750,
-        "y": 80,
+        "y": 120,
         "wires": []
     },
     {
@@ -802,7 +802,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 240,
+        "y": 280,
         "wires": [
             [
                 "8d45a4f01b3eefdf",
@@ -827,7 +827,7 @@
             }
         ],
         "x": 360,
-        "y": 240,
+        "y": 280,
         "wires": [
             [
                 "8d45a4f01b3eefdf",
@@ -846,7 +846,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 590,
-        "y": 240,
+        "y": 280,
         "wires": [
             [
                 "8d45a4f01b3eefdf",
@@ -867,7 +867,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 280,
+        "y": 320,
         "wires": []
     },
     {
@@ -878,7 +878,7 @@
         "statusCode": "",
         "headers": {},
         "x": 750,
-        "y": 240,
+        "y": 280,
         "wires": []
     },
     {
@@ -891,7 +891,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 400,
+        "y": 620,
         "wires": [
             [
                 "53596ebf910458be",
@@ -916,7 +916,7 @@
             }
         ],
         "x": 360,
-        "y": 400,
+        "y": 620,
         "wires": [
             [
                 "53596ebf910458be",
@@ -935,7 +935,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 590,
-        "y": 400,
+        "y": 620,
         "wires": [
             [
                 "53596ebf910458be",
@@ -956,7 +956,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 440,
+        "y": 660,
         "wires": []
     },
     {
@@ -967,7 +967,7 @@
         "statusCode": "",
         "headers": {},
         "x": 750,
-        "y": 400,
+        "y": 620,
         "wires": []
     },
     {
@@ -992,7 +992,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1140,
+        "y": 1540,
         "wires": [
             [
                 "6919bc84caf16110"
@@ -1010,7 +1010,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1140,
+        "y": 1540,
         "wires": [
             [
                 "8a77e92bf79ce345"
@@ -1030,7 +1030,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1140,
+        "y": 1540,
         "wires": []
     },
     {
@@ -1050,7 +1050,7 @@
             }
         ],
         "x": 240,
-        "y": 1140,
+        "y": 1540,
         "wires": [
             [
                 "bf4e03e8bc4c4c33"
@@ -1079,7 +1079,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1180,
+        "y": 1580,
         "wires": [
             [
                 "9c39e956120ff1d7"
@@ -1097,7 +1097,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1180,
+        "y": 1580,
         "wires": [
             [
                 "2543c5f821c8da9a"
@@ -1117,7 +1117,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1180,
+        "y": 1580,
         "wires": []
     },
     {
@@ -1137,7 +1137,7 @@
             }
         ],
         "x": 230,
-        "y": 1180,
+        "y": 1580,
         "wires": [
             [
                 "c403afb8de1fdf9a"
@@ -1166,7 +1166,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1220,
+        "y": 1620,
         "wires": [
             [
                 "2e181ddb411d9b92"
@@ -1184,7 +1184,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1220,
+        "y": 1620,
         "wires": [
             [
                 "4573bb45913fbd76"
@@ -1204,7 +1204,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1220,
+        "y": 1620,
         "wires": []
     },
     {
@@ -1219,7 +1219,7 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 1220,
+        "y": 1620,
         "wires": [
             [
                 "87898c8ea5653f96"
@@ -1236,7 +1236,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 580,
+        "y": 800,
         "wires": [
             [
                 "4543de764df42d6c",
@@ -1261,7 +1261,7 @@
             }
         ],
         "x": 360,
-        "y": 580,
+        "y": 800,
         "wires": [
             [
                 "4543de764df42d6c",
@@ -1280,7 +1280,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 590,
-        "y": 580,
+        "y": 800,
         "wires": [
             [
                 "4543de764df42d6c",
@@ -1301,7 +1301,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 620,
+        "y": 840,
         "wires": []
     },
     {
@@ -1312,7 +1312,7 @@
         "statusCode": "",
         "headers": {},
         "x": 750,
-        "y": 580,
+        "y": 800,
         "wires": []
     },
     {
@@ -1325,7 +1325,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 150,
-        "y": 760,
+        "y": 980,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1350,7 +1350,7 @@
             }
         ],
         "x": 390,
-        "y": 760,
+        "y": 980,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1369,7 +1369,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 590,
-        "y": 760,
+        "y": 980,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1390,7 +1390,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 800,
+        "y": 1020,
         "wires": []
     },
     {
@@ -1401,7 +1401,7 @@
         "statusCode": "",
         "headers": {},
         "x": 750,
-        "y": 760,
+        "y": 980,
         "wires": []
     },
     {
@@ -1414,7 +1414,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 150,
-        "y": 940,
+        "y": 1160,
         "wires": [
             [
                 "914186e273076b7d",
@@ -1439,7 +1439,7 @@
             }
         ],
         "x": 390,
-        "y": 940,
+        "y": 1160,
         "wires": [
             [
                 "914186e273076b7d",
@@ -1458,7 +1458,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 590,
-        "y": 940,
+        "y": 1160,
         "wires": [
             [
                 "914186e273076b7d",
@@ -1479,7 +1479,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 980,
+        "y": 1200,
         "wires": []
     },
     {
@@ -1490,7 +1490,7 @@
         "statusCode": "",
         "headers": {},
         "x": 930,
-        "y": 940,
+        "y": 1160,
         "wires": []
     },
     {
@@ -1515,7 +1515,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 180,
-        "y": 1060,
+        "y": 1280,
         "wires": [
             [
                 "a27297e66a6abe07"
@@ -1544,7 +1544,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1260,
+        "y": 1660,
         "wires": [
             [
                 "7623b8e60a096f05"
@@ -1562,7 +1562,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1260,
+        "y": 1660,
         "wires": [
             [
                 "bac15085669840a3"
@@ -1582,7 +1582,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1260,
+        "y": 1660,
         "wires": []
     },
     {
@@ -1597,7 +1597,7 @@
         "finalize": "",
         "libs": [],
         "x": 260,
-        "y": 1260,
+        "y": 1660,
         "wires": [
             [
                 "1bda2083d6dea760"
@@ -1616,7 +1616,7 @@
         "finalize": "",
         "libs": [],
         "x": 780,
-        "y": 940,
+        "y": 1160,
         "wires": [
             [
                 "b3fb0b87891dfbe5"
@@ -1645,7 +1645,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1360,
+        "y": 1760,
         "wires": [
             [
                 "e8384769bf28d8a1"
@@ -1663,7 +1663,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 440,
-        "y": 1360,
+        "y": 1760,
         "wires": [
             [
                 "60caa5caafe51245"
@@ -1683,7 +1683,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1360,
+        "y": 1760,
         "wires": []
     },
     {
@@ -1698,10 +1698,269 @@
         "finalize": "",
         "libs": [],
         "x": 260,
-        "y": 1360,
+        "y": 1760,
         "wires": [
             [
                 "fd9032dc3d062c2d"
+            ]
+        ]
+    },
+    {
+        "id": "80a33c6e4d432ab3",
+        "type": "http in",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "url": "/getWidgetsFillers",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 40,
+        "wires": [
+            [
+                "8c72dc63a5c029f6"
+            ]
+        ]
+    },
+    {
+        "id": "8c72dc63a5c029f6",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "Static Widgets Fillers",
+        "func": "const leadStatus = [\n    {\n        \"label\": \"New\",\n        \"value\": \"New\"\n    },\n    {\n        \"label\": \"Open\",\n        \"value\": \"Open\"\n    },\n    {\n        \"label\": \"In progress\",\n        \"value\": \"In progress\"\n    },\n    {\n        \"label\": \"Open deal\",\n        \"value\": \"Open deal\"\n    },\n    {\n        \"label\": \"Unqualified\",\n        \"value\": \"Unqualified\"\n    },\n    {\n        \"label\": \"Attempted to contact\",\n        \"value\": \"Attempted to contact\"\n    },\n    {\n        \"label\": \"Connected\",\n        \"value\": \"Connected\"\n    },\n    {\n        \"label\": \"Bad timing\",\n        \"value\": \"Bad timing\"\n    },\n    {\n        \"label\": \"Unassigned\",\n        \"value\": \"Unassigned\"\n    }\n];\nconst dealStage = [\n    {\n        \"label\": \"Outreach\",\n        \"value\": \"Outreach\"\n    },\n    {\n        \"label\": \"Qualifying ICP\",\n        \"value\": \"Qualifying ICP\"\n    },\n    {\n        \"label\": \"Appointment scheduled\",\n        \"value\": \"Appointment scheduled\"\n    },\n    {\n        \"label\": \"Presentation made\",\n        \"value\": \"Presentation made\"\n    },\n    {\n        \"label\": \"Follow up\",\n        \"value\": \"Follow up\"\n    },\n    {\n        \"label\": \"Testing Platform\",\n        \"value\": \"Testing Platform\"\n    },\n    {\n        \"label\": \"Objections\",\n        \"value\": \"Objections\"\n    },\n    {\n        \"label\": \"Proposal Sent\",\n        \"value\": \"Proposal Sent\"\n    },\n    {\n        \"label\": \"Closed won\",\n        \"value\": \"Closed won\"\n    },\n    {\n        \"label\": \"Closed - their lost\",\n        \"value\": \"Closed - their lost\"\n    }\n];\nconst countries = [{ \"label\": \"Afghanistan\", \"value\": \"AF\" }, { \"label\": \"Aland Islands\", \"value\": \"AX\" }, { \"label\": \"Albania\", \"value\": \"AL\" }, { \"label\": \"Algeria\", \"value\": \"DZ\" }, { \"label\": \"American Samoa\", \"value\": \"AS\" }, { \"label\": \"Andorra\", \"value\": \"AD\" }, { \"label\": \"Angola\", \"value\": \"AO\" }, { \"label\": \"Anguilla\", \"value\": \"AI\" }, { \"label\": \"Antarctica\", \"value\": \"AQ\" }, { \"label\": \"Antigua and Barbuda\", \"value\": \"AG\" }, { \"label\": \"Argentina\", \"value\": \"AR\" }, { \"label\": \"Armenia\", \"value\": \"AM\" }, { \"label\": \"Aruba\", \"value\": \"AW\" }, { \"label\": \"Australia\", \"value\": \"AU\" }, { \"label\": \"Austria\", \"value\": \"AT\" }, { \"label\": \"Azerbaijan\", \"value\": \"AZ\" }, { \"label\": \"Bahamas\", \"value\": \"BS\" }, { \"label\": \"Bahrain\", \"value\": \"BH\" }, { \"label\": \"Bangladesh\", \"value\": \"BD\" }, { \"label\": \"Barbados\", \"value\": \"BB\" }, { \"label\": \"Belarus\", \"value\": \"BY\" }, { \"label\": \"Belgium\", \"value\": \"BE\" }, { \"label\": \"Belize\", \"value\": \"BZ\" }, { \"label\": \"Benin\", \"value\": \"BJ\" }, { \"label\": \"Bermuda\", \"value\": \"BM\" }, { \"label\": \"Bhutan\", \"value\": \"BT\" }, { \"label\": \"Bolivia\", \"value\": \"BO\" }, { \"label\": \"Bosnia and Herzegovina\", \"value\": \"BA\" }, { \"label\": \"Botswana\", \"value\": \"BW\" }, { \"label\": \"Bouvet Island\", \"value\": \"BV\" }, { \"label\": \"Brazil\", \"value\": \"BR\" }, { \"label\": \"British Indian Ocean Territory\", \"value\": \"IO\" }, { \"label\": \"Brunei Darussalam\", \"value\": \"BN\" }, { \"label\": \"Bulgaria\", \"value\": \"BG\" }, { \"label\": \"Burkina Faso\", \"value\": \"BF\" }, { \"label\": \"Burundi\", \"value\": \"BI\" }, { \"label\": \"Cambodia\", \"value\": \"KH\" }, { \"label\": \"Cameroon\", \"value\": \"CM\" }, { \"label\": \"Canada\", \"value\": \"CA\" }, { \"label\": \"Cape Verde\", \"value\": \"CV\" }, { \"label\": \"Cayman Islands\", \"value\": \"KY\" }, { \"label\": \"Central African Republic\", \"value\": \"CF\" }, { \"label\": \"Chad\", \"value\": \"TD\" }, { \"label\": \"Chile\", \"value\": \"CL\" }, { \"label\": \"China\", \"value\": \"CN\" }, { \"label\": \"Christmas Island\", \"value\": \"CX\" }, { \"label\": \"Cocos (Keeling) Islands\", \"value\": \"CC\" }, { \"label\": \"Colombia\", \"value\": \"CO\" }, { \"label\": \"Comoros\", \"value\": \"KM\" }, { \"label\": \"Congo\", \"value\": \"CG\" }, { \"label\": \"Congo, Democratic Republic of the Congo\", \"value\": \"CD\" }, { \"label\": \"Cook Islands\", \"value\": \"CK\" }, { \"label\": \"Costa Rica\", \"value\": \"CR\" }, { \"label\": \"Croatia\", \"value\": \"HR\" }, { \"label\": \"Cuba\", \"value\": \"CU\" }, { \"label\": \"Cyprus\", \"value\": \"CY\" }, { \"label\": \"Czech Republic\", \"value\": \"CZ\" }, { \"label\": \"Denmark\", \"value\": \"DK\" }, { \"label\": \"Djibouti\", \"value\": \"DJ\" }, { \"label\": \"Dominica\", \"value\": \"DM\" }, { \"label\": \"Dominican Republic\", \"value\": \"DO\" }, { \"label\": \"Ecuador\", \"value\": \"EC\" }, { \"label\": \"Egypt\", \"value\": \"EG\" }, { \"label\": \"El Salvador\", \"value\": \"SV\" }, { \"label\": \"Equatorial Guinea\", \"value\": \"GQ\" }, { \"label\": \"Eritrea\", \"value\": \"ER\" }, { \"label\": \"Estonia\", \"value\": \"EE\" }, { \"label\": \"Ethiopia\", \"value\": \"ET\" }, { \"label\": \"Falkland Islands (Malvinas)\", \"value\": \"FK\" }, { \"label\": \"Faroe Islands\", \"value\": \"FO\" }, { \"label\": \"Fiji\", \"value\": \"FJ\" }, { \"label\": \"Finland\", \"value\": \"FI\" }, { \"label\": \"France\", \"value\": \"FR\" }, { \"label\": \"French Guiana\", \"value\": \"GF\" }, { \"label\": \"French Polynesia\", \"value\": \"PF\" }, { \"label\": \"French Southern Territories\", \"value\": \"TF\" }, { \"label\": \"Gabon\", \"value\": \"GA\" }, { \"label\": \"Gambia\", \"value\": \"GM\" }, { \"label\": \"Georgia\", \"value\": \"GE\" }, { \"label\": \"Germany\", \"value\": \"DE\" }, { \"label\": \"Ghana\", \"value\": \"GH\" }, { \"label\": \"Gibraltar\", \"value\": \"GI\" }, { \"label\": \"Greece\", \"value\": \"GR\" }, { \"label\": \"Greenland\", \"value\": \"GL\" }, { \"label\": \"Grenada\", \"value\": \"GD\" }, { \"label\": \"Guadeloupe\", \"value\": \"GP\" }, { \"label\": \"Guam\", \"value\": \"GU\" }, { \"label\": \"Guatemala\", \"value\": \"GT\" }, { \"label\": \"Guernsey\", \"value\": \"GG\" }, { \"label\": \"Guinea\", \"value\": \"GN\" }, { \"label\": \"Guinea-Bissau\", \"value\": \"GW\" }, { \"label\": \"Guyana\", \"value\": \"GY\" }, { \"label\": \"Haiti\", \"value\": \"HT\" }, { \"label\": \"Heard Island and Mcdonald Islands\", \"value\": \"HM\" }, { \"label\": \"Holy See (Vatican City State)\", \"value\": \"VA\" }, { \"label\": \"Honduras\", \"value\": \"HN\" }, { \"label\": \"Hong Kong\", \"value\": \"HK\" }, { \"label\": \"Hungary\", \"value\": \"HU\" }, { \"label\": \"Iceland\", \"value\": \"IS\" }, { \"label\": \"India\", \"value\": \"IN\" }, { \"label\": \"Indonesia\", \"value\": \"ID\" }, { \"label\": \"Iran, Islamic Republic Of\", \"value\": \"IR\" }, { \"label\": \"Iraq\", \"value\": \"IQ\" }, { \"label\": \"Ireland\", \"value\": \"IE\" }, { \"label\": \"Isle of Man\", \"value\": \"IM\" }, { \"label\": \"Israel\", \"value\": \"IL\" }, { \"label\": \"Italy\", \"value\": \"IT\" }, { \"label\": \"Jamaica\", \"value\": \"JM\" }, { \"label\": \"Japan\", \"value\": \"JP\" }, { \"label\": \"Jersey\", \"value\": \"JE\" }, { \"label\": \"Jordan\", \"value\": \"JO\" }, { \"label\": \"Kazakhstan\", \"value\": \"KZ\" }, { \"label\": \"Kenya\", \"value\": \"KE\" }, { \"label\": \"Kiribati\", \"value\": \"KI\" }, { \"label\": \"Korea, Republic of\", \"value\": \"KR\" }, { \"label\": \"Kuwait\", \"value\": \"KW\" }, { \"label\": \"Kyrgyzstan\", \"value\": \"KG\" }, { \"label\": \"Latvia\", \"value\": \"LV\" }, { \"label\": \"Lebanon\", \"value\": \"LB\" }, { \"label\": \"Lesotho\", \"value\": \"LS\" }, { \"label\": \"Liberia\", \"value\": \"LR\" }, { \"label\": \"Libyan Arab Jamahiriya\", \"value\": \"LY\" }, { \"label\": \"Liechtenstein\", \"value\": \"LI\" }, { \"label\": \"Lithuania\", \"value\": \"LT\" }, { \"label\": \"Luxembourg\", \"value\": \"LU\" }, { \"label\": \"Macao\", \"value\": \"MO\" }, { \"label\": \"North Macedonia\", \"value\": \"MK\" }, { \"label\": \"Madagascar\", \"value\": \"MG\" }, { \"label\": \"Malawi\", \"value\": \"MW\" }, { \"label\": \"Malaysia\", \"value\": \"MY\" }, { \"label\": \"Maldives\", \"value\": \"MV\" }, { \"label\": \"Mali\", \"value\": \"ML\" }, { \"label\": \"Malta\", \"value\": \"MT\" }, { \"label\": \"Marshall Islands\", \"value\": \"MH\" }, { \"label\": \"Martinique\", \"value\": \"MQ\" }, { \"label\": \"Mauritania\", \"value\": \"MR\" }, { \"label\": \"Mauritius\", \"value\": \"MU\" }, { \"label\": \"Mayotte\", \"value\": \"YT\" }, { \"label\": \"Mexico\", \"value\": \"MX\" }, { \"label\": \"Micronesia, Federated States of\", \"value\": \"FM\" }, { \"label\": \"Moldova, Republic of\", \"value\": \"MD\" }, { \"label\": \"Monaco\", \"value\": \"MC\" }, { \"label\": \"Mongolia\", \"value\": \"MN\" }, { \"label\": \"Montserrat\", \"value\": \"MS\" }, { \"label\": \"Morocco\", \"value\": \"MA\" }, { \"label\": \"Mozambique\", \"value\": \"MZ\" }, { \"label\": \"Myanmar\", \"value\": \"MM\" }, { \"label\": \"Namibia\", \"value\": \"NA\" }, { \"label\": \"Nauru\", \"value\": \"NR\" }, { \"label\": \"Nepal\", \"value\": \"NP\" }, { \"label\": \"Netherlands\", \"value\": \"NL\" }, { \"label\": \"Netherlands Antilles\", \"value\": \"AN\" }, { \"label\": \"New Caledonia\", \"value\": \"NC\" }, { \"label\": \"New Zealand\", \"value\": \"NZ\" }, { \"label\": \"Nicaragua\", \"value\": \"NI\" }, { \"label\": \"Niger\", \"value\": \"NE\" }, { \"label\": \"Nigeria\", \"value\": \"NG\" }, { \"label\": \"Niue\", \"value\": \"NU\" }, { \"label\": \"Norfolk Island\", \"value\": \"NF\" }, { \"label\": \"Northern Mariana Islands\", \"value\": \"MP\" }, { \"label\": \"Norway\", \"value\": \"NO\" }, { \"label\": \"Oman\", \"value\": \"OM\" }, { \"label\": \"Pakistan\", \"value\": \"PK\" }, { \"label\": \"Palau\", \"value\": \"PW\" }, { \"label\": \"Palestinian Territory, Occupied\", \"value\": \"PS\" }, { \"label\": \"Panama\", \"value\": \"PA\" }, { \"label\": \"Papua New Guinea\", \"value\": \"PG\" }, { \"label\": \"Paraguay\", \"value\": \"PY\" }, { \"label\": \"Peru\", \"value\": \"PE\" }, { \"label\": \"Philippines\", \"value\": \"PH\" }, { \"label\": \"Pitcairn Islands\", \"value\": \"PN\" }, { \"label\": \"Poland\", \"value\": \"PL\" }, { \"label\": \"Portugal\", \"value\": \"PT\" }, { \"label\": \"Puerto Rico\", \"value\": \"PR\" }, { \"label\": \"Qatar\", \"value\": \"QA\" }, { \"label\": \"Reunion\", \"value\": \"RE\" }, { \"label\": \"Romania\", \"value\": \"RO\" }, { \"label\": \"Russian Federation\", \"value\": \"RU\" }, { \"label\": \"Rwanda\", \"value\": \"RW\" }, { \"label\": \"Saint Helena\", \"value\": \"SH\" }, { \"label\": \"Saint Kitts and Nevis\", \"value\": \"KN\" }, { \"label\": \"Saint Lucia\", \"value\": \"LC\" }, { \"label\": \"Saint Pierre and Miquelon\", \"value\": \"PM\" }, { \"label\": \"Saint Vincent and the Grenadines\", \"value\": \"VC\" }, { \"label\": \"Samoa\", \"value\": \"WS\" }, { \"label\": \"San Marino\", \"value\": \"SM\" }, { \"label\": \"Sao Tome and Principe\", \"value\": \"ST\" }, { \"label\": \"Saudi Arabia\", \"value\": \"SA\" }, { \"label\": \"Senegal\", \"value\": \"SN\" }, { \"label\": \"Serbia and Montenegro\", \"value\": \"CS\" }, { \"label\": \"Seychelles\", \"value\": \"SC\" }, { \"label\": \"Sierra Leone\", \"value\": \"SL\" }, { \"label\": \"Singapore\", \"value\": \"SG\" }, { \"label\": \"Slovakia\", \"value\": \"SK\" }, { \"label\": \"Slovenia\", \"value\": \"SI\" }, { \"label\": \"Solomon Islands\", \"value\": \"SB\" }, { \"label\": \"Somalia\", \"value\": \"SO\" }, { \"label\": \"South Africa\", \"value\": \"ZA\" }, { \"label\": \"South Georgia and the South Sandwich Islands\", \"value\": \"GS\" }, { \"label\": \"Spain\", \"value\": \"ES\" }, { \"label\": \"Sri Lanka\", \"value\": \"LK\" }, { \"label\": \"Sudan\", \"value\": \"SD\" }, { \"label\": \"Suriname\", \"value\": \"SR\" }, { \"label\": \"Svalbard and Jan Mayen\", \"value\": \"SJ\" }, { \"label\": \"Swaziland\", \"value\": \"SZ\" }, { \"label\": \"Sweden\", \"value\": \"SE\" }, { \"label\": \"Switzerland\", \"value\": \"CH\" }, { \"label\": \"Syrian Arab Republic\", \"value\": \"SY\" }, { \"label\": \"Taiwan\", \"value\": \"TW\" }, { \"label\": \"Tajikistan\", \"value\": \"TJ\" }, { \"label\": \"Tanzania, United Republic of\", \"value\": \"TZ\" }, { \"label\": \"Thailand\", \"value\": \"TH\" }, { \"label\": \"Timor-Leste\", \"value\": \"TL\" }, { \"label\": \"Togo\", \"value\": \"TG\" }, { \"label\": \"Tokelau\", \"value\": \"TK\" }, { \"label\": \"Tonga\", \"value\": \"TO\" }, { \"label\": \"Trinidad and Tobago\", \"value\": \"TT\" }, { \"label\": \"Tunisia\", \"value\": \"TN\" }, { \"label\": \"Turkey\", \"value\": \"TR\" }, { \"label\": \"Turkmenistan\", \"value\": \"TM\" }, { \"label\": \"Turks and Caicos Islands\", \"value\": \"TC\" }, { \"label\": \"Tuvalu\", \"value\": \"TV\" }, { \"label\": \"Uganda\", \"value\": \"UG\" }, { \"label\": \"Ukraine\", \"value\": \"UA\" }, { \"label\": \"United Arab Emirates\", \"value\": \"AE\" }, { \"label\": \"United Kingdom\", \"value\": \"GB\" }, { \"label\": \"United States\", \"value\": \"US\" }, { \"label\": \"United States Minor Outlying Islands\", \"value\": \"UM\" }, { \"label\": \"Uruguay\", \"value\": \"UY\" }, { \"label\": \"Uzbekistan\", \"value\": \"UZ\" }, { \"label\": \"Vanuatu\", \"value\": \"VU\" }, { \"label\": \"Venezuela\", \"value\": \"VE\" }, { \"label\": \"Vietnam\", \"value\": \"VN\" }, { \"label\": \"Virgin Islands, British\", \"value\": \"VG\" }, { \"label\": \"Virgin Islands, U.S.\", \"value\": \"VI\" }, { \"label\": \"Wallis and Futuna\", \"value\": \"WF\" }, { \"label\": \"Western Sahara\", \"value\": \"EH\" }, { \"label\": \"Yemen\", \"value\": \"YE\" }, { \"label\": \"Zambia\", \"value\": \"ZM\" }, { \"label\": \"Zimbabwe\", \"value\": \"ZN\" }];\n\nmsg.payload = {\n    leadStatus,\n    dealStage,\n    countries,\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 360,
+        "y": 40,
+        "wires": [
+            [
+                "6f0a13eb41a96c3a"
+            ]
+        ]
+    },
+    {
+        "id": "6f0a13eb41a96c3a",
+        "type": "http response",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 530,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "81b2e5b12aa54308",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "Static Widgets Fillers",
+        "func": "const leadStatus = [\n    {\n        \"label\": \"New\",\n        \"value\": \"New\"\n    },\n    {\n        \"label\": \"Open\",\n        \"value\": \"Open\"\n    },\n    {\n        \"label\": \"In progress\",\n        \"value\": \"In progress\"\n    },\n    {\n        \"label\": \"Open deal\",\n        \"value\": \"Open deal\"\n    },\n    {\n        \"label\": \"Unqualified\",\n        \"value\": \"Unqualified\"\n    },\n    {\n        \"label\": \"Attempted to contact\",\n        \"value\": \"Attempted to contact\"\n    },\n    {\n        \"label\": \"Connected\",\n        \"value\": \"Connected\"\n    },\n    {\n        \"label\": \"Bad timing\",\n        \"value\": \"Bad timing\"\n    },\n    {\n        \"label\": \"Unassigned\",\n        \"value\": \"Unassigned\"\n    }\n];\nconst dealStage = [\n    {\n        \"label\": \"Outreach\",\n        \"value\": \"Outreach\"\n    },\n    {\n        \"label\": \"Qualifying ICP\",\n        \"value\": \"Qualifying ICP\"\n    },\n    {\n        \"label\": \"Appointment scheduled\",\n        \"value\": \"Appointment scheduled\"\n    },\n    {\n        \"label\": \"Presentation made\",\n        \"value\": \"Presentation made\"\n    },\n    {\n        \"label\": \"Follow up\",\n        \"value\": \"Follow up\"\n    },\n    {\n        \"label\": \"Testing Platform\",\n        \"value\": \"Testing Platform\"\n    },\n    {\n        \"label\": \"Objections\",\n        \"value\": \"Objections\"\n    },\n    {\n        \"label\": \"Proposal Sent\",\n        \"value\": \"Proposal Sent\"\n    },\n    {\n        \"label\": \"Closed won\",\n        \"value\": \"Closed won\"\n    },\n    {\n        \"label\": \"Closed - their lost\",\n        \"value\": \"Closed - their lost\"\n    }\n];\nconst countries = [\n    { \"name\": \"Afghanistan\", \"code\": \"AF\" },\n    { \"name\": \"Åland Islands\", \"code\": \"AX\" },\n    { \"name\": \"Albania\", \"code\": \"AL\" },\n    { \"name\": \"Algeria\", \"code\": \"DZ\" },\n    { \"name\": \"American Samoa\", \"code\": \"AS\" },\n    { \"name\": \"AndorrA\", \"code\": \"AD\" },\n    { \"name\": \"Angola\", \"code\": \"AO\" },\n    { \"name\": \"Anguilla\", \"code\": \"AI\" },\n    { \"name\": \"Antarctica\", \"code\": \"AQ\" },\n    { \"name\": \"Antigua and Barbuda\", \"code\": \"AG\" },\n    { \"name\": \"Argentina\", \"code\": \"AR\" },\n    { \"name\": \"Armenia\", \"code\": \"AM\" },\n    { \"name\": \"Aruba\", \"code\": \"AW\" },\n    { \"name\": \"Australia\", \"code\": \"AU\" },\n    { \"name\": \"Austria\", \"code\": \"AT\" },\n    { \"name\": \"Azerbaijan\", \"code\": \"AZ\" },\n    { \"name\": \"Bahamas\", \"code\": \"BS\" },\n    { \"name\": \"Bahrain\", \"code\": \"BH\" },\n    { \"name\": \"Bangladesh\", \"code\": \"BD\" },\n    { \"name\": \"Barbados\", \"code\": \"BB\" },\n    { \"name\": \"Belarus\", \"code\": \"BY\" },\n    { \"name\": \"Belgium\", \"code\": \"BE\" },\n    { \"name\": \"Belize\", \"code\": \"BZ\" },\n    { \"name\": \"Benin\", \"code\": \"BJ\" },\n    { \"name\": \"Bermuda\", \"code\": \"BM\" },\n    { \"name\": \"Bhutan\", \"code\": \"BT\" },\n    { \"name\": \"Bolivia\", \"code\": \"BO\" },\n    { \"name\": \"Bosnia and Herzegovina\", \"code\": \"BA\" },\n    { \"name\": \"Botswana\", \"code\": \"BW\" },\n    { \"name\": \"Bouvet Island\", \"code\": \"BV\" },\n    { \"name\": \"Brazil\", \"code\": \"BR\" },\n    { \"name\": \"British Indian Ocean Territory\", \"code\": \"IO\" },\n    { \"name\": \"Brunei Darussalam\", \"code\": \"BN\" },\n    { \"name\": \"Bulgaria\", \"code\": \"BG\" },\n    { \"name\": \"Burkina Faso\", \"code\": \"BF\" },\n    { \"name\": \"Burundi\", \"code\": \"BI\" },\n    { \"name\": \"Cambodia\", \"code\": \"KH\" },\n    { \"name\": \"Cameroon\", \"code\": \"CM\" },\n    { \"name\": \"Canada\", \"code\": \"CA\" },\n    { \"name\": \"Cape Verde\", \"code\": \"CV\" },\n    { \"name\": \"Cayman Islands\", \"code\": \"KY\" },\n    { \"name\": \"Central African Republic\", \"code\": \"CF\" },\n    { \"name\": \"Chad\", \"code\": \"TD\" },\n    { \"name\": \"Chile\", \"code\": \"CL\" },\n    { \"name\": \"China\", \"code\": \"CN\" },\n    { \"name\": \"Christmas Island\", \"code\": \"CX\" },\n    { \"name\": \"Cocos (Keeling) Islands\", \"code\": \"CC\" },\n    { \"name\": \"Colombia\", \"code\": \"CO\" },\n    { \"name\": \"Comoros\", \"code\": \"KM\" },\n    { \"name\": \"Congo\", \"code\": \"CG\" },\n    { \"name\": \"Congo, The Democratic Republic of the\", \"code\": \"CD\" },\n    { \"name\": \"Cook Islands\", \"code\": \"CK\" },\n    { \"name\": \"Costa Rica\", \"code\": \"CR\" },\n    { \"name\": \"Croatia\", \"code\": \"HR\" },\n    { \"name\": \"Cuba\", \"code\": \"CU\" },\n    { \"name\": \"Cyprus\", \"code\": \"CY\" },\n    { \"name\": \"Czech Republic\", \"code\": \"CZ\" },\n    { \"name\": \"Denmark\", \"code\": \"DK\" },\n    { \"name\": \"Djibouti\", \"code\": \"DJ\" },\n    { \"name\": \"Dominica\", \"code\": \"DM\" },\n    { \"name\": \"Dominican Republic\", \"code\": \"DO\" },\n    { \"name\": \"Ecuador\", \"code\": \"EC\" },\n    { \"name\": \"Egypt\", \"code\": \"EG\" },\n    { \"name\": \"El Salvador\", \"code\": \"SV\" },\n    { \"name\": \"Equatorial Guinea\", \"code\": \"GQ\" },\n    { \"name\": \"Eritrea\", \"code\": \"ER\" },\n    { \"name\": \"Estonia\", \"code\": \"EE\" },\n    { \"name\": \"Ethiopia\", \"code\": \"ET\" },\n    { \"name\": \"Falkland Islands (Malvinas)\", \"code\": \"FK\" },\n    { \"name\": \"Faroe Islands\", \"code\": \"FO\" },\n    { \"name\": \"Fiji\", \"code\": \"FJ\" },\n    { \"name\": \"Finland\", \"code\": \"FI\" },\n    { \"name\": \"France\", \"code\": \"FR\" },\n    { \"name\": \"French Guiana\", \"code\": \"GF\" },\n    { \"name\": \"French Polynesia\", \"code\": \"PF\" },\n    { \"name\": \"French Southern Territories\", \"code\": \"TF\" },\n    { \"name\": \"Gabon\", \"code\": \"GA\" },\n    { \"name\": \"Gambia\", \"code\": \"GM\" },\n    { \"name\": \"Georgia\", \"code\": \"GE\" },\n    { \"name\": \"Germany\", \"code\": \"DE\" },\n    { \"name\": \"Ghana\", \"code\": \"GH\" },\n    { \"name\": \"Gibraltar\", \"code\": \"GI\" },\n    { \"name\": \"Greece\", \"code\": \"GR\" },\n    { \"name\": \"Greenland\", \"code\": \"GL\" },\n    { \"name\": \"Grenada\", \"code\": \"GD\" },\n    { \"name\": \"Guadeloupe\", \"code\": \"GP\" },\n    { \"name\": \"Guam\", \"code\": \"GU\" },\n    { \"name\": \"Guatemala\", \"code\": \"GT\" },\n    { \"name\": \"Guernsey\", \"code\": \"GG\" },\n    { \"name\": \"Guinea\", \"code\": \"GN\" },\n    { \"name\": \"Guinea-Bissau\", \"code\": \"GW\" },\n    { \"name\": \"Guyana\", \"code\": \"GY\" },\n    { \"name\": \"Haiti\", \"code\": \"HT\" },\n    { \"name\": \"Heard Island and Mcdonald Islands\", \"code\": \"HM\" },\n    { \"name\": \"Holy See (Vatican City State)\", \"code\": \"VA\" },\n    { \"name\": \"Honduras\", \"code\": \"HN\" },\n    { \"name\": \"Hong Kong\", \"code\": \"HK\" },\n    { \"name\": \"Hungary\", \"code\": \"HU\" },\n    { \"name\": \"Iceland\", \"code\": \"IS\" },\n    { \"name\": \"India\", \"code\": \"IN\" },\n    { \"name\": \"Indonesia\", \"code\": \"ID\" },\n    { \"name\": \"Iran, Islamic Republic Of\", \"code\": \"IR\" },\n    { \"name\": \"Iraq\", \"code\": \"IQ\" },\n    { \"name\": \"Ireland\", \"code\": \"IE\" },\n    { \"name\": \"Isle of Man\", \"code\": \"IM\" },\n    { \"name\": \"Israel\", \"code\": \"IL\" },\n    { \"name\": \"Italy\", \"code\": \"IT\" },\n    { \"name\": \"Jamaica\", \"code\": \"JM\" },\n    { \"name\": \"Japan\", \"code\": \"JP\" },\n    { \"name\": \"Jersey\", \"code\": \"JE\" },\n    { \"name\": \"Jordan\", \"code\": \"JO\" },\n    { \"name\": \"Kazakhstan\", \"code\": \"KZ\" },\n    { \"name\": \"Kenya\", \"code\": \"KE\" },\n    { \"name\": \"Kiribati\", \"code\": \"KI\" },\n    { \"name\": \"Korea, Republic of\", \"code\": \"KR\" },\n    { \"name\": \"Kuwait\", \"code\": \"KW\" },\n    { \"name\": \"Kyrgyzstan\", \"code\": \"KG\" },\n    { \"name\": \"Latvia\", \"code\": \"LV\" },\n    { \"name\": \"Lebanon\", \"code\": \"LB\" },\n    { \"name\": \"Lesotho\", \"code\": \"LS\" },\n    { \"name\": \"Liberia\", \"code\": \"LR\" },\n    { \"name\": \"Libyan Arab Jamahiriya\", \"code\": \"LY\" },\n    { \"name\": \"Liechtenstein\", \"code\": \"LI\" },\n    { \"name\": \"Lithuania\", \"code\": \"LT\" },\n    { \"name\": \"Luxembourg\", \"code\": \"LU\" },\n    { \"name\": \"Macao\", \"code\": \"MO\" },\n    { \"name\": \"North Macedonia\", \"code\": \"MK\" },\n    { \"name\": \"Madagascar\", \"code\": \"MG\" },\n    { \"name\": \"Malawi\", \"code\": \"MW\" },\n    { \"name\": \"Malaysia\", \"code\": \"MY\" },\n    { \"name\": \"Maldives\", \"code\": \"MV\" },\n    { \"name\": \"Mali\", \"code\": \"ML\" },\n    { \"name\": \"Malta\", \"code\": \"MT\" },\n    { \"name\": \"Marshall Islands\", \"code\": \"MH\" },\n    { \"name\": \"Martinique\", \"code\": \"MQ\" },\n    { \"name\": \"Mauritania\", \"code\": \"MR\" },\n    { \"name\": \"Mauritius\", \"code\": \"MU\" },\n    { \"name\": \"Mayotte\", \"code\": \"YT\" },\n    { \"name\": \"Mexico\", \"code\": \"MX\" },\n    { \"name\": \"Micronesia, Federated States of\", \"code\": \"FM\" },\n    { \"name\": \"Moldova, Republic of\", \"code\": \"MD\" },\n    { \"name\": \"Monaco\", \"code\": \"MC\" },\n    { \"name\": \"Mongolia\", \"code\": \"MN\" },\n    { \"name\": \"Montserrat\", \"code\": \"MS\" },\n    { \"name\": \"Morocco\", \"code\": \"MA\" },\n    { \"name\": \"Mozambique\", \"code\": \"MZ\" },\n    { \"name\": \"Myanmar\", \"code\": \"MM\" },\n    { \"name\": \"Namibia\", \"code\": \"NA\" },\n    { \"name\": \"Nauru\", \"code\": \"NR\" },\n    { \"name\": \"Nepal\", \"code\": \"NP\" },\n    { \"name\": \"Netherlands\", \"code\": \"NL\" },\n    { \"name\": \"Netherlands Antilles\", \"code\": \"AN\" },\n    { \"name\": \"New Caledonia\", \"code\": \"NC\" },\n    { \"name\": \"New Zealand\", \"code\": \"NZ\" },\n    { \"name\": \"Nicaragua\", \"code\": \"NI\" },\n    { \"name\": \"Niger\", \"code\": \"NE\" },\n    { \"name\": \"Nigeria\", \"code\": \"NG\" },\n    { \"name\": \"Niue\", \"code\": \"NU\" },\n    { \"name\": \"Norfolk Island\", \"code\": \"NF\" },\n    { \"name\": \"Northern Mariana Islands\", \"code\": \"MP\" },\n    { \"name\": \"Norway\", \"code\": \"NO\" },\n    { \"name\": \"Oman\", \"code\": \"OM\" },\n    { \"name\": \"Pakistan\", \"code\": \"PK\" },\n    { \"name\": \"Palau\", \"code\": \"PW\" },\n    { \"name\": \"Palestinian Territory, Occupied\", \"code\": \"PS\" },\n    { \"name\": \"Panama\", \"code\": \"PA\" },\n    { \"name\": \"Papua New Guinea\", \"code\": \"PG\" },\n    { \"name\": \"Paraguay\", \"code\": \"PY\" },\n    { \"name\": \"Peru\", \"code\": \"PE\" },\n    { \"name\": \"Philippines\", \"code\": \"PH\" },\n    { \"name\": \"Pitcairn Islands\", \"code\": \"PN\" },\n    { \"name\": \"Poland\", \"code\": \"PL\" },\n    { \"name\": \"Portugal\", \"code\": \"PT\" },\n    { \"name\": \"Puerto Rico\", \"code\": \"PR\" },\n    { \"name\": \"Qatar\", \"code\": \"QA\" },\n    { \"name\": \"Reunion\", \"code\": \"RE\" },\n    { \"name\": \"Romania\", \"code\": \"RO\" },\n    { \"name\": \"Russian Federation\", \"code\": \"RU\" },\n    { \"name\": \"Rwanda\", \"code\": \"RW\" },\n    { \"name\": \"Saint Helena\", \"code\": \"SH\" },\n    { \"name\": \"Saint Kitts and Nevis\", \"code\": \"KN\" },\n    { \"name\": \"Saint Lucia\", \"code\": \"LC\" },\n    { \"name\": \"Saint Pierre and Miquelon\", \"code\": \"PM\" },\n    { \"name\": \"Saint Vincent and the Grenadines\", \"code\": \"VC\" },\n    { \"name\": \"Samoa\", \"code\": \"WS\" },\n    { \"name\": \"San Marino\", \"code\": \"SM\" },\n    { \"name\": \"Sao Tome and Principe\", \"code\": \"ST\" },\n    { \"name\": \"Saudi Arabia\", \"code\": \"SA\" },\n    { \"name\": \"Senegal\", \"code\": \"SN\" },\n    { \"name\": \"Serbia and Montenegro\", \"code\": \"CS\" },\n    { \"name\": \"Seychelles\", \"code\": \"SC\" },\n    { \"name\": \"Sierra Leone\", \"code\": \"SL\" },\n    { \"name\": \"Singapore\", \"code\": \"SG\" },\n    { \"name\": \"Slovakia\", \"code\": \"SK\" },\n    { \"name\": \"Slovenia\", \"code\": \"SI\" },\n    { \"name\": \"Solomon Islands\", \"code\": \"SB\" },\n    { \"name\": \"Somalia\", \"code\": \"SO\" },\n    { \"name\": \"South Africa\", \"code\": \"ZA\" },\n    { \"name\": \"South Georgia and the South Sandwich Islands\", \"code\": \"GS\" },\n    { \"name\": \"Spain\", \"code\": \"ES\" },\n    { \"name\": \"Sri Lanka\", \"code\": \"LK\" },\n    { \"name\": \"Sudan\", \"code\": \"SD\" },\n    { \"name\": \"Suriname\", \"code\": \"SR\" },\n    { \"name\": \"Svalbard and Jan Mayen\", \"code\": \"SJ\" },\n    { \"name\": \"Swaziland\", \"code\": \"SZ\" },\n    { \"name\": \"Sweden\", \"code\": \"SE\" },\n    { \"name\": \"Switzerland\", \"code\": \"CH\" },\n    { \"name\": \"Syrian Arab Republic\", \"code\": \"SY\" },\n    { \"name\": \"Taiwan\", \"code\": \"TW\" },\n    { \"name\": \"Tajikistan\", \"code\": \"TJ\" },\n    { \"name\": \"Tanzania, United Republic of\", \"code\": \"TZ\" },\n    { \"name\": \"Thailand\", \"code\": \"TH\" },\n    { \"name\": \"Timor-Leste\", \"code\": \"TL\" },\n    { \"name\": \"Togo\", \"code\": \"TG\" },\n    { \"name\": \"Tokelau\", \"code\": \"TK\" },\n    { \"name\": \"Tonga\", \"code\": \"TO\" },\n    { \"name\": \"Trinidad and Tobago\", \"code\": \"TT\" },\n    { \"name\": \"Tunisia\", \"code\": \"TN\" },\n    { \"name\": \"Turkey\", \"code\": \"TR\" },\n    { \"name\": \"Turkmenistan\", \"code\": \"TM\" },\n    { \"name\": \"Turks and Caicos Islands\", \"code\": \"TC\" },\n    { \"name\": \"Tuvalu\", \"code\": \"TV\" },\n    { \"name\": \"Uganda\", \"code\": \"UG\" },\n    { \"name\": \"Ukraine\", \"code\": \"UA\" },\n    { \"name\": \"United Arab Emirates\", \"code\": \"AE\" },\n    { \"name\": \"United Kingdom\", \"code\": \"GB\" },\n    { \"name\": \"United States\", \"code\": \"US\" },\n    { \"name\": \"United States Minor Outlying Islands\", \"code\": \"UM\" },\n    { \"name\": \"Uruguay\", \"code\": \"UY\" },\n    { \"name\": \"Uzbekistan\", \"code\": \"UZ\" },\n    { \"name\": \"Vanuatu\", \"code\": \"VU\" },\n    { \"name\": \"Venezuela\", \"code\": \"VE\" },\n    { \"name\": \"Vietnam\", \"code\": \"VN\" },\n    { \"name\": \"Virgin Islands, British\", \"code\": \"VG\" },\n    { \"name\": \"Virgin Islands, U.S.\", \"code\": \"VI\" },\n    { \"name\": \"Wallis and Futuna\", \"code\": \"WF\" },\n    { \"name\": \"Western Sahara\", \"code\": \"EH\" },\n    { \"name\": \"Yemen\", \"code\": \"YE\" },\n    { \"name\": \"Zambia\", \"code\": \"ZM\" },\n    { \"name\": \"Zimbabwe\", \"code\": \"ZN\" }\n];\n\nconst a = countries.map(c => ({\n    label: c.name,\n    value: c.code,\n}))\n\nmsg.payload = a;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 1180,
+        "y": 120,
+        "wires": [
+            [
+                "33b0c3ee40dc5476"
+            ]
+        ]
+    },
+    {
+        "id": "9927c01d1024acdb",
+        "type": "inject",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 960,
+        "y": 120,
+        "wires": [
+            [
+                "81b2e5b12aa54308"
+            ]
+        ]
+    },
+    {
+        "id": "33b0c3ee40dc5476",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a148eaabd2352638",
+        "type": "http in",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "url": "/getLists",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 400,
+        "wires": [
+            [
+                "491919effcf61399",
+                "1d5b0808453b5970"
+            ]
+        ]
+    },
+    {
+        "id": "1d5b0808453b5970",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "getLists",
+        "func": "msg.collection = \"lists\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 360,
+        "y": 400,
+        "wires": [
+            [
+                "491919effcf61399",
+                "7c2ad79f0d878edc"
+            ]
+        ]
+    },
+    {
+        "id": "7c2ad79f0d878edc",
+        "type": "link call",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 590,
+        "y": 400,
+        "wires": [
+            [
+                "491919effcf61399",
+                "98ce039bfecd322a"
+            ]
+        ]
+    },
+    {
+        "id": "491919effcf61399",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f47ebcd88b05288f",
+        "type": "http response",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 930,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "98ce039bfecd322a",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "prepare for ui",
+        "func": "msg.payload = msg.payload.map(list => ({\n    label: list.name,\n    value: list._id,\n}));\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 400,
+        "wires": [
+            [
+                "f47ebcd88b05288f",
+                "491919effcf61399"
+            ]
+        ]
+    },
+    {
+        "id": "93399744a682298f",
+        "type": "inject",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 480,
+        "wires": [
+            [
+                "1d5b0808453b5970"
             ]
         ]
     },
