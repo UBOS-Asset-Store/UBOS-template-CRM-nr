@@ -220,7 +220,9 @@
             "10c41f549cf86656"
         ],
         "x": 54,
-        "y": 459
+        "y": 459,
+        "w": 832,
+        "h": 182
     },
     {
         "id": "d78377c07a215120",
@@ -329,9 +331,7 @@
             "2d32ffcf75d44831"
         ],
         "x": 34,
-        "y": 519,
-        "w": 1352,
-        "h": 562
+        "y": 519
     },
     {
         "id": "b2cb8a397b61947a",
@@ -354,12 +354,15 @@
             "71f3d54994ffdd14",
             "fce3b8f7a9a47972",
             "4ddc5ea18abc5f6d",
-            "76e2571f7ce63c0c"
+            "76e2571f7ce63c0c",
+            "f31e158d32908a90",
+            "f854fa3e29dd1bd1",
+            "b5f800450862f3cd"
         ],
-        "x": 24,
+        "x": 34,
         "y": 119,
-        "w": 672,
-        "h": 222
+        "w": 632,
+        "h": 322
     },
     {
         "id": "5bf7ccb6c6709633",
@@ -439,11 +442,14 @@
             "f3f6e7207f8f36bd",
             "61559c3ca23bf800",
             "5892c744245e35ff",
-            "c787c8088d0b4975"
+            "c787c8088d0b4975",
+            "c2ed02a101fd1361",
+            "1b52c746852fe177",
+            "f3211f80fa6b47f6"
         ],
         "x": 34,
         "y": 39,
-        "w": 1332,
+        "w": 1452,
         "h": 462
     },
     {
@@ -494,9 +500,7 @@
             "1e2c8c7cdacb7345"
         ],
         "x": 44,
-        "y": 39,
-        "w": 942,
-        "h": 762
+        "y": 39
     },
     {
         "id": "c8e4ab113b6b9056",
@@ -539,9 +543,7 @@
             "655fc308a4013906"
         ],
         "x": 1034,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "221ba791b89fb1e4",
@@ -591,9 +593,22 @@
             "6c2b81d3f58aa157"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1472,
-        "h": 482
+        "y": 19
+    },
+    {
+        "id": "c2ed02a101fd1361",
+        "type": "junction",
+        "z": "be827c2e9f2e7979",
+        "g": "fd9bc368cea45c71",
+        "x": 1020,
+        "y": 160,
+        "wires": [
+            [
+                "2225f6bd64a90ebc",
+                "f195bbb56d220aa0",
+                "1b52c746852fe177"
+            ]
+        ]
     },
     {
         "id": "ab6475898c71d570",
@@ -697,12 +712,11 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 110,
-        "y": 140,
+        "x": 130,
+        "y": 80,
         "wires": [
             [
                 "b871b51b65519561",
-                "67449e45db06f66b",
                 "90bca87605ac5804"
             ]
         ]
@@ -711,7 +725,7 @@
         "id": "90bca87605ac5804",
         "type": "function",
         "z": "3db5a363b78466f5",
-        "name": "function 596",
+        "name": "newContact",
         "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n    ...msg.fromUI,\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
@@ -723,8 +737,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 330,
-        "y": 140,
+        "x": 370,
+        "y": 80,
         "wires": [
             [
                 "b871b51b65519561",
@@ -742,11 +756,12 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 610,
-        "y": 140,
+        "x": 590,
+        "y": 80,
         "wires": [
             [
-                "b871b51b65519561"
+                "b871b51b65519561",
+                "67449e45db06f66b"
             ]
         ]
     },
@@ -762,8 +777,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 320,
-        "y": 220,
+        "x": 160,
+        "y": 120,
         "wires": []
     },
     {
@@ -773,8 +788,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 310,
-        "y": 100,
+        "x": 750,
+        "y": 80,
         "wires": []
     },
     {
@@ -786,12 +801,11 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 100,
-        "y": 360,
+        "x": 120,
+        "y": 240,
         "wires": [
             [
                 "8d45a4f01b3eefdf",
-                "18b4c77c99729d3d",
                 "ce22795126de9f29"
             ]
         ]
@@ -800,7 +814,7 @@
         "id": "ce22795126de9f29",
         "type": "function",
         "z": "3db5a363b78466f5",
-        "name": "function 597",
+        "name": "newList",
         "func": "msg.fromUI = msg.payload;\nmsg.collection = \"lists\";\n\nmsg.payload = {\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n    ...msg.fromUI,\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
@@ -812,8 +826,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 330,
-        "y": 360,
+        "x": 360,
+        "y": 240,
         "wires": [
             [
                 "8d45a4f01b3eefdf",
@@ -831,11 +845,12 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 610,
-        "y": 360,
+        "x": 590,
+        "y": 240,
         "wires": [
             [
-                "8d45a4f01b3eefdf"
+                "8d45a4f01b3eefdf",
+                "18b4c77c99729d3d"
             ]
         ]
     },
@@ -851,8 +866,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 320,
-        "y": 440,
+        "x": 140,
+        "y": 280,
         "wires": []
     },
     {
@@ -862,8 +877,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 310,
-        "y": 320,
+        "x": 750,
+        "y": 240,
         "wires": []
     },
     {
@@ -875,12 +890,11 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 100,
-        "y": 620,
+        "x": 120,
+        "y": 400,
         "wires": [
             [
                 "53596ebf910458be",
-                "2924389c5e5332f2",
                 "779e0686b69cadf6"
             ]
         ]
@@ -889,7 +903,7 @@
         "id": "779e0686b69cadf6",
         "type": "function",
         "z": "3db5a363b78466f5",
-        "name": "function 598",
+        "name": "newList",
         "func": "msg.fromUI = msg.payload;\nmsg.collection = \"deals\";\n\nmsg.payload = {\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n    ...msg.fromUI,\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
@@ -901,8 +915,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 330,
-        "y": 620,
+        "x": 360,
+        "y": 400,
         "wires": [
             [
                 "53596ebf910458be",
@@ -920,11 +934,12 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 610,
-        "y": 620,
+        "x": 590,
+        "y": 400,
         "wires": [
             [
-                "53596ebf910458be"
+                "53596ebf910458be",
+                "2924389c5e5332f2"
             ]
         ]
     },
@@ -940,8 +955,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 320,
-        "y": 700,
+        "x": 140,
+        "y": 440,
         "wires": []
     },
     {
@@ -951,8 +966,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 310,
-        "y": 580,
+        "x": 750,
+        "y": 400,
         "wires": []
     },
     {
@@ -994,7 +1009,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 410,
+        "x": 450,
         "y": 1140,
         "wires": [
             [
@@ -1014,7 +1029,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
+        "x": 600,
         "y": 1140,
         "wires": []
     },
@@ -1081,7 +1096,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 410,
+        "x": 450,
         "y": 1180,
         "wires": [
             [
@@ -1101,7 +1116,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
+        "x": 600,
         "y": 1180,
         "wires": []
     },
@@ -1168,7 +1183,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 410,
+        "x": 450,
         "y": 1220,
         "wires": [
             [
@@ -1188,7 +1203,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
+        "x": 600,
         "y": 1220,
         "wires": []
     },
@@ -1220,12 +1235,11 @@
         "method": "put",
         "upload": false,
         "swaggerDoc": "",
-        "x": 100,
-        "y": 860,
+        "x": 120,
+        "y": 580,
         "wires": [
             [
                 "4543de764df42d6c",
-                "a7375daee819e5b6",
                 "a04c4d05431e905d"
             ]
         ]
@@ -1234,7 +1248,7 @@
         "id": "a04c4d05431e905d",
         "type": "function",
         "z": "3db5a363b78466f5",
-        "name": "function 599",
+        "name": "addToList",
         "func": "msg.fromUI = msg.payload;\nmsg.collection = \"list\";\n\nmsg.query = {\n    _id: objectid(msg.fromUI.listID),\n};\n\nmsg.payload = {\n    $set: {\n        ...msg.fromUI,\n    }\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
@@ -1246,8 +1260,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 330,
-        "y": 860,
+        "x": 360,
+        "y": 580,
         "wires": [
             [
                 "4543de764df42d6c",
@@ -1265,11 +1279,12 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 610,
-        "y": 860,
+        "x": 590,
+        "y": 580,
         "wires": [
             [
-                "4543de764df42d6c"
+                "4543de764df42d6c",
+                "a7375daee819e5b6"
             ]
         ]
     },
@@ -1285,8 +1300,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 320,
-        "y": 940,
+        "x": 140,
+        "y": 620,
         "wires": []
     },
     {
@@ -1296,9 +1311,399 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 310,
-        "y": 820,
+        "x": 750,
+        "y": 580,
         "wires": []
+    },
+    {
+        "id": "0658976922c54b67",
+        "type": "http in",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "url": "/addContactOwner",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 760,
+        "wires": [
+            [
+                "4cf1f43e7c0fd6f8",
+                "ed5c0dec81a4bc6f"
+            ]
+        ]
+    },
+    {
+        "id": "ed5c0dec81a4bc6f",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "addContactOwner",
+        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"contactOwners\";\n\nmsg.payload = {\n    _id: msg.fromUI.email,\n    ...msg.fromUI,\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 390,
+        "y": 760,
+        "wires": [
+            [
+                "4cf1f43e7c0fd6f8",
+                "f382aaafe52c4d67"
+            ]
+        ]
+    },
+    {
+        "id": "f382aaafe52c4d67",
+        "type": "link call",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "links": [
+            "193774ea3ceea673"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 590,
+        "y": 760,
+        "wires": [
+            [
+                "4cf1f43e7c0fd6f8",
+                "bc9cfb132bd95bb9"
+            ]
+        ]
+    },
+    {
+        "id": "4cf1f43e7c0fd6f8",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "bc9cfb132bd95bb9",
+        "type": "http response",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 750,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "406c27b8c866bed1",
+        "type": "http in",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "url": "/getContactOwners",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 940,
+        "wires": [
+            [
+                "914186e273076b7d",
+                "a27297e66a6abe07"
+            ]
+        ]
+    },
+    {
+        "id": "a27297e66a6abe07",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "getContactOwners",
+        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"contactOwners\";\n\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 390,
+        "y": 940,
+        "wires": [
+            [
+                "914186e273076b7d",
+                "d5bcce3edb953ea2"
+            ]
+        ]
+    },
+    {
+        "id": "d5bcce3edb953ea2",
+        "type": "link call",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 590,
+        "y": 940,
+        "wires": [
+            [
+                "914186e273076b7d",
+                "fa1ec3ce89b1c05c"
+            ]
+        ]
+    },
+    {
+        "id": "914186e273076b7d",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "b3fb0b87891dfbe5",
+        "type": "http response",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 930,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "83794678117f21e2",
+        "type": "inject",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 1060,
+        "wires": [
+            [
+                "a27297e66a6abe07"
+            ]
+        ]
+    },
+    {
+        "id": "c1a2217275f74e59",
+        "type": "inject",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 1260,
+        "wires": [
+            [
+                "7623b8e60a096f05"
+            ]
+        ]
+    },
+    {
+        "id": "1bda2083d6dea760",
+        "type": "link call",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 450,
+        "y": 1260,
+        "wires": [
+            [
+                "bac15085669840a3"
+            ]
+        ]
+    },
+    {
+        "id": "bac15085669840a3",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "7623b8e60a096f05",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "contactOwners",
+        "func": "msg.collection = 'contactOwners';\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 1260,
+        "wires": [
+            [
+                "1bda2083d6dea760"
+            ]
+        ]
+    },
+    {
+        "id": "fa1ec3ce89b1c05c",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "prepare for ui",
+        "func": "msg.payload = msg.payload.map(owner => ({\n    label: `${owner.firstname} ${owner?.lastname}\n${owner.email}`,\n    value: owner._id,\n}));\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 940,
+        "wires": [
+            [
+                "b3fb0b87891dfbe5"
+            ]
+        ]
+    },
+    {
+        "id": "c0e1cf988f37a271",
+        "type": "inject",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 1360,
+        "wires": [
+            [
+                "e8384769bf28d8a1"
+            ]
+        ]
+    },
+    {
+        "id": "fd9032dc3d062c2d",
+        "type": "link call",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "links": [
+            "f31e158d32908a90"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 440,
+        "y": 1360,
+        "wires": [
+            [
+                "60caa5caafe51245"
+            ]
+        ]
+    },
+    {
+        "id": "60caa5caafe51245",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "e8384769bf28d8a1",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "contactOwners",
+        "func": "msg.collection = 'contactOwners';\n\n\n\nmsg.payload = {\n\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 1360,
+        "wires": [
+            [
+                "fd9032dc3d062c2d"
+            ]
+        ]
     },
     {
         "id": "ba97e8986832bd94",
@@ -1307,8 +1712,8 @@
         "g": "b2cb8a397b61947a",
         "name": "mongo Find",
         "links": [],
-        "x": 65,
-        "y": 200,
+        "x": 75,
+        "y": 240,
         "wires": [
             [
                 "71f3d54994ffdd14"
@@ -1322,8 +1727,8 @@
         "g": "b2cb8a397b61947a",
         "name": "mongo Aggregate",
         "links": [],
-        "x": 65,
-        "y": 260,
+        "x": 75,
+        "y": 300,
         "wires": [
             [
                 "fce3b8f7a9a47972"
@@ -1337,7 +1742,7 @@
         "g": "b2cb8a397b61947a",
         "name": "mongo Insert",
         "links": [],
-        "x": 435,
+        "x": 445,
         "y": 200,
         "wires": [
             [
@@ -1353,8 +1758,8 @@
         "g": "b2cb8a397b61947a",
         "name": "mongo Update",
         "links": [],
-        "x": 435,
-        "y": 260,
+        "x": 445,
+        "y": 300,
         "wires": [
             [
                 "5d175f0e185e2be1",
@@ -1370,8 +1775,8 @@
         "name": "link out 6",
         "mode": "return",
         "links": [],
-        "x": 335,
-        "y": 200,
+        "x": 345,
+        "y": 240,
         "wires": []
     },
     {
@@ -1382,8 +1787,8 @@
         "name": "link out 7",
         "mode": "return",
         "links": [],
-        "x": 335,
-        "y": 260,
+        "x": 345,
+        "y": 300,
         "wires": []
     },
     {
@@ -1394,7 +1799,7 @@
         "name": "link out 8",
         "mode": "return",
         "links": [],
-        "x": 575,
+        "x": 535,
         "y": 160,
         "wires": []
     },
@@ -1406,8 +1811,8 @@
         "name": "link out 9",
         "mode": "return",
         "links": [],
-        "x": 575,
-        "y": 300,
+        "x": 535,
+        "y": 260,
         "wires": []
     },
     {
@@ -1419,8 +1824,8 @@
         "name": "Find",
         "collection": "",
         "operation": "find",
-        "x": 200,
-        "y": 200,
+        "x": 210,
+        "y": 240,
         "wires": [
             [
                 "0475ddf79f2a60a0"
@@ -1436,8 +1841,8 @@
         "name": "Aggregate",
         "collection": "",
         "operation": "aggregate",
-        "x": 220,
-        "y": 260,
+        "x": 230,
+        "y": 300,
         "wires": [
             [
                 "4b446130f2f65783"
@@ -1456,7 +1861,7 @@
         "upsert": false,
         "multi": false,
         "operation": "insert",
-        "x": 600,
+        "x": 570,
         "y": 200,
         "wires": []
     },
@@ -1472,8 +1877,8 @@
         "upsert": false,
         "multi": false,
         "operation": "update",
-        "x": 610,
-        "y": 260,
+        "x": 580,
+        "y": 300,
         "wires": []
     },
     {
@@ -1540,7 +1945,7 @@
         "finalize": "",
         "libs": [],
         "x": 320,
-        "y": 380,
+        "y": 480,
         "wires": [
             []
         ]
@@ -1567,12 +1972,56 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 380,
+        "y": 480,
         "wires": [
             [
                 "61c07f425931fa4d"
             ]
         ]
+    },
+    {
+        "id": "f31e158d32908a90",
+        "type": "link in",
+        "z": "c740254358c79788",
+        "g": "b2cb8a397b61947a",
+        "name": "mongo Delete",
+        "links": [],
+        "x": 445,
+        "y": 400,
+        "wires": [
+            [
+                "b5f800450862f3cd",
+                "f854fa3e29dd1bd1"
+            ]
+        ]
+    },
+    {
+        "id": "b5f800450862f3cd",
+        "type": "link out",
+        "z": "c740254358c79788",
+        "g": "b2cb8a397b61947a",
+        "name": "link out 10",
+        "mode": "return",
+        "links": [],
+        "x": 535,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f854fa3e29dd1bd1",
+        "type": "mongodb out",
+        "z": "c740254358c79788",
+        "g": "b2cb8a397b61947a",
+        "mongodb": "ab6475898c71d570",
+        "name": "Delete",
+        "collection": "",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "delete",
+        "x": 570,
+        "y": 400,
+        "wires": []
     },
     {
         "id": "6d762311464829e7",
@@ -5392,11 +5841,10 @@
             }
         ],
         "x": 920,
-        "y": 120,
+        "y": 160,
         "wires": [
             [
-                "f195bbb56d220aa0",
-                "2225f6bd64a90ebc"
+                "c2ed02a101fd1361"
             ]
         ]
     },
@@ -5411,7 +5859,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1090,
+        "x": 1110,
         "y": 160,
         "wires": [
             []
@@ -5434,7 +5882,7 @@
                 "module": "nodemailer"
             }
         ],
-        "x": 1110,
+        "x": 1130,
         "y": 120,
         "wires": [
             [
@@ -5823,6 +6271,97 @@
         "x": 710,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "1b52c746852fe177",
+        "type": "function",
+        "z": "be827c2e9f2e7979",
+        "g": "fd9bc368cea45c71",
+        "name": "link to create contact owner",
+        "func": "msg.url = `${env.get('nodeUrl')}/addContactOwner`;\n\nmsg.payload = {\n    userID: msg.payload._id,\n    firstname: msg.payload.firstname,\n    lastname: msg.payload.lastname,\n    email: msg.payload.email,\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 200,
+        "wires": [
+            [
+                "f3211f80fa6b47f6"
+            ]
+        ]
+    },
+    {
+        "id": "f3211f80fa6b47f6",
+        "type": "http request",
+        "z": "be827c2e9f2e7979",
+        "g": "fd9bc368cea45c71",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1390,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e0d2d3192d03337",
+        "type": "inject",
+        "z": "be827c2e9f2e7979",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 980,
+        "y": 540,
+        "wires": [
+            [
+                "0b72d3a0ed3927e7"
+            ]
+        ]
+    },
+    {
+        "id": "0b72d3a0ed3927e7",
+        "type": "function",
+        "z": "be827c2e9f2e7979",
+        "name": "forTest---delete-it",
+        "func": "msg.payload = {\n    _id: 'lalal',\n    firstname: 'lalalas',\n    lastname: 'laladdadad',\n    email: 'lalal@assasa.sasa',\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 540,
+        "wires": [
+            [
+                "1b52c746852fe177"
+            ]
+        ]
     },
     {
         "id": "967b38b536709fe7",
