@@ -220,9 +220,7 @@
             "10c41f549cf86656"
         ],
         "x": 54,
-        "y": 459,
-        "w": 832,
-        "h": 182
+        "y": 459
     },
     {
         "id": "d78377c07a215120",
@@ -448,9 +446,7 @@
             "f3211f80fa6b47f6"
         ],
         "x": 34,
-        "y": 39,
-        "w": 1452,
-        "h": 462
+        "y": 39
     },
     {
         "id": "a8bcf74ef7690d27",
@@ -500,7 +496,9 @@
             "1e2c8c7cdacb7345"
         ],
         "x": 44,
-        "y": 39
+        "y": 39,
+        "w": 942,
+        "h": 762
     },
     {
         "id": "c8e4ab113b6b9056",
@@ -543,7 +541,9 @@
             "655fc308a4013906"
         ],
         "x": 1034,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 682
     },
     {
         "id": "221ba791b89fb1e4",
@@ -815,7 +815,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "newList",
-        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"lists\";\n\nmsg.payload = {\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n    ...msg.fromUI,\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"lists\";\n\nmsg.payload = {\n    ...msg.fromUI,\n    _id: objectid(),\n    deleted: false,\n    createdAt: new Date,\n    contactIDs: [],\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -903,7 +903,7 @@
         "id": "779e0686b69cadf6",
         "type": "function",
         "z": "3db5a363b78466f5",
-        "name": "newList",
+        "name": "newDeal",
         "func": "msg.fromUI = msg.payload;\nmsg.collection = \"deals\";\n\nmsg.payload = {\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n    ...msg.fromUI,\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
@@ -1125,7 +1125,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "lists",
-        "func": "msg.collection = 'lists';\n\n// msg.query = {\n//     _id: objectid('65e98993204d011100000002'),\n// };\n\nmsg.payload = {\n    _id: objectid('65e98993204d011100000002'),\n};\n\nreturn msg;\n",
+        "func": "msg.collection = 'lists';\n\n// msg.query = {\n//     _id: objectid('65e98993204d011100000002'),\n// };\n\nmsg.payload = {\n    // _id: objectid('65e98993204d011100000002'),\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1249,7 +1249,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "addToList",
-        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"list\";\n\nmsg.query = {\n    _id: objectid(msg.fromUI.listID),\n};\n\nmsg.payload = {\n    $set: {\n        ...msg.fromUI,\n    }\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1265,7 +1265,7 @@
         "wires": [
             [
                 "4543de764df42d6c",
-                "5f18c7ea8eab9432"
+                "631b6508617082d7"
             ]
         ]
     },
@@ -1275,16 +1275,16 @@
         "z": "3db5a363b78466f5",
         "name": "",
         "links": [
-            "193774ea3ceea673"
+            "a724f172bc7c2de5"
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 590,
-        "y": 1000,
+        "x": 900,
+        "y": 1100,
         "wires": [
             [
-                "4543de764df42d6c",
-                "a7375daee819e5b6"
+                "631b6508617082d7",
+                "307e57a68392ea3d"
             ]
         ]
     },
@@ -1311,8 +1311,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 750,
-        "y": 1000,
+        "x": 1130,
+        "y": 920,
         "wires": []
     },
     {
@@ -1324,8 +1324,8 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 150,
-        "y": 1180,
+        "x": 250,
+        "y": 1260,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1349,8 +1349,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 390,
-        "y": 1180,
+        "x": 490,
+        "y": 1260,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1368,8 +1368,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 590,
-        "y": 1180,
+        "x": 690,
+        "y": 1260,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1389,8 +1389,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 140,
-        "y": 1220,
+        "x": 240,
+        "y": 1300,
         "wires": []
     },
     {
@@ -1400,8 +1400,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 750,
-        "y": 1180,
+        "x": 850,
+        "y": 1260,
         "wires": []
     },
     {
@@ -1409,11 +1409,11 @@
         "type": "http in",
         "z": "3db5a363b78466f5",
         "name": "",
-        "url": "/getContactOwners",
+        "url": "/getOwners",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 150,
+        "x": 120,
         "y": 1360,
         "wires": [
             [
@@ -1426,8 +1426,8 @@
         "id": "a27297e66a6abe07",
         "type": "function",
         "z": "3db5a363b78466f5",
-        "name": "getContactOwners",
-        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"contactOwners\";\n\n\n\nreturn msg;\n",
+        "name": "getOwners",
+        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"admins\";\n\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1438,7 +1438,7 @@
                 "module": "objectid"
             }
         ],
-        "x": 390,
+        "x": 370,
         "y": 1360,
         "wires": [
             [
@@ -1489,7 +1489,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 930,
+        "x": 970,
         "y": 1360,
         "wires": []
     },
@@ -1514,8 +1514,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 1480,
+        "x": 140,
+        "y": 1460,
         "wires": [
             [
                 "a27297e66a6abe07"
@@ -1615,7 +1615,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
+        "x": 820,
         "y": 1360,
         "wires": [
             [
@@ -1690,14 +1690,14 @@
         "id": "e8384769bf28d8a1",
         "type": "function",
         "z": "3db5a363b78466f5",
-        "name": "contactOwners",
-        "func": "msg.collection = 'contactOwners';\n\n\n\nmsg.payload = {\n\n};\n\nreturn msg;\n",
+        "name": "delete",
+        "func": "msg.collection = 'lists';\n\n\n\nmsg.payload = {\n\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
+        "x": 230,
         "y": 1760,
         "wires": [
             [
@@ -1987,7 +1987,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "getContacts",
-        "func": "msg.collection = \"contacts\";\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"contacts\";\n\nmsg.payload = {};\n\nif (msg.fromUI.owner) {\n    msg.payload.contactOwner = msg.fromUI.owner;\n}\n\nif (msg.fromUI.deal) {\n    msg.payload.dealStage = msg.fromUI.deal;\n}\n\nif (msg.fromUI.lead) {\n    msg.payload.leadStatus = msg.fromUI.lead;\n}\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2094,13 +2094,94 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 220,
+        "x": 160,
         "y": 320,
         "wires": [
             [
                 "335be961b97df98e"
             ]
         ]
+    },
+    {
+        "id": "631b6508617082d7",
+        "type": "array-loop",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "key": "al631b6508617082d7",
+        "keyType": "msg",
+        "reset": false,
+        "resetValue": "value-null",
+        "array": "fromUI.contacts",
+        "arrayType": "msg",
+        "x": 720,
+        "y": 1000,
+        "wires": [
+            [
+                "c3e6669ed9bd2a2d",
+                "a7375daee819e5b6"
+            ],
+            [
+                "2bf6a44f4ed568e6",
+                "307e57a68392ea3d"
+            ]
+        ]
+    },
+    {
+        "id": "2bf6a44f4ed568e6",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "addToList",
+        "func": "msg.collection = \"list\";\nmsg.query = {\n    _id: objectid(msg.fromUI.listID),\n};\n\n\nmsg.payload = {};\n\nmsg.payload.contactID.push(msg.payload)\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 720,
+        "y": 1100,
+        "wires": [
+            [
+                "307e57a68392ea3d",
+                "5f18c7ea8eab9432"
+            ]
+        ]
+    },
+    {
+        "id": "307e57a68392ea3d",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "c3e6669ed9bd2a2d",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 900,
+        "wires": []
     },
     {
         "id": "ba97e8986832bd94",
