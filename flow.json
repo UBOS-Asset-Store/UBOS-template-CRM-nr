@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "04949f39d52b1544",
+        "type": "tab",
+        "label": "Lists",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "c740254358c79788",
         "type": "tab",
         "label": "Base",
@@ -112,9 +120,7 @@
             "a2b1bc579a4c0ced"
         ],
         "x": 14,
-        "y": 719,
-        "w": 932,
-        "h": 122
+        "y": 719
     },
     {
         "id": "398457a4bc6d8725",
@@ -174,9 +180,7 @@
             "c13baca0a8f18f1a"
         ],
         "x": 14,
-        "y": 1319,
-        "w": 3312,
-        "h": 462
+        "y": 1319
     },
     {
         "id": "b0ef14992c694846",
@@ -193,9 +197,7 @@
             "8f8ca6e8d858b872"
         ],
         "x": 34,
-        "y": 19,
-        "w": 472,
-        "h": 82
+        "y": 19
     },
     {
         "id": "d78c837be83c52b2",
@@ -282,9 +284,7 @@
             "f3fae0dbf2c5f9ec"
         ],
         "x": 14,
-        "y": 39,
-        "w": 1792,
-        "h": 642
+        "y": 39
     },
     {
         "id": "0dd2dfd7df691836",
@@ -358,9 +358,7 @@
             "b5f800450862f3cd"
         ],
         "x": 34,
-        "y": 119,
-        "w": 632,
-        "h": 322
+        "y": 119
     },
     {
         "id": "5bf7ccb6c6709633",
@@ -398,9 +396,7 @@
             "2f67916e0bc7be15"
         ],
         "x": 14,
-        "y": 879,
-        "w": 1372,
-        "h": 402
+        "y": 879
     },
     {
         "id": "fd9bc368cea45c71",
@@ -496,9 +492,7 @@
             "1e2c8c7cdacb7345"
         ],
         "x": 44,
-        "y": 39,
-        "w": 942,
-        "h": 762
+        "y": 39
     },
     {
         "id": "c8e4ab113b6b9056",
@@ -541,9 +535,7 @@
             "655fc308a4013906"
         ],
         "x": 1034,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "221ba791b89fb1e4",
@@ -793,95 +785,6 @@
         "wires": []
     },
     {
-        "id": "f03319fda5d70724",
-        "type": "http in",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "url": "/newList",
-        "method": "post",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 120,
-        "y": 480,
-        "wires": [
-            [
-                "8d45a4f01b3eefdf",
-                "ce22795126de9f29"
-            ]
-        ]
-    },
-    {
-        "id": "ce22795126de9f29",
-        "type": "function",
-        "z": "3db5a363b78466f5",
-        "name": "newList",
-        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"lists\";\n\nmsg.payload = {\n    ...msg.fromUI,\n    _id: objectid(),\n    deleted: false,\n    createdAt: new Date,\n    contactIDs: [],\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 360,
-        "y": 480,
-        "wires": [
-            [
-                "8d45a4f01b3eefdf",
-                "493ef1dd60b4ffc0"
-            ]
-        ]
-    },
-    {
-        "id": "493ef1dd60b4ffc0",
-        "type": "link call",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "links": [
-            "193774ea3ceea673"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 590,
-        "y": 480,
-        "wires": [
-            [
-                "8d45a4f01b3eefdf",
-                "18b4c77c99729d3d"
-            ]
-        ]
-    },
-    {
-        "id": "8d45a4f01b3eefdf",
-        "type": "debug",
-        "z": "3db5a363b78466f5",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 140,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "18b4c77c99729d3d",
-        "type": "http response",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 750,
-        "y": 480,
-        "wires": []
-    },
-    {
         "id": "1611828d794cb86d",
         "type": "http in",
         "z": "3db5a363b78466f5",
@@ -891,7 +794,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 820,
+        "y": 1240,
         "wires": [
             [
                 "53596ebf910458be",
@@ -916,7 +819,7 @@
             }
         ],
         "x": 360,
-        "y": 820,
+        "y": 1240,
         "wires": [
             [
                 "53596ebf910458be",
@@ -935,7 +838,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 590,
-        "y": 820,
+        "y": 1240,
         "wires": [
             [
                 "53596ebf910458be",
@@ -956,7 +859,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 860,
+        "y": 1280,
         "wires": []
     },
     {
@@ -967,7 +870,7 @@
         "statusCode": "",
         "headers": {},
         "x": 750,
-        "y": 820,
+        "y": 1240,
         "wires": []
     },
     {
@@ -992,7 +895,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1540,
+        "y": 1640,
         "wires": [
             [
                 "6919bc84caf16110"
@@ -1010,7 +913,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1540,
+        "y": 1640,
         "wires": [
             [
                 "8a77e92bf79ce345"
@@ -1030,15 +933,15 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1540,
+        "y": 1640,
         "wires": []
     },
     {
         "id": "6919bc84caf16110",
         "type": "function",
         "z": "3db5a363b78466f5",
-        "name": "contacts",
-        "func": "msg.collection = 'contacts';\n\n// msg.payload = {\n//     _id: objectid(),\n// };\n\nreturn msg;\n",
+        "name": "---",
+        "func": "msg.collection = 'contacts';\n\nmsg.payload = {\n    _id: '65eaecb9204d01110000001d'\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1049,8 +952,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 240,
-        "y": 1540,
+        "x": 230,
+        "y": 1640,
         "wires": [
             [
                 "bf4e03e8bc4c4c33"
@@ -1079,7 +982,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1580,
+        "y": 1680,
         "wires": [
             [
                 "9c39e956120ff1d7"
@@ -1097,7 +1000,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1580,
+        "y": 1680,
         "wires": [
             [
                 "2543c5f821c8da9a"
@@ -1117,7 +1020,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1580,
+        "y": 1680,
         "wires": []
     },
     {
@@ -1125,7 +1028,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "lists",
-        "func": "msg.collection = 'lists';\n\n// msg.query = {\n//     _id: objectid('65e98993204d011100000002'),\n// };\n\nmsg.payload = {\n    // _id: objectid('65e98993204d011100000002'),\n};\n\nreturn msg;\n",
+        "func": "msg.collection = 'lists';\n\n// msg.query = {\n//     _id: objectid('65eed5b1204d011100000030'),\n// };\n\nmsg.payload = {\n    _id: objectid('65ef443d204d011100000046'),\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1137,7 +1040,7 @@
             }
         ],
         "x": 230,
-        "y": 1580,
+        "y": 1680,
         "wires": [
             [
                 "c403afb8de1fdf9a"
@@ -1166,7 +1069,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1620,
+        "y": 1720,
         "wires": [
             [
                 "2e181ddb411d9b92"
@@ -1184,7 +1087,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1620,
+        "y": 1720,
         "wires": [
             [
                 "4573bb45913fbd76"
@@ -1204,7 +1107,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1620,
+        "y": 1720,
         "wires": []
     },
     {
@@ -1219,101 +1122,12 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 1620,
+        "y": 1720,
         "wires": [
             [
                 "87898c8ea5653f96"
             ]
         ]
-    },
-    {
-        "id": "afe14bdebb762a31",
-        "type": "http in",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "url": "/addToList",
-        "method": "put",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 120,
-        "y": 1000,
-        "wires": [
-            [
-                "4543de764df42d6c",
-                "a04c4d05431e905d"
-            ]
-        ]
-    },
-    {
-        "id": "a04c4d05431e905d",
-        "type": "function",
-        "z": "3db5a363b78466f5",
-        "name": "addToList",
-        "func": "msg.fromUI = msg.payload;\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 360,
-        "y": 1000,
-        "wires": [
-            [
-                "4543de764df42d6c",
-                "631b6508617082d7"
-            ]
-        ]
-    },
-    {
-        "id": "5f18c7ea8eab9432",
-        "type": "link call",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "links": [
-            "a724f172bc7c2de5"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 900,
-        "y": 1100,
-        "wires": [
-            [
-                "631b6508617082d7",
-                "307e57a68392ea3d"
-            ]
-        ]
-    },
-    {
-        "id": "4543de764df42d6c",
-        "type": "debug",
-        "z": "3db5a363b78466f5",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 140,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "a7375daee819e5b6",
-        "type": "http response",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 1130,
-        "y": 920,
-        "wires": []
     },
     {
         "id": "0658976922c54b67",
@@ -1325,7 +1139,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 250,
-        "y": 1260,
+        "y": 1360,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1350,7 +1164,7 @@
             }
         ],
         "x": 490,
-        "y": 1260,
+        "y": 1360,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1369,7 +1183,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 690,
-        "y": 1260,
+        "y": 1360,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1390,7 +1204,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 240,
-        "y": 1300,
+        "y": 1400,
         "wires": []
     },
     {
@@ -1401,7 +1215,7 @@
         "statusCode": "",
         "headers": {},
         "x": 850,
-        "y": 1260,
+        "y": 1360,
         "wires": []
     },
     {
@@ -1414,7 +1228,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 1360,
+        "y": 1460,
         "wires": [
             [
                 "914186e273076b7d",
@@ -1439,7 +1253,7 @@
             }
         ],
         "x": 370,
-        "y": 1360,
+        "y": 1460,
         "wires": [
             [
                 "914186e273076b7d",
@@ -1458,7 +1272,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 590,
-        "y": 1360,
+        "y": 1460,
         "wires": [
             [
                 "914186e273076b7d",
@@ -1479,7 +1293,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 1400,
+        "y": 1500,
         "wires": []
     },
     {
@@ -1490,7 +1304,7 @@
         "statusCode": "",
         "headers": {},
         "x": 970,
-        "y": 1360,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1515,7 +1329,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 1460,
+        "y": 1560,
         "wires": [
             [
                 "a27297e66a6abe07"
@@ -1544,7 +1358,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1660,
+        "y": 1760,
         "wires": [
             [
                 "7623b8e60a096f05"
@@ -1562,7 +1376,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1660,
+        "y": 1760,
         "wires": [
             [
                 "bac15085669840a3"
@@ -1582,7 +1396,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1660,
+        "y": 1760,
         "wires": []
     },
     {
@@ -1597,7 +1411,7 @@
         "finalize": "",
         "libs": [],
         "x": 260,
-        "y": 1660,
+        "y": 1760,
         "wires": [
             [
                 "1bda2083d6dea760"
@@ -1616,7 +1430,7 @@
         "finalize": "",
         "libs": [],
         "x": 820,
-        "y": 1360,
+        "y": 1460,
         "wires": [
             [
                 "b3fb0b87891dfbe5"
@@ -1645,7 +1459,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1760,
+        "y": 1860,
         "wires": [
             [
                 "e8384769bf28d8a1"
@@ -1663,7 +1477,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 440,
-        "y": 1760,
+        "y": 1860,
         "wires": [
             [
                 "60caa5caafe51245"
@@ -1683,7 +1497,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1760,
+        "y": 1860,
         "wires": []
     },
     {
@@ -1698,7 +1512,7 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 1760,
+        "y": 1860,
         "wires": [
             [
                 "fd9032dc3d062c2d"
@@ -1827,144 +1641,6 @@
         "wires": []
     },
     {
-        "id": "a148eaabd2352638",
-        "type": "http in",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "url": "/getLists",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 110,
-        "y": 600,
-        "wires": [
-            [
-                "491919effcf61399",
-                "1d5b0808453b5970"
-            ]
-        ]
-    },
-    {
-        "id": "1d5b0808453b5970",
-        "type": "function",
-        "z": "3db5a363b78466f5",
-        "name": "getLists",
-        "func": "msg.collection = \"lists\";\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 360,
-        "y": 600,
-        "wires": [
-            [
-                "491919effcf61399",
-                "7c2ad79f0d878edc"
-            ]
-        ]
-    },
-    {
-        "id": "7c2ad79f0d878edc",
-        "type": "link call",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "links": [
-            "ba97e8986832bd94"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 590,
-        "y": 600,
-        "wires": [
-            [
-                "491919effcf61399",
-                "98ce039bfecd322a"
-            ]
-        ]
-    },
-    {
-        "id": "491919effcf61399",
-        "type": "debug",
-        "z": "3db5a363b78466f5",
-        "name": "debug 17",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 140,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "f47ebcd88b05288f",
-        "type": "http response",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 930,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "98ce039bfecd322a",
-        "type": "function",
-        "z": "3db5a363b78466f5",
-        "name": "prepare for ui",
-        "func": "msg.payload = msg.payload.map(list => ({\n    label: list.name,\n    value: list._id,\n}));\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 780,
-        "y": 600,
-        "wires": [
-            [
-                "f47ebcd88b05288f",
-                "491919effcf61399"
-            ]
-        ]
-    },
-    {
-        "id": "93399744a682298f",
-        "type": "inject",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 220,
-        "y": 680,
-        "wires": [
-            [
-                "1d5b0808453b5970"
-            ]
-        ]
-    },
-    {
         "id": "ae4065fff567fd39",
         "type": "http in",
         "z": "3db5a363b78466f5",
@@ -1987,7 +1663,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "getContacts",
-        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"contacts\";\n\nmsg.payload = {};\n\nif (msg.fromUI.owner) {\n    msg.payload.contactOwner = msg.fromUI.owner;\n}\n\nif (msg.fromUI.deal) {\n    msg.payload.dealStage = msg.fromUI.deal;\n}\n\nif (msg.fromUI.lead) {\n    msg.payload.leadStatus = msg.fromUI.lead;\n}\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"contacts\";\n\nmsg.payload = {\n    deleted: false,\n};\n\nif (msg.fromUI.owner) {\n    msg.payload.contactOwner = msg.fromUI.owner;\n}\n\nif (msg.fromUI.deal) {\n    msg.payload.dealStage = msg.fromUI.deal;\n}\n\nif (msg.fromUI.lead) {\n    msg.payload.leadStatus = msg.fromUI.lead;\n}\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2103,35 +1779,29 @@
         ]
     },
     {
-        "id": "631b6508617082d7",
-        "type": "array-loop",
-        "z": "3db5a363b78466f5",
+        "id": "f03319fda5d70724",
+        "type": "http in",
+        "z": "04949f39d52b1544",
         "name": "",
-        "key": "al631b6508617082d7",
-        "keyType": "msg",
-        "reset": false,
-        "resetValue": "value-null",
-        "array": "fromUI.contacts",
-        "arrayType": "msg",
-        "x": 720,
-        "y": 1000,
+        "url": "/newList",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 80,
         "wires": [
             [
-                "c3e6669ed9bd2a2d",
-                "a7375daee819e5b6"
-            ],
-            [
-                "2bf6a44f4ed568e6",
-                "307e57a68392ea3d"
+                "8d45a4f01b3eefdf",
+                "ce22795126de9f29"
             ]
         ]
     },
     {
-        "id": "2bf6a44f4ed568e6",
+        "id": "ce22795126de9f29",
         "type": "function",
-        "z": "3db5a363b78466f5",
-        "name": "addToList",
-        "func": "msg.collection = \"list\";\nmsg.query = {\n    _id: objectid(msg.fromUI.listID),\n};\n\n\nmsg.payload = {};\n\nmsg.payload.contactID.push(msg.payload)\n\nreturn msg;\n",
+        "z": "04949f39d52b1544",
+        "name": "getUserData",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"admins\";\nmsg.payload = {\n    _id: objectid(msg.fromUI.listCreatorID),\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2142,20 +1812,38 @@
                 "module": "objectid"
             }
         ],
-        "x": 720,
-        "y": 1100,
+        "x": 310,
+        "y": 80,
         "wires": [
             [
-                "307e57a68392ea3d",
-                "5f18c7ea8eab9432"
+                "8d45a4f01b3eefdf",
+                "4f3df7caf11473e9"
             ]
         ]
     },
     {
-        "id": "307e57a68392ea3d",
+        "id": "493ef1dd60b4ffc0",
+        "type": "link call",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "links": [
+            "193774ea3ceea673"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 850,
+        "y": 80,
+        "wires": [
+            [
+                "18b4c77c99729d3d"
+            ]
+        ]
+    },
+    {
+        "id": "8d45a4f01b3eefdf",
         "type": "debug",
-        "z": "3db5a363b78466f5",
-        "name": "debug 19",
+        "z": "04949f39d52b1544",
+        "name": "debug 6",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -2163,14 +1851,226 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1020,
+        "x": 140,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "18b4c77c99729d3d",
+        "type": "http response",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "afe14bdebb762a31",
+        "type": "http in",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "url": "/addToList",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 660,
+        "wires": [
+            [
+                "2bf6a44f4ed568e6"
+            ]
+        ]
+    },
+    {
+        "id": "5f18c7ea8eab9432",
+        "type": "link call",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 540,
+        "y": 660,
+        "wires": [
+            [
+                "6fd7015cfb9aef9a",
+                "609661c9ac83776d"
+            ]
+        ]
+    },
+    {
+        "id": "a148eaabd2352638",
+        "type": "http in",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "url": "/getLists",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 980,
+        "wires": [
+            [
+                "491919effcf61399",
+                "1d5b0808453b5970"
+            ]
+        ]
+    },
+    {
+        "id": "1d5b0808453b5970",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "getLists",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"lists\";\nmsg.payload = {\n    deleted: false,\n};\n\nif (msg.fromUI.listCreatorID) {\n    msg.payload.creatorID = msg.fromUI.listCreatorID;\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 360,
+        "y": 980,
+        "wires": [
+            [
+                "491919effcf61399",
+                "7c2ad79f0d878edc"
+            ]
+        ]
+    },
+    {
+        "id": "7c2ad79f0d878edc",
+        "type": "link call",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 550,
+        "y": 980,
+        "wires": [
+            [
+                "491919effcf61399",
+                "98ce039bfecd322a"
+            ]
+        ]
+    },
+    {
+        "id": "491919effcf61399",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "f47ebcd88b05288f",
+        "type": "http response",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
         "y": 980,
         "wires": []
     },
     {
+        "id": "98ce039bfecd322a",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "prepare for ui",
+        "func": "switch (msg.fromUI.responseType) {\n    case 'forSelector':\n        msg.payload = msg.payload.map(list => ({\n            label: list.name,\n            value: list._id,\n        }));\n\n        break;\n\n    case 'forTable':\n        msg.payload = msg.payload.map(list => ({\n            listID: list._id,\n            'name': list.name,\n            'description': list.description,\n            'listCreatorID': list.creatorID,\n            'listCreatorEmail': list.creatorEmail,\n            'listCreatorName': list.creatorName,\n        }));\n\n        break;\n\n    default:\n        return msg;\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 980,
+        "wires": [
+            [
+                "f47ebcd88b05288f",
+                "491919effcf61399",
+                "79d5e67bab090f73"
+            ]
+        ]
+    },
+    {
+        "id": "93399744a682298f",
+        "type": "inject",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1060,
+        "wires": [
+            [
+                "1d5b0808453b5970"
+            ]
+        ]
+    },
+    {
+        "id": "2bf6a44f4ed568e6",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "to mongo",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"lists\";\nmsg.query = {\n    _id: msg.fromUI.listID,\n};\n\nmsg.payload = {\n    $addToSet: { contactIDs: { $each: msg.fromUI.contacts } }\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 340,
+        "y": 660,
+        "wires": [
+            [
+                "5f18c7ea8eab9432",
+                "c3e6669ed9bd2a2d"
+            ]
+        ]
+    },
+    {
         "id": "c3e6669ed9bd2a2d",
         "type": "debug",
-        "z": "3db5a363b78466f5",
+        "z": "04949f39d52b1544",
         "name": "debug 20",
         "active": true,
         "tosidebar": true,
@@ -2179,9 +2079,589 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 900,
+        "x": 340,
+        "y": 700,
         "wires": []
+    },
+    {
+        "id": "6fd7015cfb9aef9a",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "609661c9ac83776d",
+        "type": "http response",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "c3edeb52ba2a5990",
+        "type": "http in",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "url": "/removeFromList",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 760,
+        "wires": [
+            [
+                "c44f34bb55cf60f5"
+            ]
+        ]
+    },
+    {
+        "id": "55e2454dbbdfdbaa",
+        "type": "link call",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 540,
+        "y": 760,
+        "wires": [
+            [
+                "ea71ea2583b9903c",
+                "2fb6f3ee06c38855"
+            ]
+        ]
+    },
+    {
+        "id": "c44f34bb55cf60f5",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "to mongo",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"lists\";\nmsg.query = {\n    _id: msg.fromUI.listID,\n};\n\nmsg.payload = {\n    $pull: { \"contactIDs\": { $in: msg.fromUI.contacts }}\n};\n\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 340,
+        "y": 760,
+        "wires": [
+            [
+                "55e2454dbbdfdbaa",
+                "34feef178181aa42"
+            ]
+        ]
+    },
+    {
+        "id": "34feef178181aa42",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "ea71ea2583b9903c",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "2fb6f3ee06c38855",
+        "type": "http response",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "79d5e67bab090f73",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "4f3df7caf11473e9",
+        "type": "link call",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 490,
+        "y": 80,
+        "wires": [
+            [
+                "7c99b7fc32fd2682",
+                "32cad6f091a26637"
+            ]
+        ]
+    },
+    {
+        "id": "32cad6f091a26637",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "newList",
+        "func": "msg.user = msg.payload[0];\n\nmsg.collection = \"lists\";\nmsg.payload = {\n    name: msg.fromUI.name,\n    description: msg.fromUI.description,\n    creatorID: msg.fromUI.listCreatorID,\n\n    creatorName: `${msg.user.firstname} ${msg.user.lastname}`,\n    creatorEmail: msg.user.email,\n    \n    _id: objectid(),\n    deleted: false,\n    createdAt: new Date,\n    contactIDs: [],\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 680,
+        "y": 80,
+        "wires": [
+            [
+                "493ef1dd60b4ffc0",
+                "7c99b7fc32fd2682"
+            ]
+        ]
+    },
+    {
+        "id": "7c99b7fc32fd2682",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "502e5a88512775b2",
+        "type": "http in",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "url": "/editList",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "bf9f415d224a9a16",
+                "c8f9276c9e54a134"
+            ]
+        ]
+    },
+    {
+        "id": "a95defc783cd0463",
+        "type": "link call",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 540,
+        "y": 260,
+        "wires": [
+            [
+                "a0e956b5641a6cde",
+                "6fc0a090ff1793ad"
+            ]
+        ]
+    },
+    {
+        "id": "c8f9276c9e54a134",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "to mongo",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"lists\";\nmsg.query = {\n    _id: msg.fromUI.listID,\n};\n\nmsg.payload = {\n    $set: {\n        name: msg.fromUI.name,\n        description: msg.fromUI.description,\n    },\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 340,
+        "y": 260,
+        "wires": [
+            [
+                "a95defc783cd0463",
+                "410721fc06d68a48"
+            ]
+        ]
+    },
+    {
+        "id": "410721fc06d68a48",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a0e956b5641a6cde",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6fc0a090ff1793ad",
+        "type": "http response",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "bf9f415d224a9a16",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d696f10d05f9bfbc",
+        "type": "http in",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "url": "/getListContacts",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 1240,
+        "wires": [
+            [
+                "a7da04479a06ceba"
+            ]
+        ]
+    },
+    {
+        "id": "c16555819b98820a",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "to contacts",
+        "func": "msg.contactIDs = msg.payload[0].contactIDs;\n\nconst objectIds = msg.contactIDs.map(id => objectid(id));\nnode.warn(objectIds);\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    _id: { $in: objectIds },\n};\n\nif (msg.fromUI.owner) {\n    msg.payload.contactOwner = msg.fromUI.owner;\n}\n\nif (msg.fromUI.deal) {\n    msg.payload.dealStage = msg.fromUI.deal;\n}\n\nif (msg.fromUI.lead) {\n    msg.payload.leadStatus = msg.fromUI.lead;\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 610,
+        "y": 1240,
+        "wires": [
+            [
+                "1d719c19432433b9"
+            ]
+        ]
+    },
+    {
+        "id": "1d719c19432433b9",
+        "type": "link call",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 770,
+        "y": 1240,
+        "wires": [
+            [
+                "21860ef23eada82d"
+            ]
+        ]
+    },
+    {
+        "id": "78c7715a4124010e",
+        "type": "http response",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1090,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "21860ef23eada82d",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "prepare for ui",
+        "func": "// msg.payload = msg.payload.map(list => ({\n//     label: list.name,\n//     value: list._id,\n// }));\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1240,
+        "wires": [
+            [
+                "78c7715a4124010e"
+            ]
+        ]
+    },
+    {
+        "id": "beb99cad446ff413",
+        "type": "http in",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "url": "/deleteList",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 440,
+        "wires": [
+            [
+                "31e1bd57f8c1815d",
+                "4b373b961f5828e1"
+            ]
+        ]
+    },
+    {
+        "id": "4f4adbf1d2a6e4d5",
+        "type": "link call",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 540,
+        "y": 440,
+        "wires": [
+            [
+                "8b813dab4d88a6a9",
+                "41c7c8de697bb625"
+            ]
+        ]
+    },
+    {
+        "id": "4b373b961f5828e1",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "to mongo",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"lists\";\nmsg.query = {\n    _id: msg.fromUI.listID,\n};\n\nmsg.payload = {\n    $set: {\n        deleted: true,\n    },\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 340,
+        "y": 440,
+        "wires": [
+            [
+                "4f4adbf1d2a6e4d5",
+                "bb7cf420a7d4520a"
+            ]
+        ]
+    },
+    {
+        "id": "bb7cf420a7d4520a",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "8b813dab4d88a6a9",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "41c7c8de697bb625",
+        "type": "http response",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "31e1bd57f8c1815d",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a7da04479a06ceba",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "to list",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"lists\";\nmsg.payload = {\n    _id: objectid(msg.fromUI.list),\n    deleted: false,\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 310,
+        "y": 1240,
+        "wires": [
+            [
+                "049978f2fdd4b154"
+            ]
+        ]
+    },
+    {
+        "id": "049978f2fdd4b154",
+        "type": "link call",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 450,
+        "y": 1240,
+        "wires": [
+            [
+                "c16555819b98820a"
+            ]
+        ]
     },
     {
         "id": "ba97e8986832bd94",
@@ -2353,7 +2833,7 @@
         "collection": "",
         "payonly": false,
         "upsert": false,
-        "multi": false,
+        "multi": true,
         "operation": "update",
         "x": 580,
         "y": 300,
@@ -4980,54 +5460,6 @@
         "x": 300,
         "y": 640,
         "wires": []
-    },
-    {
-        "id": "beea17c236095e3e",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "name": "function 595",
-        "func": "msg.payload = {\n    email: 'sacecag764@artgulin.com',\n    password: 'sacecag764@artgulin.com',\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 250,
-        "y": 1840,
-        "wires": [
-            [
-                "2cd98c7afab56662"
-            ]
-        ]
-    },
-    {
-        "id": "29aba3eed1bd4ed5",
-        "type": "inject",
-        "z": "c8b39bad946d8ab6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 1840,
-        "wires": [
-            [
-                "beea17c236095e3e"
-            ]
-        ]
     },
     {
         "id": "081c8c3d3092e3d2",
