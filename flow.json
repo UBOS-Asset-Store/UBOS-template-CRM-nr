@@ -824,7 +824,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "getDeals",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.payload = {\n    deleted: false\n};\n\nif (msg.fromUI.owner) {\n    msg.payload.owner = msg.fromUI.owner;\n}\n\nif (msg.fromUI.deal) {\n    msg.payload.stage = msg.fromUI.deal;\n}\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1194,6 +1194,248 @@
         "statusType": "auto",
         "x": 1000,
         "y": 480,
+        "wires": []
+    },
+    {
+        "id": "872a895b50981ca6",
+        "type": "http in",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "url": "/editDeal",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 680,
+        "wires": [
+            [
+                "172c85cff4faa9f5",
+                "a5823dc0ae75b267"
+            ]
+        ]
+    },
+    {
+        "id": "1498d00fb731170c",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 540,
+        "y": 680,
+        "wires": [
+            [
+                "8f422060d13ef448",
+                "2758945273714598"
+            ]
+        ]
+    },
+    {
+        "id": "a5823dc0ae75b267",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "to mongo",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        name: msg.fromUI.DealName,\n        stage: msg.fromUI.DealStage,\n        amount: msg.fromUI.Amount,\n        closeDate: msg.fromUI.CloseDate,\n        priority: msg.fromUI.Priority,\n    },\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 320,
+        "y": 680,
+        "wires": [
+            [
+                "1498d00fb731170c",
+                "604d1c9b083a4f10"
+            ]
+        ]
+    },
+    {
+        "id": "604d1c9b083a4f10",
+        "type": "debug",
+        "z": "291b0c173e143ef0",
+        "name": "debug 49",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "8f422060d13ef448",
+        "type": "debug",
+        "z": "291b0c173e143ef0",
+        "name": "debug 50",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "2758945273714598",
+        "type": "http response",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 700,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "172c85cff4faa9f5",
+        "type": "debug",
+        "z": "291b0c173e143ef0",
+        "name": "debug 51",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 120,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "014dd7f8a6cb3b9e",
+        "type": "http in",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "url": "/deleteDeal",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 940,
+        "wires": [
+            [
+                "a17f474364540d14",
+                "e27452a2a81c710e"
+            ]
+        ]
+    },
+    {
+        "id": "2e446f0dd0de8f16",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 530,
+        "y": 940,
+        "wires": [
+            [
+                "57b9eef22164c6f0",
+                "f2c46c8214b966e5"
+            ]
+        ]
+    },
+    {
+        "id": "e27452a2a81c710e",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "to mongo",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        deleted: true,\n    },\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 310,
+        "y": 940,
+        "wires": [
+            [
+                "2e446f0dd0de8f16",
+                "0d5c28677f0e0864"
+            ]
+        ]
+    },
+    {
+        "id": "0d5c28677f0e0864",
+        "type": "debug",
+        "z": "291b0c173e143ef0",
+        "name": "debug 52",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "57b9eef22164c6f0",
+        "type": "debug",
+        "z": "291b0c173e143ef0",
+        "name": "debug 53",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "f2c46c8214b966e5",
+        "type": "http response",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "a17f474364540d14",
+        "type": "debug",
+        "z": "291b0c173e143ef0",
+        "name": "debug 54",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 142.6666717529297,
+        "y": 984.6666870117188,
         "wires": []
     },
     {
