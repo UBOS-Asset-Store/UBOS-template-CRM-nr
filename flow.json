@@ -1,5 +1,13 @@
 [
     {
+        "id": "291b0c173e143ef0",
+        "type": "tab",
+        "label": "Deals",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "3db5a363b78466f5",
         "type": "tab",
         "label": "Contacts",
@@ -120,7 +128,9 @@
             "a2b1bc579a4c0ced"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 932,
+        "h": 122
     },
     {
         "id": "398457a4bc6d8725",
@@ -180,7 +190,9 @@
             "c13baca0a8f18f1a"
         ],
         "x": 14,
-        "y": 1319
+        "y": 1319,
+        "w": 3312,
+        "h": 462
     },
     {
         "id": "b0ef14992c694846",
@@ -285,7 +297,9 @@
             "171297511238480d"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 1792,
+        "h": 642
     },
     {
         "id": "0dd2dfd7df691836",
@@ -397,7 +411,9 @@
             "2f67916e0bc7be15"
         ],
         "x": 14,
-        "y": 879
+        "y": 879,
+        "w": 1372,
+        "h": 402
     },
     {
         "id": "fd9bc368cea45c71",
@@ -697,6 +713,490 @@
         ]
     },
     {
+        "id": "1611828d794cb86d",
+        "type": "http in",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "url": "/newDeal",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "53596ebf910458be",
+                "779e0686b69cadf6"
+            ]
+        ]
+    },
+    {
+        "id": "53596ebf910458be",
+        "type": "debug",
+        "z": "291b0c173e143ef0",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "779e0686b69cadf6",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "newDeal",
+        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"deals\";\n\nmsg.payload = {\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n    ...msg.fromUI,\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 360,
+        "y": 60,
+        "wires": [
+            [
+                "53596ebf910458be",
+                "a6ca2e5f2849d584"
+            ]
+        ]
+    },
+    {
+        "id": "a6ca2e5f2849d584",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "193774ea3ceea673"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 590,
+        "y": 60,
+        "wires": [
+            [
+                "53596ebf910458be",
+                "2924389c5e5332f2"
+            ]
+        ]
+    },
+    {
+        "id": "2924389c5e5332f2",
+        "type": "http response",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 750,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "1caf7887df4af2a7",
+        "type": "http in",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "url": "/getDeals",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "dbfa879fbd03220a",
+                "f722d7cce8d7a468"
+            ]
+        ]
+    },
+    {
+        "id": "f722d7cce8d7a468",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "getDeals",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "dbfa879fbd03220a",
+                "79a0093a898d159f"
+            ]
+        ]
+    },
+    {
+        "id": "79a0093a898d159f",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 470,
+        "y": 240,
+        "wires": [
+            [
+                "dbfa879fbd03220a",
+                "928184e57c0da8fd"
+            ]
+        ]
+    },
+    {
+        "id": "dbfa879fbd03220a",
+        "type": "debug",
+        "z": "291b0c173e143ef0",
+        "name": "debug 45",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "c075c10d6ab37070",
+        "type": "http response",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1150,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "96b36b35400a49cc",
+        "type": "inject",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "f722d7cce8d7a468"
+            ]
+        ]
+    },
+    {
+        "id": "928184e57c0da8fd",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "getOwners",
+        "func": "msg.deals = msg.payload; // save deals for future \n\nmsg.collection = \"admins\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 650,
+        "y": 240,
+        "wires": [
+            [
+                "f2f98ce4a6f16476"
+            ]
+        ]
+    },
+    {
+        "id": "f2f98ce4a6f16476",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 810,
+        "y": 240,
+        "wires": [
+            [
+                "526bce4591c7ae53"
+            ]
+        ]
+    },
+    {
+        "id": "526bce4591c7ae53",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "prepare for UI",
+        "func": "msg.owners = msg.payload;\n// msg.owners = msg.owners.map(e => (\n//     {\n//         _id: e._id,\n//         email: e.email,\n//         firstname: e.firstname,\n//         lastname: e.lastname,\n//     }\n// ));\n\nmsg.deals = msg.deals.map(e => {    \n    return {\n        dealID: e._id,\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        closeDate: e.closeDate,\n        priority: e.priority,\n        ownerID: e.owner,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n    };\n});\n\nmsg.payload = msg.deals;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 240,
+        "wires": [
+            [
+                "c075c10d6ab37070",
+                "81d47a72d453604e"
+            ]
+        ]
+    },
+    {
+        "id": "81d47a72d453604e",
+        "type": "debug",
+        "z": "291b0c173e143ef0",
+        "name": "debug 46",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "b66115a7dcc1ff71",
+        "type": "http in",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "url": "/getDeal",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "2fb1d9ac8e766369",
+                "d89e317c984047d9"
+            ]
+        ]
+    },
+    {
+        "id": "d89e317c984047d9",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "getDeal",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.payload = {\n    _id: objectid(msg.fromUI.dealID),\n    deleted: false\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "2fb1d9ac8e766369",
+                "1c1bb517c2fc831c"
+            ]
+        ]
+    },
+    {
+        "id": "1c1bb517c2fc831c",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 470,
+        "y": 440,
+        "wires": [
+            [
+                "2fb1d9ac8e766369",
+                "b6367eaa15460e77"
+            ]
+        ]
+    },
+    {
+        "id": "2fb1d9ac8e766369",
+        "type": "debug",
+        "z": "291b0c173e143ef0",
+        "name": "debug 47",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "a311e6a3b2036066",
+        "type": "http response",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1150,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d81da4372544ff2f",
+        "type": "inject",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 400,
+        "wires": [
+            [
+                "d89e317c984047d9"
+            ]
+        ]
+    },
+    {
+        "id": "b6367eaa15460e77",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "getOwners",
+        "func": "msg.deals = msg.payload; // save deals for future \n\nmsg.collection = \"admins\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 650,
+        "y": 440,
+        "wires": [
+            [
+                "3f1bf027224f4785",
+                "b35d459943532d28"
+            ]
+        ]
+    },
+    {
+        "id": "3f1bf027224f4785",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 810,
+        "y": 440,
+        "wires": [
+            [
+                "dfa4fa357c591b6c"
+            ]
+        ]
+    },
+    {
+        "id": "dfa4fa357c591b6c",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "prepare for UI",
+        "func": "msg.owners = msg.payload;\n// msg.owners = msg.owners.map(e => (\n//     {\n//         _id: e._id,\n//         email: e.email,\n//         firstname: e.firstname,\n//         lastname: e.lastname,\n//     }\n// ));\n\nmsg.deals = msg.deals.map(e => {    \n    return {\n        dealID: e._id,\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        closeDate: e.closeDate,\n        priority: e.priority,\n        ownerID: e.owner,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n    };\n});\n\nmsg.payload = msg.deals[0];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 440,
+        "wires": [
+            [
+                "a311e6a3b2036066",
+                "b35d459943532d28"
+            ]
+        ]
+    },
+    {
+        "id": "b35d459943532d28",
+        "type": "debug",
+        "z": "291b0c173e143ef0",
+        "name": "debug 48",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 480,
+        "wires": []
+    },
+    {
         "id": "587c4d3f26fe4852",
         "type": "http in",
         "z": "3db5a363b78466f5",
@@ -786,95 +1286,6 @@
         "wires": []
     },
     {
-        "id": "1611828d794cb86d",
-        "type": "http in",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "url": "/newDeal",
-        "method": "post",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 560,
-        "y": 720,
-        "wires": [
-            [
-                "53596ebf910458be",
-                "779e0686b69cadf6"
-            ]
-        ]
-    },
-    {
-        "id": "779e0686b69cadf6",
-        "type": "function",
-        "z": "3db5a363b78466f5",
-        "name": "newDeal",
-        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"deals\";\n\nmsg.payload = {\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n    ...msg.fromUI,\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 800,
-        "y": 720,
-        "wires": [
-            [
-                "53596ebf910458be",
-                "a6ca2e5f2849d584"
-            ]
-        ]
-    },
-    {
-        "id": "a6ca2e5f2849d584",
-        "type": "link call",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "links": [
-            "193774ea3ceea673"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 1030,
-        "y": 720,
-        "wires": [
-            [
-                "53596ebf910458be",
-                "2924389c5e5332f2"
-            ]
-        ]
-    },
-    {
-        "id": "53596ebf910458be",
-        "type": "debug",
-        "z": "3db5a363b78466f5",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "2924389c5e5332f2",
-        "type": "http response",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 1190,
-        "y": 720,
-        "wires": []
-    },
-    {
         "id": "8939051f184e68e3",
         "type": "inject",
         "z": "3db5a363b78466f5",
@@ -896,7 +1307,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1420,
+        "y": 1600,
         "wires": [
             [
                 "6919bc84caf16110"
@@ -914,7 +1325,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1420,
+        "y": 1600,
         "wires": [
             [
                 "8a77e92bf79ce345"
@@ -934,7 +1345,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1420,
+        "y": 1600,
         "wires": []
     },
     {
@@ -942,7 +1353,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "---",
-        "func": "msg.collection = 'contacts';\n\nmsg.payload = {\n    _id: '65eaecb9204d01110000001d'\n};\n\nreturn msg;\n",
+        "func": "msg.collection = 'admins';\n\n// msg.payload = {\n//     _id: '65eaecb9204d01110000001d'\n// };\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -954,7 +1365,7 @@
             }
         ],
         "x": 230,
-        "y": 1420,
+        "y": 1600,
         "wires": [
             [
                 "bf4e03e8bc4c4c33"
@@ -983,7 +1394,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1460,
+        "y": 1640,
         "wires": [
             [
                 "9c39e956120ff1d7"
@@ -1001,7 +1412,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1460,
+        "y": 1640,
         "wires": [
             [
                 "2543c5f821c8da9a"
@@ -1021,7 +1432,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1460,
+        "y": 1640,
         "wires": []
     },
     {
@@ -1029,7 +1440,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "lists",
-        "func": "msg.collection = 'lists';\n\n// msg.query = {\n//     _id: objectid('65eed5b1204d011100000030'),\n// };\n\nmsg.payload = {\n    _id: objectid('65ef443d204d011100000046'),\n};\n\nreturn msg;\n",
+        "func": "msg.collection = 'lists';\n\n// msg.query = {\n//     _id: objectid('65eed5b1204d011100000030'),\n// };\n\n// msg.payload = {\n//     _id: objectid('65ef443d204d011100000046'),\n// };\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1041,7 +1452,7 @@
             }
         ],
         "x": 230,
-        "y": 1460,
+        "y": 1640,
         "wires": [
             [
                 "c403afb8de1fdf9a"
@@ -1070,7 +1481,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1500,
+        "y": 1680,
         "wires": [
             [
                 "2e181ddb411d9b92"
@@ -1088,7 +1499,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1500,
+        "y": 1680,
         "wires": [
             [
                 "4573bb45913fbd76"
@@ -1108,7 +1519,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1500,
+        "y": 1680,
         "wires": []
     },
     {
@@ -1123,7 +1534,7 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 1500,
+        "y": 1680,
         "wires": [
             [
                 "87898c8ea5653f96"
@@ -1359,7 +1770,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1540,
+        "y": 1720,
         "wires": [
             [
                 "7623b8e60a096f05"
@@ -1377,7 +1788,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1540,
+        "y": 1720,
         "wires": [
             [
                 "bac15085669840a3"
@@ -1397,7 +1808,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1540,
+        "y": 1720,
         "wires": []
     },
     {
@@ -1412,7 +1823,7 @@
         "finalize": "",
         "libs": [],
         "x": 260,
-        "y": 1540,
+        "y": 1720,
         "wires": [
             [
                 "1bda2083d6dea760"
@@ -1460,7 +1871,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1640,
+        "y": 1820,
         "wires": [
             [
                 "e8384769bf28d8a1"
@@ -1478,7 +1889,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 440,
-        "y": 1640,
+        "y": 1820,
         "wires": [
             [
                 "60caa5caafe51245"
@@ -1498,7 +1909,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1640,
+        "y": 1820,
         "wires": []
     },
     {
@@ -1513,7 +1924,7 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 1640,
+        "y": 1820,
         "wires": [
             [
                 "fd9032dc3d062c2d"
@@ -2157,6 +2568,115 @@
         "statusType": "auto",
         "x": 140,
         "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "ae0bc8eaec3a9c84",
+        "type": "http in",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "url": "/getContactLists",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 1380,
+        "wires": [
+            [
+                "f6fb8eee69b4320d",
+                "024aa50b8981b309"
+            ]
+        ]
+    },
+    {
+        "id": "a43d36d64e1d0350",
+        "type": "http response",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "816b5e65576cd59d",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "prepare for ui",
+        "func": "msg.payload = msg.payload.map(list => ({\n    name: list.name,\n    listID: list._id,\n}));\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 1380,
+        "wires": [
+            [
+                "a43d36d64e1d0350",
+                "024aa50b8981b309"
+            ]
+        ]
+    },
+    {
+        "id": "f6fb8eee69b4320d",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "to list",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"lists\";\nmsg.payload = {\n    \"contactIDs\": { $elemMatch: { $eq: msg.fromUI.contactID }},\n    deleted: false,\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 290,
+        "y": 1380,
+        "wires": [
+            [
+                "7000f5c794e0e2a9",
+                "024aa50b8981b309"
+            ]
+        ]
+    },
+    {
+        "id": "7000f5c794e0e2a9",
+        "type": "link call",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 430,
+        "y": 1380,
+        "wires": [
+            [
+                "024aa50b8981b309",
+                "816b5e65576cd59d"
+            ]
+        ]
+    },
+    {
+        "id": "024aa50b8981b309",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 44",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1480,
         "wires": []
     },
     {
@@ -3043,110 +3563,6 @@
                 "c16555819b98820a"
             ]
         ]
-    },
-    {
-        "id": "f6202fe7f8d00095",
-        "type": "http in",
-        "z": "04949f39d52b1544",
-        "name": "",
-        "url": "/-----------removeFromList",
-        "method": "put",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 170,
-        "y": 1200,
-        "wires": [
-            [
-                "ee5f4c85d8f9dac0"
-            ]
-        ]
-    },
-    {
-        "id": "94d00735b01323d2",
-        "type": "link call",
-        "z": "04949f39d52b1544",
-        "name": "",
-        "links": [
-            "a724f172bc7c2de5"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 580,
-        "y": 1200,
-        "wires": [
-            [
-                "f827be5bdf896a17",
-                "d025c51bd077572b"
-            ]
-        ]
-    },
-    {
-        "id": "ee5f4c85d8f9dac0",
-        "type": "function",
-        "z": "04949f39d52b1544",
-        "name": "to mongo",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"lists\";\nmsg.query = {\n    _id: msg.fromUI.listID,\n};\n\nmsg.payload = {\n    $pull: { \"contactIDs\": { $in: msg.fromUI.contacts }}\n};\n\n\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 380,
-        "y": 1200,
-        "wires": [
-            [
-                "94d00735b01323d2",
-                "56029f9cd8f165c7"
-            ]
-        ]
-    },
-    {
-        "id": "56029f9cd8f165c7",
-        "type": "debug",
-        "z": "04949f39d52b1544",
-        "name": "debug 33",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 380,
-        "y": 1240,
-        "wires": []
-    },
-    {
-        "id": "f827be5bdf896a17",
-        "type": "debug",
-        "z": "04949f39d52b1544",
-        "name": "debug 34",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 1240,
-        "wires": []
-    },
-    {
-        "id": "d025c51bd077572b",
-        "type": "http response",
-        "z": "04949f39d52b1544",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 770,
-        "y": 1200,
-        "wires": []
     },
     {
         "id": "700f74e12d842ae7",
@@ -5176,7 +5592,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "d78377c07a215120",
         "name": "check user permissions",
-        "func": "const pageName = msg.check.page_id.replace('%20', ' ');\n\nconst parentPage = msg.menu.map((el) => el.label).includes(pageName);\nconst childPage = msg.menu.filter((e) => e.children.length > 0).flatMap((el) => el.children).map((elem) => elem.label).includes(pageName);\n\nif (parentPage || childPage) {\n\n\n    msg.menu.pop(); //------------\n    msg.menu.pop();//-------------\n    node.warn(msg.menu);\n    // delete msg.menu;\n    // const msg.menu = msg.menu.map((el) => el.label).includes(pageName);\n\n\n    msg.statusCode = 200;\n    msg.payload = {\n        auth: \"Success\",\n        code: 200,\n        user: {\n            \"menu\": msg.menu,\n            \"permission\": msg.permissions,\n            \"translation\": msg.payload.translation[0],\n            \"info\": msg.user,\n            // \"attributes\": msg.user.user.attributes\n        }\n    }\n\n} else {\n\n    msg.payload = {\n        auth: \"Unautorizate\",\n        code: 401,\n        login_id: msg.menu[0].value + `?pageName=${msg.menu[0].value}`,\n        app_id: msg.check.app_id\n    }\n\n}\nreturn msg;",
+        "func": "const pageName = msg.check.page_id.replace('%20', ' ');\n\nconst parentPage = msg.menu.map((el) => el.label).includes(pageName);\nconst childPage = msg.menu.filter((e) => e.children.length > 0).flatMap((el) => el.children).map((elem) => elem.label).includes(pageName);\n\nif (parentPage || childPage) {\n\n\n    msg.menu.pop(); //------------\n    msg.menu.pop();//-------------\n    msg.menu.pop();//-------------\n    node.warn(msg.menu);\n    // delete msg.menu;\n    // const msg.menu = msg.menu.map((el) => el.label).includes(pageName);\n\n\n    msg.statusCode = 200;\n    msg.payload = {\n        auth: \"Success\",\n        code: 200,\n        user: {\n            \"menu\": msg.menu,\n            \"permission\": msg.permissions,\n            \"translation\": msg.payload.translation[0],\n            \"info\": msg.user,\n            // \"attributes\": msg.user.user.attributes\n        }\n    }\n\n} else {\n\n    msg.payload = {\n        auth: \"Unautorizate\",\n        code: 401,\n        login_id: msg.menu[0].value + `?pageName=${msg.menu[0].value}`,\n        app_id: msg.check.app_id\n    }\n\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
