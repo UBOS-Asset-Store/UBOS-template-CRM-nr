@@ -281,7 +281,8 @@
             "c6738f0c897830ef",
             "769c853fb108cedb",
             "d2bd362abdcf67e2",
-            "f3fae0dbf2c5f9ec"
+            "f3fae0dbf2c5f9ec",
+            "171297511238480d"
         ],
         "x": 14,
         "y": 39
@@ -793,8 +794,8 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 120,
-        "y": 1240,
+        "x": 560,
+        "y": 720,
         "wires": [
             [
                 "53596ebf910458be",
@@ -818,8 +819,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 360,
-        "y": 1240,
+        "x": 800,
+        "y": 720,
         "wires": [
             [
                 "53596ebf910458be",
@@ -837,8 +838,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 590,
-        "y": 1240,
+        "x": 1030,
+        "y": 720,
         "wires": [
             [
                 "53596ebf910458be",
@@ -858,8 +859,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 140,
-        "y": 1280,
+        "x": 580,
+        "y": 760,
         "wires": []
     },
     {
@@ -869,8 +870,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 750,
-        "y": 1240,
+        "x": 1190,
+        "y": 720,
         "wires": []
     },
     {
@@ -895,7 +896,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1640,
+        "y": 1420,
         "wires": [
             [
                 "6919bc84caf16110"
@@ -913,7 +914,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1640,
+        "y": 1420,
         "wires": [
             [
                 "8a77e92bf79ce345"
@@ -933,7 +934,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1640,
+        "y": 1420,
         "wires": []
     },
     {
@@ -953,7 +954,7 @@
             }
         ],
         "x": 230,
-        "y": 1640,
+        "y": 1420,
         "wires": [
             [
                 "bf4e03e8bc4c4c33"
@@ -982,7 +983,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1680,
+        "y": 1460,
         "wires": [
             [
                 "9c39e956120ff1d7"
@@ -1000,7 +1001,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1680,
+        "y": 1460,
         "wires": [
             [
                 "2543c5f821c8da9a"
@@ -1020,7 +1021,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1680,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1040,7 +1041,7 @@
             }
         ],
         "x": 230,
-        "y": 1680,
+        "y": 1460,
         "wires": [
             [
                 "c403afb8de1fdf9a"
@@ -1069,7 +1070,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1720,
+        "y": 1500,
         "wires": [
             [
                 "2e181ddb411d9b92"
@@ -1087,7 +1088,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1720,
+        "y": 1500,
         "wires": [
             [
                 "4573bb45913fbd76"
@@ -1107,7 +1108,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1720,
+        "y": 1500,
         "wires": []
     },
     {
@@ -1122,7 +1123,7 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 1720,
+        "y": 1500,
         "wires": [
             [
                 "87898c8ea5653f96"
@@ -1138,8 +1139,8 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 250,
-        "y": 1360,
+        "x": 150,
+        "y": 820,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1163,8 +1164,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 490,
-        "y": 1360,
+        "x": 390,
+        "y": 820,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1182,8 +1183,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 690,
-        "y": 1360,
+        "x": 590,
+        "y": 820,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1203,8 +1204,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 240,
-        "y": 1400,
+        "x": 140,
+        "y": 860,
         "wires": []
     },
     {
@@ -1214,8 +1215,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 850,
-        "y": 1360,
+        "x": 750,
+        "y": 820,
         "wires": []
     },
     {
@@ -1228,7 +1229,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 1460,
+        "y": 920,
         "wires": [
             [
                 "914186e273076b7d",
@@ -1241,7 +1242,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "getOwners",
-        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"admins\";\n\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"admins\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1253,7 +1254,7 @@
             }
         ],
         "x": 370,
-        "y": 1460,
+        "y": 920,
         "wires": [
             [
                 "914186e273076b7d",
@@ -1272,7 +1273,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 590,
-        "y": 1460,
+        "y": 920,
         "wires": [
             [
                 "914186e273076b7d",
@@ -1293,7 +1294,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 1500,
+        "y": 960,
         "wires": []
     },
     {
@@ -1304,7 +1305,7 @@
         "statusCode": "",
         "headers": {},
         "x": 970,
-        "y": 1460,
+        "y": 920,
         "wires": []
     },
     {
@@ -1329,7 +1330,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 1560,
+        "y": 1020,
         "wires": [
             [
                 "a27297e66a6abe07"
@@ -1358,7 +1359,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1760,
+        "y": 1540,
         "wires": [
             [
                 "7623b8e60a096f05"
@@ -1376,7 +1377,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1760,
+        "y": 1540,
         "wires": [
             [
                 "bac15085669840a3"
@@ -1396,7 +1397,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1760,
+        "y": 1540,
         "wires": []
     },
     {
@@ -1411,7 +1412,7 @@
         "finalize": "",
         "libs": [],
         "x": 260,
-        "y": 1760,
+        "y": 1540,
         "wires": [
             [
                 "1bda2083d6dea760"
@@ -1423,14 +1424,14 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "prepare for ui",
-        "func": "msg.payload = msg.payload.map(owner => ({\n    label: `${owner.firstname} ${owner?.lastname}\n${owner.email}`,\n    value: owner._id,\n}));\n\nreturn msg;\n",
+        "func": "switch (msg.fromUI.responseType) {\n    case 'forSelector':\n        msg.payload = msg.payload.map(owner => ({\n            label: `${owner.firstname} ${owner?.lastname}\n${owner.email}`,\n            value: owner._id,\n        }));\n\n        break;\n\n    default:\n        return msg;\n}\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 820,
-        "y": 1460,
+        "y": 920,
         "wires": [
             [
                 "b3fb0b87891dfbe5"
@@ -1459,7 +1460,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1860,
+        "y": 1640,
         "wires": [
             [
                 "e8384769bf28d8a1"
@@ -1477,7 +1478,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 440,
-        "y": 1860,
+        "y": 1640,
         "wires": [
             [
                 "60caa5caafe51245"
@@ -1497,7 +1498,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 1860,
+        "y": 1640,
         "wires": []
     },
     {
@@ -1512,7 +1513,7 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 1860,
+        "y": 1640,
         "wires": [
             [
                 "fd9032dc3d062c2d"
@@ -1779,6 +1780,386 @@
         ]
     },
     {
+        "id": "d48f32b3496b2bce",
+        "type": "http in",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "url": "/getContact",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 400,
+        "wires": [
+            [
+                "9084482d993e7a94",
+                "fc43f8fef3f634d7"
+            ]
+        ]
+    },
+    {
+        "id": "fc43f8fef3f634d7",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "getContact",
+        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"contacts\";\n\nmsg.payload = {\n    _id: objectid(msg.fromUI.contactID),\n    deleted: false,\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 370,
+        "y": 400,
+        "wires": [
+            [
+                "9084482d993e7a94",
+                "ff4eb2e98589c447"
+            ]
+        ]
+    },
+    {
+        "id": "ff4eb2e98589c447",
+        "type": "link call",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 550,
+        "y": 400,
+        "wires": [
+            [
+                "9084482d993e7a94",
+                "a3eb15e85c0a2e65"
+            ]
+        ]
+    },
+    {
+        "id": "9084482d993e7a94",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 35",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "781c2562d5cc03a3",
+        "type": "http response",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a3eb15e85c0a2e65",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "prepare for ui",
+        "func": "msg.payload = msg.payload[0];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 400,
+        "wires": [
+            [
+                "781c2562d5cc03a3",
+                "9084482d993e7a94"
+            ]
+        ]
+    },
+    {
+        "id": "ed730e3fc95b1f44",
+        "type": "inject",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 480,
+        "wires": [
+            [
+                "fc43f8fef3f634d7"
+            ]
+        ]
+    },
+    {
+        "id": "b9e6fb44be43d4f6",
+        "type": "http in",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "url": "/editContact",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "48c53df230034250",
+                "acecfe1fa531fc26"
+            ]
+        ]
+    },
+    {
+        "id": "a3903868fa4e6034",
+        "type": "link call",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 540,
+        "y": 560,
+        "wires": [
+            [
+                "349981bbd596d9cf",
+                "dc7ce2b9a5ba9749"
+            ]
+        ]
+    },
+    {
+        "id": "acecfe1fa531fc26",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "to mongo",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.query = {\n    _id: msg.fromUI.contactID,\n};\n\nmsg.payload = {\n    $set: {\n        \"email\": msg.fromUI.email,\n        \"firstName\": msg.fromUI.firstName,\n        \"lastName\": msg.fromUI.lastName,\n        \"contactOwner\": msg.fromUI.contactOwner,\n        \"phoneNumber\": msg.fromUI.phoneNumber,\n        \"dealStage\": msg.fromUI.dealStage,\n        \"leadStatus\": msg.fromUI.leadStatus,\n        \"country\": msg.fromUI.country,\n        \"city\": msg.fromUI.city,\n        \"industry\": msg.fromUI.industry,\n    },\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 340,
+        "y": 560,
+        "wires": [
+            [
+                "a3903868fa4e6034",
+                "735f0ad5ac42f62a"
+            ]
+        ]
+    },
+    {
+        "id": "735f0ad5ac42f62a",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 36",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "349981bbd596d9cf",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "dc7ce2b9a5ba9749",
+        "type": "http response",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "48c53df230034250",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "3cc8195aeb33fd47",
+        "type": "http in",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "url": "/deleteContact",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 1180,
+        "wires": [
+            [
+                "cc4ddb11b62e4632",
+                "db22383c6b67146c"
+            ]
+        ]
+    },
+    {
+        "id": "54646fb575955b59",
+        "type": "link call",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 540,
+        "y": 1180,
+        "wires": [
+            [
+                "6319976845f3b3be",
+                "8dead48cd6f52d19"
+            ]
+        ]
+    },
+    {
+        "id": "db22383c6b67146c",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "to mongo",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.query = {\n    _id: objectid(msg.fromUI.contactID),\n};\n\nmsg.payload = {\n    $set: {\n        deleted: true,\n    },\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 340,
+        "y": 1180,
+        "wires": [
+            [
+                "54646fb575955b59",
+                "b8533c850e6c752a"
+            ]
+        ]
+    },
+    {
+        "id": "b8533c850e6c752a",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 39",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "6319976845f3b3be",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "8dead48cd6f52d19",
+        "type": "http response",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "cc4ddb11b62e4632",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 41",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 1240,
+        "wires": []
+    },
+    {
         "id": "f03319fda5d70724",
         "type": "http in",
         "z": "04949f39d52b1544",
@@ -1912,7 +2293,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 110,
-        "y": 980,
+        "y": 780,
         "wires": [
             [
                 "491919effcf61399",
@@ -1937,7 +2318,7 @@
             }
         ],
         "x": 360,
-        "y": 980,
+        "y": 780,
         "wires": [
             [
                 "491919effcf61399",
@@ -1956,7 +2337,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 550,
-        "y": 980,
+        "y": 780,
         "wires": [
             [
                 "491919effcf61399",
@@ -1978,7 +2359,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 1020,
+        "y": 820,
         "wires": []
     },
     {
@@ -1989,7 +2370,7 @@
         "statusCode": "",
         "headers": {},
         "x": 910,
-        "y": 980,
+        "y": 780,
         "wires": []
     },
     {
@@ -2004,7 +2385,7 @@
         "finalize": "",
         "libs": [],
         "x": 760,
-        "y": 980,
+        "y": 780,
         "wires": [
             [
                 "f47ebcd88b05288f",
@@ -2035,7 +2416,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 120,
-        "y": 1060,
+        "y": 860,
         "wires": [
             [
                 "1d5b0808453b5970"
@@ -2120,7 +2501,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 140,
-        "y": 760,
+        "y": 1120,
         "wires": [
             [
                 "c44f34bb55cf60f5"
@@ -2138,7 +2519,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 540,
-        "y": 760,
+        "y": 1120,
         "wires": [
             [
                 "ea71ea2583b9903c",
@@ -2163,7 +2544,7 @@
             }
         ],
         "x": 340,
-        "y": 760,
+        "y": 1120,
         "wires": [
             [
                 "55e2454dbbdfdbaa",
@@ -2184,7 +2565,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 340,
-        "y": 800,
+        "y": 1160,
         "wires": []
     },
     {
@@ -2200,7 +2581,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 800,
+        "y": 1160,
         "wires": []
     },
     {
@@ -2211,7 +2592,7 @@
         "statusCode": "",
         "headers": {},
         "x": 730,
-        "y": 760,
+        "y": 1120,
         "wires": []
     },
     {
@@ -2227,7 +2608,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 820,
-        "y": 1040,
+        "y": 840,
         "wires": []
     },
     {
@@ -2421,7 +2802,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 140,
-        "y": 1240,
+        "y": 1400,
         "wires": [
             [
                 "a7da04479a06ceba"
@@ -2445,7 +2826,7 @@
             }
         ],
         "x": 610,
-        "y": 1240,
+        "y": 1400,
         "wires": [
             [
                 "1d719c19432433b9"
@@ -2463,7 +2844,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 770,
-        "y": 1240,
+        "y": 1400,
         "wires": [
             [
                 "21860ef23eada82d"
@@ -2478,7 +2859,7 @@
         "statusCode": "",
         "headers": {},
         "x": 1090,
-        "y": 1240,
+        "y": 1400,
         "wires": []
     },
     {
@@ -2493,7 +2874,7 @@
         "finalize": "",
         "libs": [],
         "x": 940,
-        "y": 1240,
+        "y": 1400,
         "wires": [
             [
                 "78c7715a4124010e"
@@ -2638,7 +3019,7 @@
             }
         ],
         "x": 310,
-        "y": 1240,
+        "y": 1400,
         "wires": [
             [
                 "049978f2fdd4b154"
@@ -2656,12 +3037,272 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1240,
+        "y": 1400,
         "wires": [
             [
                 "c16555819b98820a"
             ]
         ]
+    },
+    {
+        "id": "f6202fe7f8d00095",
+        "type": "http in",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "url": "/-----------removeFromList",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 1200,
+        "wires": [
+            [
+                "ee5f4c85d8f9dac0"
+            ]
+        ]
+    },
+    {
+        "id": "94d00735b01323d2",
+        "type": "link call",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 580,
+        "y": 1200,
+        "wires": [
+            [
+                "f827be5bdf896a17",
+                "d025c51bd077572b"
+            ]
+        ]
+    },
+    {
+        "id": "ee5f4c85d8f9dac0",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "to mongo",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"lists\";\nmsg.query = {\n    _id: msg.fromUI.listID,\n};\n\nmsg.payload = {\n    $pull: { \"contactIDs\": { $in: msg.fromUI.contacts }}\n};\n\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 380,
+        "y": 1200,
+        "wires": [
+            [
+                "94d00735b01323d2",
+                "56029f9cd8f165c7"
+            ]
+        ]
+    },
+    {
+        "id": "56029f9cd8f165c7",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 33",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "f827be5bdf896a17",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 34",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "d025c51bd077572b",
+        "type": "http response",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "700f74e12d842ae7",
+        "type": "http in",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "url": "/getList",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 960,
+        "wires": [
+            [
+                "f1235bca4be3f4c6",
+                "8b7f7221f16b2bc1"
+            ]
+        ]
+    },
+    {
+        "id": "8b7f7221f16b2bc1",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "getList",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"lists\";\nmsg.payload = {\n    _id: objectid(msg.fromUI.listID),\n    deleted: false,\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 350,
+        "y": 960,
+        "wires": [
+            [
+                "f1235bca4be3f4c6",
+                "ddf72920c9c4666a"
+            ]
+        ]
+    },
+    {
+        "id": "ddf72920c9c4666a",
+        "type": "link call",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 550,
+        "y": 960,
+        "wires": [
+            [
+                "f1235bca4be3f4c6",
+                "ab299bbd6d07f83d"
+            ]
+        ]
+    },
+    {
+        "id": "f1235bca4be3f4c6",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "a49706b041abf611",
+        "type": "http response",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "ab299bbd6d07f83d",
+        "type": "function",
+        "z": "04949f39d52b1544",
+        "name": "prepare for ui",
+        "func": "msg.payload = msg.payload[0];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 960,
+        "wires": [
+            [
+                "a49706b041abf611",
+                "f1235bca4be3f4c6",
+                "733c862f2aeeb763"
+            ]
+        ]
+    },
+    {
+        "id": "59988dd35cdbfe48",
+        "type": "inject",
+        "z": "04949f39d52b1544",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1040,
+        "wires": [
+            [
+                "8b7f7221f16b2bc1"
+            ]
+        ]
+    },
+    {
+        "id": "733c862f2aeeb763",
+        "type": "debug",
+        "z": "04949f39d52b1544",
+        "name": "debug 43",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1020,
+        "wires": []
     },
     {
         "id": "ba97e8986832bd94",
@@ -4535,7 +5176,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "d78377c07a215120",
         "name": "check user permissions",
-        "func": "const pageName = msg.check.page_id.replace('%20', ' ');\n\nconst parentPage = msg.menu.map((el) => el.label).includes(pageName);\nconst childPage = msg.menu.filter((e) => e.children.length > 0).flatMap((el) => el.children).map((elem) => elem.label).includes(pageName);\n\nif (parentPage || childPage) {\n\n    msg.statusCode = 200;\n    msg.payload = {\n        auth: \"Success\",\n        code: 200,\n        user: {\n            \"menu\": msg.menu,\n            \"permission\": msg.permissions,\n            \"translation\": msg.payload.translation[0],\n            \"info\": msg.user,\n            // \"attributes\": msg.user.user.attributes\n        }\n    }\n\n} else {\n\n    msg.payload = {\n        auth: \"Unautorizate\",\n        code: 401,\n        login_id: msg.menu[0].value + `?pageName=${msg.menu[0].value}`,\n        app_id: msg.check.app_id\n    }\n\n}\nreturn msg;",
+        "func": "const pageName = msg.check.page_id.replace('%20', ' ');\n\nconst parentPage = msg.menu.map((el) => el.label).includes(pageName);\nconst childPage = msg.menu.filter((e) => e.children.length > 0).flatMap((el) => el.children).map((elem) => elem.label).includes(pageName);\n\nif (parentPage || childPage) {\n\n\n    msg.menu.pop(); //------------\n    msg.menu.pop();//-------------\n    node.warn(msg.menu);\n    // delete msg.menu;\n    // const msg.menu = msg.menu.map((el) => el.label).includes(pageName);\n\n\n    msg.statusCode = 200;\n    msg.payload = {\n        auth: \"Success\",\n        code: 200,\n        user: {\n            \"menu\": msg.menu,\n            \"permission\": msg.permissions,\n            \"translation\": msg.payload.translation[0],\n            \"info\": msg.user,\n            // \"attributes\": msg.user.user.attributes\n        }\n    }\n\n} else {\n\n    msg.payload = {\n        auth: \"Unautorizate\",\n        code: 401,\n        login_id: msg.menu[0].value + `?pageName=${msg.menu[0].value}`,\n        app_id: msg.check.app_id\n    }\n\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5459,6 +6100,34 @@
         "statusType": "auto",
         "x": 300,
         "y": 640,
+        "wires": []
+    },
+    {
+        "id": "3991f8516b403ed6",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "name": "check user permissions",
+        "func": "const pageName = msg.check.page_id.replace('%20', ' ');\n\nconst parentPage = msg.menu.map((el) => el.label).includes(pageName);\nconst childPage = msg.menu.filter((e) => e.children.length > 0).flatMap((el) => el.children).map((elem) => elem.label).includes(pageName);\n\nif (parentPage || childPage) {\n\n    \n\n    msg.statusCode = 200;\n    msg.payload = {\n        auth: \"Success\",\n        code: 200,\n        user: {\n            \"menu\": msg.menu,\n            \"permission\": msg.permissions,\n            \"translation\": msg.payload.translation[0],\n            \"info\": msg.user,\n            // \"attributes\": msg.user.user.attributes\n        }\n    }\n\n} else {\n\n    msg.payload = {\n        auth: \"Unautorizate\",\n        code: 401,\n        login_id: msg.menu[0].value + `?pageName=${msg.menu[0].value}`,\n        app_id: msg.check.app_id\n    }\n\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1950,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "171297511238480d",
+        "type": "comment",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "fix hardcode  with .pop()",
+        "info": "",
+        "x": 1520,
+        "y": 500,
         "wires": []
     },
     {
