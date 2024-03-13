@@ -128,9 +128,7 @@
             "a2b1bc579a4c0ced"
         ],
         "x": 14,
-        "y": 719,
-        "w": 932,
-        "h": 122
+        "y": 719
     },
     {
         "id": "398457a4bc6d8725",
@@ -190,9 +188,7 @@
             "c13baca0a8f18f1a"
         ],
         "x": 14,
-        "y": 1319,
-        "w": 3312,
-        "h": 462
+        "y": 1319
     },
     {
         "id": "b0ef14992c694846",
@@ -297,9 +293,7 @@
             "171297511238480d"
         ],
         "x": 14,
-        "y": 39,
-        "w": 1792,
-        "h": 642
+        "y": 39
     },
     {
         "id": "0dd2dfd7df691836",
@@ -411,9 +405,7 @@
             "2f67916e0bc7be15"
         ],
         "x": 14,
-        "y": 879,
-        "w": 1372,
-        "h": 402
+        "y": 879
     },
     {
         "id": "fd9bc368cea45c71",
@@ -811,7 +803,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 240,
+        "y": 780,
         "wires": [
             [
                 "dbfa879fbd03220a",
@@ -836,7 +828,7 @@
             }
         ],
         "x": 300,
-        "y": 240,
+        "y": 780,
         "wires": [
             [
                 "dbfa879fbd03220a",
@@ -855,7 +847,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 470,
-        "y": 240,
+        "y": 780,
         "wires": [
             [
                 "dbfa879fbd03220a",
@@ -876,7 +868,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 280,
+        "y": 820,
         "wires": []
     },
     {
@@ -886,8 +878,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1150,
-        "y": 240,
+        "x": 1470,
+        "y": 780,
         "wires": []
     },
     {
@@ -912,7 +904,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 200,
+        "y": 740,
         "wires": [
             [
                 "f722d7cce8d7a468"
@@ -936,7 +928,7 @@
             }
         ],
         "x": 650,
-        "y": 240,
+        "y": 780,
         "wires": [
             [
                 "f2f98ce4a6f16476"
@@ -954,10 +946,10 @@
         "linkType": "static",
         "timeout": "30",
         "x": 810,
-        "y": 240,
+        "y": 780,
         "wires": [
             [
-                "526bce4591c7ae53"
+                "d25b720acf522464"
             ]
         ]
     },
@@ -966,14 +958,14 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "prepare for UI",
-        "func": "msg.owners = msg.payload;\n// msg.owners = msg.owners.map(e => (\n//     {\n//         _id: e._id,\n//         email: e.email,\n//         firstname: e.firstname,\n//         lastname: e.lastname,\n//     }\n// ));\n\nmsg.deals = msg.deals.map(e => {    \n    return {\n        dealID: e._id,\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        closeDate: e.closeDate,\n        priority: e.priority,\n        ownerID: e.owner,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n    };\n});\n\nmsg.payload = msg.deals;\n\nreturn msg;\n",
+        "func": "msg.contacts = msg.payload;\n// msg.owners = msg.owners.map(e => (\n//     {\n//         _id: e._id,\n//         email: e.email,\n//         firstname: e.firstname,\n//         lastname: e.lastname,\n//     }\n// ));\n\nmsg.deals = msg.deals.map(e => {    \n    const contact = msg.contacts?.find(contact => contact._id == e.dealWithContact);\n\n    const deal = {\n        dealID: e._id,\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        closeDate: e.closeDate,\n        priority: e.priority,\n        ownerID: e.owner,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n        dealWithContactID: e.dealWithContact,\n        dealWithContactEmail: contact?.email,\n        dealWithContactFirstName: contact?.firstName,\n        dealWithContactLastName: contact?.lastName,\n    };\n\n    return deal;\n});\n\nmsg.payload = msg.deals;\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
-        "y": 240,
+        "x": 1300,
+        "y": 780,
         "wires": [
             [
                 "c075c10d6ab37070",
@@ -994,8 +986,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1000,
-        "y": 280,
+        "x": 1280,
+        "y": 880,
         "wires": []
     },
     {
@@ -1008,7 +1000,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 110,
-        "y": 440,
+        "y": 560,
         "wires": [
             [
                 "2fb1d9ac8e766369",
@@ -1033,7 +1025,7 @@
             }
         ],
         "x": 300,
-        "y": 440,
+        "y": 560,
         "wires": [
             [
                 "2fb1d9ac8e766369",
@@ -1052,7 +1044,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 470,
-        "y": 440,
+        "y": 560,
         "wires": [
             [
                 "2fb1d9ac8e766369",
@@ -1073,7 +1065,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 480,
+        "y": 600,
         "wires": []
     },
     {
@@ -1083,8 +1075,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1150,
-        "y": 440,
+        "x": 1470,
+        "y": 560,
         "wires": []
     },
     {
@@ -1109,7 +1101,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 400,
+        "y": 520,
         "wires": [
             [
                 "d89e317c984047d9"
@@ -1133,11 +1125,10 @@
             }
         ],
         "x": 650,
-        "y": 440,
+        "y": 560,
         "wires": [
             [
-                "3f1bf027224f4785",
-                "b35d459943532d28"
+                "3f1bf027224f4785"
             ]
         ]
     },
@@ -1152,10 +1143,10 @@
         "linkType": "static",
         "timeout": "30",
         "x": 810,
-        "y": 440,
+        "y": 560,
         "wires": [
             [
-                "dfa4fa357c591b6c"
+                "97c05f87e7906426"
             ]
         ]
     },
@@ -1164,14 +1155,14 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "prepare for UI",
-        "func": "msg.owners = msg.payload;\n// msg.owners = msg.owners.map(e => (\n//     {\n//         _id: e._id,\n//         email: e.email,\n//         firstname: e.firstname,\n//         lastname: e.lastname,\n//     }\n// ));\n\nmsg.deals = msg.deals.map(e => {    \n    return {\n        dealID: e._id,\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        closeDate: e.closeDate,\n        priority: e.priority,\n        ownerID: e.owner,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n    };\n});\n\nmsg.payload = msg.deals[0];\n\nreturn msg;\n",
+        "func": "msg.contacts = msg.payload;\n// msg.owners = msg.owners.map(e => (\n//     {\n//         _id: e._id,\n//         email: e.email,\n//         firstname: e.firstname,\n//         lastname: e.lastname,\n//     }\n// ));\n\nmsg.deals = msg.deals.map(e => {\n    const contact = msg.contacts?.find(contact => contact._id == e.dealWithContact);\n\n    const deal = {\n        dealID: e._id,\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        closeDate: e.closeDate,\n        priority: e.priority,\n        ownerID: e.owner,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n        dealWithContactID: e.dealWithContact,\n        dealWithContactEmail: contact?.email,\n        dealWithContactFirstName: contact?.firstName,\n        dealWithContactLastName: contact?.lastName,\n    };\n\n    return deal;\n});\n\nmsg.payload = msg.deals;\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
-        "y": 440,
+        "x": 1300,
+        "y": 560,
         "wires": [
             [
                 "a311e6a3b2036066",
@@ -1192,8 +1183,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1000,
-        "y": 480,
+        "x": 1080,
+        "y": 640,
         "wires": []
     },
     {
@@ -1206,7 +1197,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 110,
-        "y": 680,
+        "y": 180,
         "wires": [
             [
                 "172c85cff4faa9f5",
@@ -1225,7 +1216,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 540,
-        "y": 680,
+        "y": 180,
         "wires": [
             [
                 "8f422060d13ef448",
@@ -1250,7 +1241,7 @@
             }
         ],
         "x": 320,
-        "y": 680,
+        "y": 180,
         "wires": [
             [
                 "1498d00fb731170c",
@@ -1271,7 +1262,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 320,
-        "y": 720,
+        "y": 220,
         "wires": []
     },
     {
@@ -1287,7 +1278,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 540,
-        "y": 720,
+        "y": 220,
         "wires": []
     },
     {
@@ -1298,7 +1289,7 @@
         "statusCode": "",
         "headers": {},
         "x": 700,
-        "y": 680,
+        "y": 180,
         "wires": []
     },
     {
@@ -1314,7 +1305,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 120,
-        "y": 720,
+        "y": 220,
         "wires": []
     },
     {
@@ -1327,7 +1318,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 940,
+        "y": 320,
         "wires": [
             [
                 "a17f474364540d14",
@@ -1346,7 +1337,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 530,
-        "y": 940,
+        "y": 320,
         "wires": [
             [
                 "57b9eef22164c6f0",
@@ -1371,7 +1362,7 @@
             }
         ],
         "x": 310,
-        "y": 940,
+        "y": 320,
         "wires": [
             [
                 "2e446f0dd0de8f16",
@@ -1392,7 +1383,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 310,
-        "y": 980,
+        "y": 360,
         "wires": []
     },
     {
@@ -1408,7 +1399,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 530,
-        "y": 980,
+        "y": 360,
         "wires": []
     },
     {
@@ -1419,7 +1410,7 @@
         "statusCode": "",
         "headers": {},
         "x": 690,
-        "y": 940,
+        "y": 320,
         "wires": []
     },
     {
@@ -1435,8 +1426,110 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 142.6666717529297,
-        "y": 984.6666870117188,
+        "y": 364.66668701171875,
         "wires": []
+    },
+    {
+        "id": "d25b720acf522464",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "getContacts",
+        "func": "msg.owners = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    deleted: false,\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 970,
+        "y": 780,
+        "wires": [
+            [
+                "dfdf7ad22463afd8"
+            ]
+        ]
+    },
+    {
+        "id": "dfdf7ad22463afd8",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1130,
+        "y": 780,
+        "wires": [
+            [
+                "81d47a72d453604e",
+                "526bce4591c7ae53"
+            ]
+        ]
+    },
+    {
+        "id": "97c05f87e7906426",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "getContacts",
+        "func": "msg.owners = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    deleted: false,\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 970,
+        "y": 500,
+        "wires": [
+            [
+                "dcb029b942a1982f"
+            ]
+        ]
+    },
+    {
+        "id": "dcb029b942a1982f",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1130,
+        "y": 500,
+        "wires": [
+            [
+                "dfa4fa357c591b6c"
+            ]
+        ]
+    },
+    {
+        "id": "e06d15a4fbe3829c",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "prepare for UI",
+        "func": "msg.owners = msg.payload;\n// msg.owners = msg.owners.map(e => (\n//     {\n//         _id: e._id,\n//         email: e.email,\n//         firstname: e.firstname,\n//         lastname: e.lastname,\n//     }\n// ));\n\nmsg.deals = msg.deals.map(e => {    \n    return {\n        dealID: e._id,\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        closeDate: e.closeDate,\n        priority: e.priority,\n        ownerID: e.owner,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n        dealWithContact: e.dealWithContact,\n    };\n});\n\nmsg.payload = msg.deals[0];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1320,
+        "y": 460,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "587c4d3f26fe4852",
@@ -1448,7 +1541,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 130,
-        "y": 120,
+        "y": 160,
         "wires": [
             [
                 "b871b51b65519561",
@@ -1473,7 +1566,7 @@
             }
         ],
         "x": 370,
-        "y": 120,
+        "y": 160,
         "wires": [
             [
                 "b871b51b65519561",
@@ -1492,7 +1585,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 590,
-        "y": 120,
+        "y": 160,
         "wires": [
             [
                 "b871b51b65519561",
@@ -1513,7 +1606,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 160,
-        "y": 160,
+        "y": 200,
         "wires": []
     },
     {
@@ -1524,7 +1617,7 @@
         "statusCode": "",
         "headers": {},
         "x": 750,
-        "y": 120,
+        "y": 160,
         "wires": []
     },
     {
@@ -1595,7 +1688,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "---",
-        "func": "msg.collection = 'admins';\n\n// msg.payload = {\n//     _id: '65eaecb9204d01110000001d'\n// };\n\nreturn msg;\n",
+        "func": "msg.collection = 'contacts';\n\n// msg.payload = {\n//     _id: '65eaecb9204d01110000001d'\n// };\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1792,8 +1885,8 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 150,
-        "y": 820,
+        "x": 750,
+        "y": 1040,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1817,8 +1910,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 390,
-        "y": 820,
+        "x": 990,
+        "y": 1040,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1836,8 +1929,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 590,
-        "y": 820,
+        "x": 1190,
+        "y": 1040,
         "wires": [
             [
                 "4cf1f43e7c0fd6f8",
@@ -1857,8 +1950,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 140,
-        "y": 860,
+        "x": 740,
+        "y": 1080,
         "wires": []
     },
     {
@@ -1868,8 +1961,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 750,
-        "y": 820,
+        "x": 1350,
+        "y": 1040,
         "wires": []
     },
     {
@@ -1882,7 +1975,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 920,
+        "y": 1200,
         "wires": [
             [
                 "914186e273076b7d",
@@ -1907,7 +2000,7 @@
             }
         ],
         "x": 370,
-        "y": 920,
+        "y": 1200,
         "wires": [
             [
                 "914186e273076b7d",
@@ -1926,7 +2019,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 590,
-        "y": 920,
+        "y": 1200,
         "wires": [
             [
                 "914186e273076b7d",
@@ -1947,7 +2040,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 960,
+        "y": 1240,
         "wires": []
     },
     {
@@ -1958,7 +2051,7 @@
         "statusCode": "",
         "headers": {},
         "x": 970,
-        "y": 920,
+        "y": 1200,
         "wires": []
     },
     {
@@ -1983,7 +2076,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 1020,
+        "y": 1300,
         "wires": [
             [
                 "a27297e66a6abe07"
@@ -2084,7 +2177,7 @@
         "finalize": "",
         "libs": [],
         "x": 820,
-        "y": 920,
+        "y": 1200,
         "wires": [
             [
                 "b3fb0b87891dfbe5"
@@ -2159,7 +2252,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "delete",
-        "func": "msg.collection = 'lists';\n\n\n\nmsg.payload = {\n\n};\n\nreturn msg;\n",
+        "func": "msg.collection = 'deals';\n\n\n\nmsg.payload = {\n\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2226,75 +2319,6 @@
         "wires": []
     },
     {
-        "id": "81b2e5b12aa54308",
-        "type": "function",
-        "z": "3db5a363b78466f5",
-        "name": "Static Widgets Fillers",
-        "func": "const leadStatus = [\n    {\n        \"label\": \"New\",\n        \"value\": \"New\"\n    },\n    {\n        \"label\": \"Open\",\n        \"value\": \"Open\"\n    },\n    {\n        \"label\": \"In progress\",\n        \"value\": \"In progress\"\n    },\n    {\n        \"label\": \"Open deal\",\n        \"value\": \"Open deal\"\n    },\n    {\n        \"label\": \"Unqualified\",\n        \"value\": \"Unqualified\"\n    },\n    {\n        \"label\": \"Attempted to contact\",\n        \"value\": \"Attempted to contact\"\n    },\n    {\n        \"label\": \"Connected\",\n        \"value\": \"Connected\"\n    },\n    {\n        \"label\": \"Bad timing\",\n        \"value\": \"Bad timing\"\n    },\n    {\n        \"label\": \"Unassigned\",\n        \"value\": \"Unassigned\"\n    }\n];\nconst dealStage = [\n    {\n        \"label\": \"Outreach\",\n        \"value\": \"Outreach\"\n    },\n    {\n        \"label\": \"Qualifying ICP\",\n        \"value\": \"Qualifying ICP\"\n    },\n    {\n        \"label\": \"Appointment scheduled\",\n        \"value\": \"Appointment scheduled\"\n    },\n    {\n        \"label\": \"Presentation made\",\n        \"value\": \"Presentation made\"\n    },\n    {\n        \"label\": \"Follow up\",\n        \"value\": \"Follow up\"\n    },\n    {\n        \"label\": \"Testing Platform\",\n        \"value\": \"Testing Platform\"\n    },\n    {\n        \"label\": \"Objections\",\n        \"value\": \"Objections\"\n    },\n    {\n        \"label\": \"Proposal Sent\",\n        \"value\": \"Proposal Sent\"\n    },\n    {\n        \"label\": \"Closed won\",\n        \"value\": \"Closed won\"\n    },\n    {\n        \"label\": \"Closed - their lost\",\n        \"value\": \"Closed - their lost\"\n    }\n];\nconst countries = [\n    { \"name\": \"Afghanistan\", \"code\": \"AF\" },\n    { \"name\": \"Åland Islands\", \"code\": \"AX\" },\n    { \"name\": \"Albania\", \"code\": \"AL\" },\n    { \"name\": \"Algeria\", \"code\": \"DZ\" },\n    { \"name\": \"American Samoa\", \"code\": \"AS\" },\n    { \"name\": \"AndorrA\", \"code\": \"AD\" },\n    { \"name\": \"Angola\", \"code\": \"AO\" },\n    { \"name\": \"Anguilla\", \"code\": \"AI\" },\n    { \"name\": \"Antarctica\", \"code\": \"AQ\" },\n    { \"name\": \"Antigua and Barbuda\", \"code\": \"AG\" },\n    { \"name\": \"Argentina\", \"code\": \"AR\" },\n    { \"name\": \"Armenia\", \"code\": \"AM\" },\n    { \"name\": \"Aruba\", \"code\": \"AW\" },\n    { \"name\": \"Australia\", \"code\": \"AU\" },\n    { \"name\": \"Austria\", \"code\": \"AT\" },\n    { \"name\": \"Azerbaijan\", \"code\": \"AZ\" },\n    { \"name\": \"Bahamas\", \"code\": \"BS\" },\n    { \"name\": \"Bahrain\", \"code\": \"BH\" },\n    { \"name\": \"Bangladesh\", \"code\": \"BD\" },\n    { \"name\": \"Barbados\", \"code\": \"BB\" },\n    { \"name\": \"Belarus\", \"code\": \"BY\" },\n    { \"name\": \"Belgium\", \"code\": \"BE\" },\n    { \"name\": \"Belize\", \"code\": \"BZ\" },\n    { \"name\": \"Benin\", \"code\": \"BJ\" },\n    { \"name\": \"Bermuda\", \"code\": \"BM\" },\n    { \"name\": \"Bhutan\", \"code\": \"BT\" },\n    { \"name\": \"Bolivia\", \"code\": \"BO\" },\n    { \"name\": \"Bosnia and Herzegovina\", \"code\": \"BA\" },\n    { \"name\": \"Botswana\", \"code\": \"BW\" },\n    { \"name\": \"Bouvet Island\", \"code\": \"BV\" },\n    { \"name\": \"Brazil\", \"code\": \"BR\" },\n    { \"name\": \"British Indian Ocean Territory\", \"code\": \"IO\" },\n    { \"name\": \"Brunei Darussalam\", \"code\": \"BN\" },\n    { \"name\": \"Bulgaria\", \"code\": \"BG\" },\n    { \"name\": \"Burkina Faso\", \"code\": \"BF\" },\n    { \"name\": \"Burundi\", \"code\": \"BI\" },\n    { \"name\": \"Cambodia\", \"code\": \"KH\" },\n    { \"name\": \"Cameroon\", \"code\": \"CM\" },\n    { \"name\": \"Canada\", \"code\": \"CA\" },\n    { \"name\": \"Cape Verde\", \"code\": \"CV\" },\n    { \"name\": \"Cayman Islands\", \"code\": \"KY\" },\n    { \"name\": \"Central African Republic\", \"code\": \"CF\" },\n    { \"name\": \"Chad\", \"code\": \"TD\" },\n    { \"name\": \"Chile\", \"code\": \"CL\" },\n    { \"name\": \"China\", \"code\": \"CN\" },\n    { \"name\": \"Christmas Island\", \"code\": \"CX\" },\n    { \"name\": \"Cocos (Keeling) Islands\", \"code\": \"CC\" },\n    { \"name\": \"Colombia\", \"code\": \"CO\" },\n    { \"name\": \"Comoros\", \"code\": \"KM\" },\n    { \"name\": \"Congo\", \"code\": \"CG\" },\n    { \"name\": \"Congo, The Democratic Republic of the\", \"code\": \"CD\" },\n    { \"name\": \"Cook Islands\", \"code\": \"CK\" },\n    { \"name\": \"Costa Rica\", \"code\": \"CR\" },\n    { \"name\": \"Croatia\", \"code\": \"HR\" },\n    { \"name\": \"Cuba\", \"code\": \"CU\" },\n    { \"name\": \"Cyprus\", \"code\": \"CY\" },\n    { \"name\": \"Czech Republic\", \"code\": \"CZ\" },\n    { \"name\": \"Denmark\", \"code\": \"DK\" },\n    { \"name\": \"Djibouti\", \"code\": \"DJ\" },\n    { \"name\": \"Dominica\", \"code\": \"DM\" },\n    { \"name\": \"Dominican Republic\", \"code\": \"DO\" },\n    { \"name\": \"Ecuador\", \"code\": \"EC\" },\n    { \"name\": \"Egypt\", \"code\": \"EG\" },\n    { \"name\": \"El Salvador\", \"code\": \"SV\" },\n    { \"name\": \"Equatorial Guinea\", \"code\": \"GQ\" },\n    { \"name\": \"Eritrea\", \"code\": \"ER\" },\n    { \"name\": \"Estonia\", \"code\": \"EE\" },\n    { \"name\": \"Ethiopia\", \"code\": \"ET\" },\n    { \"name\": \"Falkland Islands (Malvinas)\", \"code\": \"FK\" },\n    { \"name\": \"Faroe Islands\", \"code\": \"FO\" },\n    { \"name\": \"Fiji\", \"code\": \"FJ\" },\n    { \"name\": \"Finland\", \"code\": \"FI\" },\n    { \"name\": \"France\", \"code\": \"FR\" },\n    { \"name\": \"French Guiana\", \"code\": \"GF\" },\n    { \"name\": \"French Polynesia\", \"code\": \"PF\" },\n    { \"name\": \"French Southern Territories\", \"code\": \"TF\" },\n    { \"name\": \"Gabon\", \"code\": \"GA\" },\n    { \"name\": \"Gambia\", \"code\": \"GM\" },\n    { \"name\": \"Georgia\", \"code\": \"GE\" },\n    { \"name\": \"Germany\", \"code\": \"DE\" },\n    { \"name\": \"Ghana\", \"code\": \"GH\" },\n    { \"name\": \"Gibraltar\", \"code\": \"GI\" },\n    { \"name\": \"Greece\", \"code\": \"GR\" },\n    { \"name\": \"Greenland\", \"code\": \"GL\" },\n    { \"name\": \"Grenada\", \"code\": \"GD\" },\n    { \"name\": \"Guadeloupe\", \"code\": \"GP\" },\n    { \"name\": \"Guam\", \"code\": \"GU\" },\n    { \"name\": \"Guatemala\", \"code\": \"GT\" },\n    { \"name\": \"Guernsey\", \"code\": \"GG\" },\n    { \"name\": \"Guinea\", \"code\": \"GN\" },\n    { \"name\": \"Guinea-Bissau\", \"code\": \"GW\" },\n    { \"name\": \"Guyana\", \"code\": \"GY\" },\n    { \"name\": \"Haiti\", \"code\": \"HT\" },\n    { \"name\": \"Heard Island and Mcdonald Islands\", \"code\": \"HM\" },\n    { \"name\": \"Holy See (Vatican City State)\", \"code\": \"VA\" },\n    { \"name\": \"Honduras\", \"code\": \"HN\" },\n    { \"name\": \"Hong Kong\", \"code\": \"HK\" },\n    { \"name\": \"Hungary\", \"code\": \"HU\" },\n    { \"name\": \"Iceland\", \"code\": \"IS\" },\n    { \"name\": \"India\", \"code\": \"IN\" },\n    { \"name\": \"Indonesia\", \"code\": \"ID\" },\n    { \"name\": \"Iran, Islamic Republic Of\", \"code\": \"IR\" },\n    { \"name\": \"Iraq\", \"code\": \"IQ\" },\n    { \"name\": \"Ireland\", \"code\": \"IE\" },\n    { \"name\": \"Isle of Man\", \"code\": \"IM\" },\n    { \"name\": \"Israel\", \"code\": \"IL\" },\n    { \"name\": \"Italy\", \"code\": \"IT\" },\n    { \"name\": \"Jamaica\", \"code\": \"JM\" },\n    { \"name\": \"Japan\", \"code\": \"JP\" },\n    { \"name\": \"Jersey\", \"code\": \"JE\" },\n    { \"name\": \"Jordan\", \"code\": \"JO\" },\n    { \"name\": \"Kazakhstan\", \"code\": \"KZ\" },\n    { \"name\": \"Kenya\", \"code\": \"KE\" },\n    { \"name\": \"Kiribati\", \"code\": \"KI\" },\n    { \"name\": \"Korea, Republic of\", \"code\": \"KR\" },\n    { \"name\": \"Kuwait\", \"code\": \"KW\" },\n    { \"name\": \"Kyrgyzstan\", \"code\": \"KG\" },\n    { \"name\": \"Latvia\", \"code\": \"LV\" },\n    { \"name\": \"Lebanon\", \"code\": \"LB\" },\n    { \"name\": \"Lesotho\", \"code\": \"LS\" },\n    { \"name\": \"Liberia\", \"code\": \"LR\" },\n    { \"name\": \"Libyan Arab Jamahiriya\", \"code\": \"LY\" },\n    { \"name\": \"Liechtenstein\", \"code\": \"LI\" },\n    { \"name\": \"Lithuania\", \"code\": \"LT\" },\n    { \"name\": \"Luxembourg\", \"code\": \"LU\" },\n    { \"name\": \"Macao\", \"code\": \"MO\" },\n    { \"name\": \"North Macedonia\", \"code\": \"MK\" },\n    { \"name\": \"Madagascar\", \"code\": \"MG\" },\n    { \"name\": \"Malawi\", \"code\": \"MW\" },\n    { \"name\": \"Malaysia\", \"code\": \"MY\" },\n    { \"name\": \"Maldives\", \"code\": \"MV\" },\n    { \"name\": \"Mali\", \"code\": \"ML\" },\n    { \"name\": \"Malta\", \"code\": \"MT\" },\n    { \"name\": \"Marshall Islands\", \"code\": \"MH\" },\n    { \"name\": \"Martinique\", \"code\": \"MQ\" },\n    { \"name\": \"Mauritania\", \"code\": \"MR\" },\n    { \"name\": \"Mauritius\", \"code\": \"MU\" },\n    { \"name\": \"Mayotte\", \"code\": \"YT\" },\n    { \"name\": \"Mexico\", \"code\": \"MX\" },\n    { \"name\": \"Micronesia, Federated States of\", \"code\": \"FM\" },\n    { \"name\": \"Moldova, Republic of\", \"code\": \"MD\" },\n    { \"name\": \"Monaco\", \"code\": \"MC\" },\n    { \"name\": \"Mongolia\", \"code\": \"MN\" },\n    { \"name\": \"Montserrat\", \"code\": \"MS\" },\n    { \"name\": \"Morocco\", \"code\": \"MA\" },\n    { \"name\": \"Mozambique\", \"code\": \"MZ\" },\n    { \"name\": \"Myanmar\", \"code\": \"MM\" },\n    { \"name\": \"Namibia\", \"code\": \"NA\" },\n    { \"name\": \"Nauru\", \"code\": \"NR\" },\n    { \"name\": \"Nepal\", \"code\": \"NP\" },\n    { \"name\": \"Netherlands\", \"code\": \"NL\" },\n    { \"name\": \"Netherlands Antilles\", \"code\": \"AN\" },\n    { \"name\": \"New Caledonia\", \"code\": \"NC\" },\n    { \"name\": \"New Zealand\", \"code\": \"NZ\" },\n    { \"name\": \"Nicaragua\", \"code\": \"NI\" },\n    { \"name\": \"Niger\", \"code\": \"NE\" },\n    { \"name\": \"Nigeria\", \"code\": \"NG\" },\n    { \"name\": \"Niue\", \"code\": \"NU\" },\n    { \"name\": \"Norfolk Island\", \"code\": \"NF\" },\n    { \"name\": \"Northern Mariana Islands\", \"code\": \"MP\" },\n    { \"name\": \"Norway\", \"code\": \"NO\" },\n    { \"name\": \"Oman\", \"code\": \"OM\" },\n    { \"name\": \"Pakistan\", \"code\": \"PK\" },\n    { \"name\": \"Palau\", \"code\": \"PW\" },\n    { \"name\": \"Palestinian Territory, Occupied\", \"code\": \"PS\" },\n    { \"name\": \"Panama\", \"code\": \"PA\" },\n    { \"name\": \"Papua New Guinea\", \"code\": \"PG\" },\n    { \"name\": \"Paraguay\", \"code\": \"PY\" },\n    { \"name\": \"Peru\", \"code\": \"PE\" },\n    { \"name\": \"Philippines\", \"code\": \"PH\" },\n    { \"name\": \"Pitcairn Islands\", \"code\": \"PN\" },\n    { \"name\": \"Poland\", \"code\": \"PL\" },\n    { \"name\": \"Portugal\", \"code\": \"PT\" },\n    { \"name\": \"Puerto Rico\", \"code\": \"PR\" },\n    { \"name\": \"Qatar\", \"code\": \"QA\" },\n    { \"name\": \"Reunion\", \"code\": \"RE\" },\n    { \"name\": \"Romania\", \"code\": \"RO\" },\n    { \"name\": \"Russian Federation\", \"code\": \"RU\" },\n    { \"name\": \"Rwanda\", \"code\": \"RW\" },\n    { \"name\": \"Saint Helena\", \"code\": \"SH\" },\n    { \"name\": \"Saint Kitts and Nevis\", \"code\": \"KN\" },\n    { \"name\": \"Saint Lucia\", \"code\": \"LC\" },\n    { \"name\": \"Saint Pierre and Miquelon\", \"code\": \"PM\" },\n    { \"name\": \"Saint Vincent and the Grenadines\", \"code\": \"VC\" },\n    { \"name\": \"Samoa\", \"code\": \"WS\" },\n    { \"name\": \"San Marino\", \"code\": \"SM\" },\n    { \"name\": \"Sao Tome and Principe\", \"code\": \"ST\" },\n    { \"name\": \"Saudi Arabia\", \"code\": \"SA\" },\n    { \"name\": \"Senegal\", \"code\": \"SN\" },\n    { \"name\": \"Serbia and Montenegro\", \"code\": \"CS\" },\n    { \"name\": \"Seychelles\", \"code\": \"SC\" },\n    { \"name\": \"Sierra Leone\", \"code\": \"SL\" },\n    { \"name\": \"Singapore\", \"code\": \"SG\" },\n    { \"name\": \"Slovakia\", \"code\": \"SK\" },\n    { \"name\": \"Slovenia\", \"code\": \"SI\" },\n    { \"name\": \"Solomon Islands\", \"code\": \"SB\" },\n    { \"name\": \"Somalia\", \"code\": \"SO\" },\n    { \"name\": \"South Africa\", \"code\": \"ZA\" },\n    { \"name\": \"South Georgia and the South Sandwich Islands\", \"code\": \"GS\" },\n    { \"name\": \"Spain\", \"code\": \"ES\" },\n    { \"name\": \"Sri Lanka\", \"code\": \"LK\" },\n    { \"name\": \"Sudan\", \"code\": \"SD\" },\n    { \"name\": \"Suriname\", \"code\": \"SR\" },\n    { \"name\": \"Svalbard and Jan Mayen\", \"code\": \"SJ\" },\n    { \"name\": \"Swaziland\", \"code\": \"SZ\" },\n    { \"name\": \"Sweden\", \"code\": \"SE\" },\n    { \"name\": \"Switzerland\", \"code\": \"CH\" },\n    { \"name\": \"Syrian Arab Republic\", \"code\": \"SY\" },\n    { \"name\": \"Taiwan\", \"code\": \"TW\" },\n    { \"name\": \"Tajikistan\", \"code\": \"TJ\" },\n    { \"name\": \"Tanzania, United Republic of\", \"code\": \"TZ\" },\n    { \"name\": \"Thailand\", \"code\": \"TH\" },\n    { \"name\": \"Timor-Leste\", \"code\": \"TL\" },\n    { \"name\": \"Togo\", \"code\": \"TG\" },\n    { \"name\": \"Tokelau\", \"code\": \"TK\" },\n    { \"name\": \"Tonga\", \"code\": \"TO\" },\n    { \"name\": \"Trinidad and Tobago\", \"code\": \"TT\" },\n    { \"name\": \"Tunisia\", \"code\": \"TN\" },\n    { \"name\": \"Turkey\", \"code\": \"TR\" },\n    { \"name\": \"Turkmenistan\", \"code\": \"TM\" },\n    { \"name\": \"Turks and Caicos Islands\", \"code\": \"TC\" },\n    { \"name\": \"Tuvalu\", \"code\": \"TV\" },\n    { \"name\": \"Uganda\", \"code\": \"UG\" },\n    { \"name\": \"Ukraine\", \"code\": \"UA\" },\n    { \"name\": \"United Arab Emirates\", \"code\": \"AE\" },\n    { \"name\": \"United Kingdom\", \"code\": \"GB\" },\n    { \"name\": \"United States\", \"code\": \"US\" },\n    { \"name\": \"United States Minor Outlying Islands\", \"code\": \"UM\" },\n    { \"name\": \"Uruguay\", \"code\": \"UY\" },\n    { \"name\": \"Uzbekistan\", \"code\": \"UZ\" },\n    { \"name\": \"Vanuatu\", \"code\": \"VU\" },\n    { \"name\": \"Venezuela\", \"code\": \"VE\" },\n    { \"name\": \"Vietnam\", \"code\": \"VN\" },\n    { \"name\": \"Virgin Islands, British\", \"code\": \"VG\" },\n    { \"name\": \"Virgin Islands, U.S.\", \"code\": \"VI\" },\n    { \"name\": \"Wallis and Futuna\", \"code\": \"WF\" },\n    { \"name\": \"Western Sahara\", \"code\": \"EH\" },\n    { \"name\": \"Yemen\", \"code\": \"YE\" },\n    { \"name\": \"Zambia\", \"code\": \"ZM\" },\n    { \"name\": \"Zimbabwe\", \"code\": \"ZN\" }\n];\n\nconst a = countries.map(c => ({\n    label: c.name,\n    value: c.code,\n}))\n\nmsg.payload = a;\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 1740,
-        "y": 80,
-        "wires": [
-            [
-                "33b0c3ee40dc5476"
-            ]
-        ]
-    },
-    {
-        "id": "9927c01d1024acdb",
-        "type": "inject",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1520,
-        "y": 80,
-        "wires": [
-            [
-                "81b2e5b12aa54308"
-            ]
-        ]
-    },
-    {
-        "id": "33b0c3ee40dc5476",
-        "type": "debug",
-        "z": "3db5a363b78466f5",
-        "name": "debug 16",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1780,
-        "y": 140,
-        "wires": []
-    },
-    {
         "id": "ae4065fff567fd39",
         "type": "http in",
         "z": "3db5a363b78466f5",
@@ -2304,7 +2328,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 130,
-        "y": 240,
+        "y": 900,
         "wires": [
             [
                 "c27c7797df94b511",
@@ -2329,7 +2353,7 @@
             }
         ],
         "x": 370,
-        "y": 240,
+        "y": 900,
         "wires": [
             [
                 "c27c7797df94b511",
@@ -2348,7 +2372,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 550,
-        "y": 240,
+        "y": 900,
         "wires": [
             [
                 "c27c7797df94b511",
@@ -2369,7 +2393,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 280,
+        "y": 940,
         "wires": []
     },
     {
@@ -2380,7 +2404,7 @@
         "statusCode": "",
         "headers": {},
         "x": 910,
-        "y": 240,
+        "y": 900,
         "wires": []
     },
     {
@@ -2388,14 +2412,14 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "prepare for ui",
-        "func": "// msg.payload = msg.payload.map(list => ({\n//     label: list.name,\n//     value: list._id,\n// }));\n\nreturn msg;\n",
+        "func": "// msg.payload = msg.payload.map(list => ({\n//     label: list.name,\n//     value: list._id,\n// }));\n\n\nswitch (msg.fromUI.responseType) {\n    case 'forSelector':\n        msg.payload = msg.payload.map(e => ({\n            label: `${e.firstName} ${e?.lastName}\n${e.email}`,\n            value: e._id,\n        }));\n\n        break;\n\n    default:\n        return msg;\n}\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 240,
+        "y": 900,
         "wires": [
             [
                 "6251e1659fc16f00",
@@ -2425,7 +2449,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 320,
+        "y": 980,
         "wires": [
             [
                 "335be961b97df98e"
@@ -2442,7 +2466,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 400,
+        "y": 480,
         "wires": [
             [
                 "9084482d993e7a94",
@@ -2467,7 +2491,7 @@
             }
         ],
         "x": 370,
-        "y": 400,
+        "y": 480,
         "wires": [
             [
                 "9084482d993e7a94",
@@ -2486,7 +2510,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 550,
-        "y": 400,
+        "y": 480,
         "wires": [
             [
                 "9084482d993e7a94",
@@ -2507,7 +2531,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 440,
+        "y": 520,
         "wires": []
     },
     {
@@ -2518,7 +2542,7 @@
         "statusCode": "",
         "headers": {},
         "x": 910,
-        "y": 400,
+        "y": 480,
         "wires": []
     },
     {
@@ -2533,7 +2557,7 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 400,
+        "y": 480,
         "wires": [
             [
                 "781c2562d5cc03a3",
@@ -2563,7 +2587,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 480,
+        "y": 560,
         "wires": [
             [
                 "fc43f8fef3f634d7"
@@ -2580,7 +2604,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 560,
+        "y": 260,
         "wires": [
             [
                 "48c53df230034250",
@@ -2599,7 +2623,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 540,
-        "y": 560,
+        "y": 260,
         "wires": [
             [
                 "349981bbd596d9cf",
@@ -2624,7 +2648,7 @@
             }
         ],
         "x": 340,
-        "y": 560,
+        "y": 260,
         "wires": [
             [
                 "a3903868fa4e6034",
@@ -2645,7 +2669,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 340,
-        "y": 600,
+        "y": 300,
         "wires": []
     },
     {
@@ -2661,7 +2685,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 600,
+        "y": 300,
         "wires": []
     },
     {
@@ -2672,7 +2696,7 @@
         "statusCode": "",
         "headers": {},
         "x": 730,
-        "y": 560,
+        "y": 260,
         "wires": []
     },
     {
@@ -2688,7 +2712,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 600,
+        "y": 300,
         "wires": []
     },
     {
@@ -2701,7 +2725,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 130,
-        "y": 1180,
+        "y": 360,
         "wires": [
             [
                 "cc4ddb11b62e4632",
@@ -2720,7 +2744,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 540,
-        "y": 1180,
+        "y": 360,
         "wires": [
             [
                 "6319976845f3b3be",
@@ -2745,7 +2769,7 @@
             }
         ],
         "x": 340,
-        "y": 1180,
+        "y": 360,
         "wires": [
             [
                 "54646fb575955b59",
@@ -2766,7 +2790,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 340,
-        "y": 1220,
+        "y": 400,
         "wires": []
     },
     {
@@ -2782,7 +2806,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 1220,
+        "y": 400,
         "wires": []
     },
     {
@@ -2793,7 +2817,7 @@
         "statusCode": "",
         "headers": {},
         "x": 730,
-        "y": 1180,
+        "y": 360,
         "wires": []
     },
     {
@@ -2809,7 +2833,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 1240,
+        "y": 420,
         "wires": []
     },
     {
@@ -2821,8 +2845,8 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 120,
-        "y": 1380,
+        "x": 140,
+        "y": 620,
         "wires": [
             [
                 "f6fb8eee69b4320d",
@@ -2837,8 +2861,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 790,
-        "y": 1380,
+        "x": 870,
+        "y": 620,
         "wires": []
     },
     {
@@ -2852,8 +2876,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 640,
-        "y": 1380,
+        "x": 720,
+        "y": 620,
         "wires": [
             [
                 "a43d36d64e1d0350",
@@ -2877,8 +2901,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 290,
-        "y": 1380,
+        "x": 330,
+        "y": 620,
         "wires": [
             [
                 "7000f5c794e0e2a9",
@@ -2896,8 +2920,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 430,
-        "y": 1380,
+        "x": 510,
+        "y": 620,
         "wires": [
             [
                 "024aa50b8981b309",
@@ -2917,8 +2941,117 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 1480,
+        "x": 180,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "1b16a34aecdf978d",
+        "type": "http in",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "url": "/getContactDeals",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 720,
+        "wires": [
+            [
+                "66b824314df3f33e",
+                "068f8ba4264c7c1d"
+            ]
+        ]
+    },
+    {
+        "id": "41474809214e478f",
+        "type": "http response",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 870,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "cdb9088b407a11bb",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "prepare for ui",
+        "func": "// msg.payload = msg.payload.map(deal => ({\n//     name: deal.name,\n//     dealID: deal._id,\n// }));\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 720,
+        "wires": [
+            [
+                "41474809214e478f",
+                "068f8ba4264c7c1d"
+            ]
+        ]
+    },
+    {
+        "id": "66b824314df3f33e",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "to deals",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.payload = {\n    \"owner\": { $elemMatch: { $eq: msg.fromUI.contactID }},\n    deleted: false,\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 340,
+        "y": 720,
+        "wires": [
+            [
+                "0911e0c2b45d4b5d",
+                "068f8ba4264c7c1d"
+            ]
+        ]
+    },
+    {
+        "id": "0911e0c2b45d4b5d",
+        "type": "link call",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 510,
+        "y": 720,
+        "wires": [
+            [
+                "068f8ba4264c7c1d",
+                "cdb9088b407a11bb"
+            ]
+        ]
+    },
+    {
+        "id": "068f8ba4264c7c1d",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 55",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 180,
+        "y": 760,
         "wires": []
     },
     {
@@ -3019,7 +3152,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 660,
+        "y": 580,
         "wires": [
             [
                 "2bf6a44f4ed568e6"
@@ -3037,7 +3170,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 540,
-        "y": 660,
+        "y": 580,
         "wires": [
             [
                 "6fd7015cfb9aef9a",
@@ -3055,7 +3188,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 110,
-        "y": 780,
+        "y": 960,
         "wires": [
             [
                 "491919effcf61399",
@@ -3080,7 +3213,7 @@
             }
         ],
         "x": 360,
-        "y": 780,
+        "y": 960,
         "wires": [
             [
                 "491919effcf61399",
@@ -3099,7 +3232,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 550,
-        "y": 780,
+        "y": 960,
         "wires": [
             [
                 "491919effcf61399",
@@ -3121,7 +3254,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 820,
+        "y": 1000,
         "wires": []
     },
     {
@@ -3132,7 +3265,7 @@
         "statusCode": "",
         "headers": {},
         "x": 910,
-        "y": 780,
+        "y": 960,
         "wires": []
     },
     {
@@ -3147,7 +3280,7 @@
         "finalize": "",
         "libs": [],
         "x": 760,
-        "y": 780,
+        "y": 960,
         "wires": [
             [
                 "f47ebcd88b05288f",
@@ -3178,7 +3311,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 120,
-        "y": 860,
+        "y": 1040,
         "wires": [
             [
                 "1d5b0808453b5970"
@@ -3202,7 +3335,7 @@
             }
         ],
         "x": 340,
-        "y": 660,
+        "y": 580,
         "wires": [
             [
                 "5f18c7ea8eab9432",
@@ -3223,7 +3356,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 340,
-        "y": 700,
+        "y": 620,
         "wires": []
     },
     {
@@ -3239,7 +3372,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 700,
+        "y": 620,
         "wires": []
     },
     {
@@ -3250,7 +3383,7 @@
         "statusCode": "",
         "headers": {},
         "x": 730,
-        "y": 660,
+        "y": 580,
         "wires": []
     },
     {
@@ -3263,7 +3396,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 140,
-        "y": 1120,
+        "y": 680,
         "wires": [
             [
                 "c44f34bb55cf60f5"
@@ -3281,7 +3414,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 540,
-        "y": 1120,
+        "y": 680,
         "wires": [
             [
                 "ea71ea2583b9903c",
@@ -3306,7 +3439,7 @@
             }
         ],
         "x": 340,
-        "y": 1120,
+        "y": 680,
         "wires": [
             [
                 "55e2454dbbdfdbaa",
@@ -3327,7 +3460,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 340,
-        "y": 1160,
+        "y": 720,
         "wires": []
     },
     {
@@ -3343,7 +3476,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 1160,
+        "y": 720,
         "wires": []
     },
     {
@@ -3354,7 +3487,7 @@
         "statusCode": "",
         "headers": {},
         "x": 730,
-        "y": 1120,
+        "y": 680,
         "wires": []
     },
     {
@@ -3369,8 +3502,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 840,
+        "x": 780,
+        "y": 1000,
         "wires": []
     },
     {
@@ -3443,7 +3576,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 110,
-        "y": 260,
+        "y": 180,
         "wires": [
             [
                 "bf9f415d224a9a16",
@@ -3462,7 +3595,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 540,
-        "y": 260,
+        "y": 180,
         "wires": [
             [
                 "a0e956b5641a6cde",
@@ -3487,7 +3620,7 @@
             }
         ],
         "x": 340,
-        "y": 260,
+        "y": 180,
         "wires": [
             [
                 "a95defc783cd0463",
@@ -3508,7 +3641,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 340,
-        "y": 300,
+        "y": 220,
         "wires": []
     },
     {
@@ -3524,7 +3657,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 300,
+        "y": 220,
         "wires": []
     },
     {
@@ -3535,7 +3668,7 @@
         "statusCode": "",
         "headers": {},
         "x": 730,
-        "y": 260,
+        "y": 180,
         "wires": []
     },
     {
@@ -3550,8 +3683,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 140,
-        "y": 320,
+        "x": 120,
+        "y": 220,
         "wires": []
     },
     {
@@ -3564,7 +3697,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 140,
-        "y": 1400,
+        "y": 780,
         "wires": [
             [
                 "a7da04479a06ceba"
@@ -3588,7 +3721,7 @@
             }
         ],
         "x": 610,
-        "y": 1400,
+        "y": 780,
         "wires": [
             [
                 "1d719c19432433b9"
@@ -3606,7 +3739,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 770,
-        "y": 1400,
+        "y": 780,
         "wires": [
             [
                 "21860ef23eada82d"
@@ -3621,7 +3754,7 @@
         "statusCode": "",
         "headers": {},
         "x": 1090,
-        "y": 1400,
+        "y": 780,
         "wires": []
     },
     {
@@ -3636,7 +3769,7 @@
         "finalize": "",
         "libs": [],
         "x": 940,
-        "y": 1400,
+        "y": 780,
         "wires": [
             [
                 "78c7715a4124010e"
@@ -3653,7 +3786,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 440,
+        "y": 280,
         "wires": [
             [
                 "31e1bd57f8c1815d",
@@ -3672,7 +3805,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 540,
-        "y": 440,
+        "y": 280,
         "wires": [
             [
                 "8b813dab4d88a6a9",
@@ -3697,7 +3830,7 @@
             }
         ],
         "x": 340,
-        "y": 440,
+        "y": 280,
         "wires": [
             [
                 "4f4adbf1d2a6e4d5",
@@ -3718,7 +3851,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 340,
-        "y": 480,
+        "y": 320,
         "wires": []
     },
     {
@@ -3734,7 +3867,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 480,
+        "y": 320,
         "wires": []
     },
     {
@@ -3745,7 +3878,7 @@
         "statusCode": "",
         "headers": {},
         "x": 730,
-        "y": 440,
+        "y": 280,
         "wires": []
     },
     {
@@ -3761,7 +3894,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 140,
-        "y": 500,
+        "y": 320,
         "wires": []
     },
     {
@@ -3781,7 +3914,7 @@
             }
         ],
         "x": 310,
-        "y": 1400,
+        "y": 780,
         "wires": [
             [
                 "049978f2fdd4b154"
@@ -3799,7 +3932,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 450,
-        "y": 1400,
+        "y": 780,
         "wires": [
             [
                 "c16555819b98820a"
@@ -3816,7 +3949,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 110,
-        "y": 960,
+        "y": 380,
         "wires": [
             [
                 "f1235bca4be3f4c6",
@@ -3841,7 +3974,7 @@
             }
         ],
         "x": 350,
-        "y": 960,
+        "y": 380,
         "wires": [
             [
                 "f1235bca4be3f4c6",
@@ -3860,7 +3993,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 550,
-        "y": 960,
+        "y": 380,
         "wires": [
             [
                 "f1235bca4be3f4c6",
@@ -3881,8 +4014,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 140,
-        "y": 1000,
+        "x": 120,
+        "y": 420,
         "wires": []
     },
     {
@@ -3893,7 +4026,7 @@
         "statusCode": "",
         "headers": {},
         "x": 910,
-        "y": 960,
+        "y": 380,
         "wires": []
     },
     {
@@ -3908,59 +4041,13 @@
         "finalize": "",
         "libs": [],
         "x": 760,
-        "y": 960,
+        "y": 380,
         "wires": [
             [
                 "a49706b041abf611",
-                "f1235bca4be3f4c6",
-                "733c862f2aeeb763"
+                "f1235bca4be3f4c6"
             ]
         ]
-    },
-    {
-        "id": "59988dd35cdbfe48",
-        "type": "inject",
-        "z": "04949f39d52b1544",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 1040,
-        "wires": [
-            [
-                "8b7f7221f16b2bc1"
-            ]
-        ]
-    },
-    {
-        "id": "733c862f2aeeb763",
-        "type": "debug",
-        "z": "04949f39d52b1544",
-        "name": "debug 43",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 1020,
-        "wires": []
     },
     {
         "id": "ba97e8986832bd94",
