@@ -1075,7 +1075,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1470,
+        "x": 1530,
         "y": 560,
         "wires": []
     },
@@ -1161,31 +1161,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1300,
+        "x": 1360,
         "y": 560,
         "wires": [
             [
-                "a311e6a3b2036066",
-                "b35d459943532d28"
+                "a311e6a3b2036066"
             ]
         ]
-    },
-    {
-        "id": "b35d459943532d28",
-        "type": "debug",
-        "z": "291b0c173e143ef0",
-        "name": "debug 48",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1080,
-        "y": 640,
-        "wires": []
     },
     {
         "id": "872a895b50981ca6",
@@ -1476,7 +1458,7 @@
         "id": "97c05f87e7906426",
         "type": "function",
         "z": "291b0c173e143ef0",
-        "name": "getContacts",
+        "name": "getContacts111",
         "func": "msg.owners = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    deleted: false,\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
@@ -1488,7 +1470,7 @@
                 "module": "objectid"
             }
         ],
-        "x": 970,
+        "x": 980,
         "y": 500,
         "wires": [
             [
@@ -1506,7 +1488,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1130,
+        "x": 1150,
         "y": 500,
         "wires": [
             [
