@@ -128,7 +128,9 @@
             "a2b1bc579a4c0ced"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 932,
+        "h": 122
     },
     {
         "id": "398457a4bc6d8725",
@@ -188,7 +190,9 @@
             "c13baca0a8f18f1a"
         ],
         "x": 14,
-        "y": 1319
+        "y": 1319,
+        "w": 3312,
+        "h": 462
     },
     {
         "id": "b0ef14992c694846",
@@ -230,7 +234,9 @@
             "10c41f549cf86656"
         ],
         "x": 54,
-        "y": 459
+        "y": 459,
+        "w": 832,
+        "h": 182
     },
     {
         "id": "d78377c07a215120",
@@ -289,11 +295,12 @@
             "c6738f0c897830ef",
             "769c853fb108cedb",
             "d2bd362abdcf67e2",
-            "f3fae0dbf2c5f9ec",
-            "171297511238480d"
+            "f3fae0dbf2c5f9ec"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 1792,
+        "h": 642
     },
     {
         "id": "0dd2dfd7df691836",
@@ -405,7 +412,9 @@
             "2f67916e0bc7be15"
         ],
         "x": 14,
-        "y": 879
+        "y": 879,
+        "w": 1372,
+        "h": 402
     },
     {
         "id": "fd9bc368cea45c71",
@@ -451,7 +460,9 @@
             "f3211f80fa6b47f6"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 1452,
+        "h": 462
     },
     {
         "id": "a8bcf74ef7690d27",
@@ -501,7 +512,9 @@
             "1e2c8c7cdacb7345"
         ],
         "x": 44,
-        "y": 39
+        "y": 39,
+        "w": 942,
+        "h": 762
     },
     {
         "id": "c8e4ab113b6b9056",
@@ -544,7 +557,9 @@
             "655fc308a4013906"
         ],
         "x": 1034,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 682
     },
     {
         "id": "221ba791b89fb1e4",
@@ -5901,7 +5916,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "d78377c07a215120",
         "name": "menu grouping",
-        "func": "msg.payload = msg.payload[0];\nmsg.permissions = msg.payload.permissions;\n\nfunction sortByPositionNumber(arr) {\n    return arr.sort((a, b) => +a.position - +b.position);\n}\n\nmsg.menu = sortByPositionNumber(msg.payload.menu).map(el => {\n\n    if (el.isParent) {\n        return {\n            \"label\": el.name,\n            \"value\": el.name,\n            \"icon\": el.icon ? el.icon : \"\",\n            \"children\": el.childModules.length \n                ? sortByPositionNumber(el.childModules)\n                  .map(item => ({\n                      \"label\": item.name,\n                      \"value\": item.name,\n                      \"icon\": item.icon ? item.icon : \"\"\n                  })) \n                : []\n        }\n    } else {\n        return {\n            \"label\": el.name,\n            \"value\": el.name,\n            \"children\": [],\n            \"icon\": el.icon ? el.icon : \"\",\n        }\n    }\n    \n});\n\nreturn msg;",
+        "func": "msg.payload = msg.payload[0];\nmsg.permissions = msg.payload.permissions;\n\nfunction sortByPositionNumber(arr) {\n    return arr.sort((a, b) => +a.position - +b.position);\n}\n\nmsg.menu = sortByPositionNumber(msg.payload.menu).map(el => {\n    if (el.isParent) {\n        return {\n            \"label\": el.name,\n            \"value\": el.name,\n            \"icon\": el.icon ? el.icon : \"\",\n            isHidden: el.isHidden,\n            \"children\": el.childModules.length \n                ? sortByPositionNumber(el.childModules)\n                  .map(item => ({\n                      \"label\": item.name,\n                      \"value\": item.name,\n                      \"icon\": item.icon ? item.icon : \"\"\n                  })) \n                : []\n        }\n    } else {\n        return {\n            \"label\": el.name,\n            \"value\": el.name,\n            \"children\": [],\n            \"icon\": el.icon ? el.icon : \"\",\n            isHidden: el.isHidden,\n        }\n    }\n    \n});\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5921,7 +5936,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "d78377c07a215120",
         "name": "check user permissions",
-        "func": "const pageName = msg.check.page_id.replace('%20', ' ');\n\nconst parentPage = msg.menu.map((el) => el.label).includes(pageName);\nconst childPage = msg.menu.filter((e) => e.children.length > 0).flatMap((el) => el.children).map((elem) => elem.label).includes(pageName);\n\nif (parentPage || childPage) {\n\n\n    msg.menu.pop(); //------------\n    msg.menu.pop();//-------------\n    msg.menu.pop();//-------------\n    node.warn(msg.menu);\n    // delete msg.menu;\n    // const msg.menu = msg.menu.map((el) => el.label).includes(pageName);\n\n\n    msg.statusCode = 200;\n    msg.payload = {\n        auth: \"Success\",\n        code: 200,\n        user: {\n            \"menu\": msg.menu,\n            \"permission\": msg.permissions,\n            \"translation\": msg.payload.translation[0],\n            \"info\": msg.user,\n            // \"attributes\": msg.user.user.attributes\n        }\n    }\n\n} else {\n\n    msg.payload = {\n        auth: \"Unautorizate\",\n        code: 401,\n        login_id: msg.menu[0].value + `?pageName=${msg.menu[0].value}`,\n        app_id: msg.check.app_id\n    }\n\n}\nreturn msg;",
+        "func": "const pageName = msg.check.page_id.replace('%20', ' ');\n\nconst parentPage = msg.menu.map((el) => el.label).includes(pageName);\nconst childPage = msg.menu.filter((e) => e.children.length > 0).flatMap((el) => el.children).map((elem) => elem.label).includes(pageName);\n\nif (parentPage || childPage) {\n    msg.menu = msg.menu.filter(page => !page.isHidden ); // Hiding pages\n\n    msg.statusCode = 200;\n    msg.payload = {\n        auth: \"Success\",\n        code: 200,\n        user: {\n            \"menu\": msg.menu,\n            \"permission\": msg.permissions,\n            \"translation\": msg.payload.translation[0],\n            \"info\": msg.user,\n            // \"attributes\": msg.user.user.attributes\n        }\n    }\n\n} else {\n\n    msg.payload = {\n        auth: \"Unautorizate\",\n        code: 401,\n        login_id: msg.menu[0].value + `?pageName=${msg.menu[0].value}`,\n        app_id: msg.check.app_id\n    }\n\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6848,34 +6863,6 @@
         "wires": []
     },
     {
-        "id": "3991f8516b403ed6",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "name": "check user permissions",
-        "func": "const pageName = msg.check.page_id.replace('%20', ' ');\n\nconst parentPage = msg.menu.map((el) => el.label).includes(pageName);\nconst childPage = msg.menu.filter((e) => e.children.length > 0).flatMap((el) => el.children).map((elem) => elem.label).includes(pageName);\n\nif (parentPage || childPage) {\n\n    \n\n    msg.statusCode = 200;\n    msg.payload = {\n        auth: \"Success\",\n        code: 200,\n        user: {\n            \"menu\": msg.menu,\n            \"permission\": msg.permissions,\n            \"translation\": msg.payload.translation[0],\n            \"info\": msg.user,\n            // \"attributes\": msg.user.user.attributes\n        }\n    }\n\n} else {\n\n    msg.payload = {\n        auth: \"Unautorizate\",\n        code: 401,\n        login_id: msg.menu[0].value + `?pageName=${msg.menu[0].value}`,\n        app_id: msg.check.app_id\n    }\n\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1950,
-        "y": 540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "171297511238480d",
-        "type": "comment",
-        "z": "c8b39bad946d8ab6",
-        "g": "d78377c07a215120",
-        "name": "fix hardcode  with .pop()",
-        "info": "",
-        "x": 1520,
-        "y": 500,
-        "wires": []
-    },
-    {
         "id": "081c8c3d3092e3d2",
         "type": "http in",
         "z": "bbdd9d9b60f738e3",
@@ -6912,7 +6899,7 @@
         "z": "bbdd9d9b60f738e3",
         "g": "a8bcf74ef7690d27",
         "name": "",
-        "func": "\nif (msg.payload.userAttributes.some(e => e.attributeName === \"create page\")) {\n    msg.collection = \"admin_modules\"\n\n    msg.payload = {\n        ...msg.payload,\n        deleted: false,\n        isParent: false\n    };\n    return msg\n} else {\n    msg.status = 403;\n    return msg\n}",
+        "func": "if (msg.payload.userAttributes.some(e => e.attributeName === \"create page\")) {\n    msg.collection = \"admin_modules\";\n\n    msg.payload = {\n        ...msg.payload,\n        deleted: false,\n        isParent: false,\n        isHidden: false,\n    };\n\n    return msg;\n\n} else {\n    msg.status = 403;\n\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7452,7 +7439,7 @@
         "z": "bbdd9d9b60f738e3",
         "g": "a8bcf74ef7690d27",
         "name": "update parent",
-        "func": "msg.collection = \"admin_modules\";\n\nmsg.query = {\n    _id: objectid(msg.payload._id)\n};\n\nmsg.payload = {\n    $set: {\n        icon: msg.payload.icon,\n        position: msg.payload.position,\n        name: msg.payload.name\n    }\n}\n\nreturn msg;",
+        "func": "msg.collection = \"admin_modules\";\n\nmsg.query = {\n    _id: objectid(msg.payload._id)\n};\n\nmsg.payload = {\n    $set: {\n        icon: msg.payload.icon,\n        position: msg.payload.position,\n        name: msg.payload.name,\n        isHidden: msg.payload.isHidden,\n    }\n}\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
