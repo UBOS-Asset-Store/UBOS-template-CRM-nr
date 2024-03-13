@@ -1113,7 +1113,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "getOwners",
-        "func": "msg.deals = msg.payload; // save deals for future \n\nmsg.collection = \"admins\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
+        "func": "msg.deal = msg.payload[0]; // save deals for future \n\nmsg.collection = \"admins\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1155,7 +1155,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "prepare for UI",
-        "func": "msg.contacts = msg.payload;\n// msg.owners = msg.owners.map(e => (\n//     {\n//         _id: e._id,\n//         email: e.email,\n//         firstname: e.firstname,\n//         lastname: e.lastname,\n//     }\n// ));\n\nmsg.deals = msg.deals.map(e => {\n    const contact = msg.contacts?.find(contact => contact._id == e.dealWithContact);\n\n    const deal = {\n        dealID: e._id,\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        closeDate: e.closeDate,\n        priority: e.priority,\n        ownerID: e.owner,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n        dealWithContactID: e.dealWithContact,\n        dealWithContactEmail: contact?.email,\n        dealWithContactFirstName: contact?.firstName,\n        dealWithContactLastName: contact?.lastName,\n    };\n\n    return deal;\n});\n\nmsg.payload = msg.deals;\n\nreturn msg;\n",
+        "func": "msg.contacts = msg.payload;\n\nconst deal = msg.deal;\nconst contact = msg.contacts?.find(contact => contact._id == msg.deal.dealWithContact);\n\nconst dealUpdated = {\n    dealID: deal._id,\n    name: deal.name,\n    stage: deal.stage,\n    amount: deal.amount,\n    closeDate: deal.closeDate,\n    priority: deal.priority,\n    ownerID: deal.owner,\n    ownerEmail: msg.owners.find(owner => owner._id == deal.owner)?.email,\n    dealWithContactID: deal.dealWithContact,\n    dealWithContactEmail: contact?.email,\n    dealWithContactFirstName: contact?.firstName,\n    dealWithContactLastName: contact?.lastName,\n};\n\nmsg.payload = dealUpdated;\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1165,7 +1165,8 @@
         "y": 560,
         "wires": [
             [
-                "a311e6a3b2036066"
+                "a311e6a3b2036066",
+                "76a31d6eef79651f"
             ]
         ]
     },
@@ -1458,7 +1459,7 @@
         "id": "97c05f87e7906426",
         "type": "function",
         "z": "291b0c173e143ef0",
-        "name": "getContacts111",
+        "name": "getContacts",
         "func": "msg.owners = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    deleted: false,\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
@@ -1470,7 +1471,7 @@
                 "module": "objectid"
             }
         ],
-        "x": 980,
+        "x": 970,
         "y": 500,
         "wires": [
             [
@@ -1512,6 +1513,23 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "76a31d6eef79651f",
+        "type": "debug",
+        "z": "291b0c173e143ef0",
+        "name": "debug 56",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 600,
+        "wires": []
     },
     {
         "id": "587c4d3f26fe4852",
