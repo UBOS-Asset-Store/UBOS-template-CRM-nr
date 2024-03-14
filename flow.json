@@ -128,9 +128,7 @@
             "a2b1bc579a4c0ced"
         ],
         "x": 14,
-        "y": 719,
-        "w": 932,
-        "h": 122
+        "y": 719
     },
     {
         "id": "398457a4bc6d8725",
@@ -190,9 +188,7 @@
             "c13baca0a8f18f1a"
         ],
         "x": 14,
-        "y": 1319,
-        "w": 3312,
-        "h": 462
+        "y": 1319
     },
     {
         "id": "b0ef14992c694846",
@@ -234,9 +230,7 @@
             "10c41f549cf86656"
         ],
         "x": 54,
-        "y": 459,
-        "w": 832,
-        "h": 182
+        "y": 459
     },
     {
         "id": "d78377c07a215120",
@@ -298,9 +292,7 @@
             "f3fae0dbf2c5f9ec"
         ],
         "x": 14,
-        "y": 39,
-        "w": 1792,
-        "h": 642
+        "y": 39
     },
     {
         "id": "0dd2dfd7df691836",
@@ -412,9 +404,7 @@
             "2f67916e0bc7be15"
         ],
         "x": 14,
-        "y": 879,
-        "w": 1372,
-        "h": 402
+        "y": 879
     },
     {
         "id": "fd9bc368cea45c71",
@@ -460,9 +450,7 @@
             "f3211f80fa6b47f6"
         ],
         "x": 34,
-        "y": 39,
-        "w": 1452,
-        "h": 462
+        "y": 39
     },
     {
         "id": "a8bcf74ef7690d27",
@@ -512,9 +500,7 @@
             "1e2c8c7cdacb7345"
         ],
         "x": 44,
-        "y": 39,
-        "w": 942,
-        "h": 762
+        "y": 39
     },
     {
         "id": "c8e4ab113b6b9056",
@@ -557,9 +543,7 @@
             "655fc308a4013906"
         ],
         "x": 1034,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "221ba791b89fb1e4",
@@ -769,7 +753,7 @@
                 "module": "objectid"
             }
         ],
-        "x": 360,
+        "x": 320,
         "y": 60,
         "wires": [
             [
@@ -788,7 +772,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 590,
+        "x": 530,
         "y": 60,
         "wires": [
             [
@@ -804,7 +788,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 750,
+        "x": 690,
         "y": 60,
         "wires": []
     },
@@ -983,27 +967,9 @@
         "y": 780,
         "wires": [
             [
-                "c075c10d6ab37070",
-                "81d47a72d453604e"
+                "c075c10d6ab37070"
             ]
         ]
-    },
-    {
-        "id": "81d47a72d453604e",
-        "type": "debug",
-        "z": "291b0c173e143ef0",
-        "name": "debug 46",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1280,
-        "y": 880,
-        "wires": []
     },
     {
         "id": "b66115a7dcc1ff71",
@@ -1090,7 +1056,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1530,
+        "x": 1510,
         "y": 560,
         "wires": []
     },
@@ -1115,7 +1081,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 120,
         "y": 520,
         "wires": [
             [
@@ -1176,12 +1142,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1360,
+        "x": 1340,
         "y": 560,
         "wires": [
             [
-                "a311e6a3b2036066",
-                "76a31d6eef79651f"
+                "a311e6a3b2036066"
             ]
         ]
     },
@@ -1334,7 +1299,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 530,
+        "x": 540,
         "y": 320,
         "wires": [
             [
@@ -1359,7 +1324,7 @@
                 "module": "objectid"
             }
         ],
-        "x": 310,
+        "x": 320,
         "y": 320,
         "wires": [
             [
@@ -1380,7 +1345,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 310,
+        "x": 320,
         "y": 360,
         "wires": []
     },
@@ -1396,7 +1361,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 530,
+        "x": 540,
         "y": 360,
         "wires": []
     },
@@ -1407,7 +1372,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 690,
+        "x": 700,
         "y": 320,
         "wires": []
     },
@@ -1465,7 +1430,6 @@
         "y": 780,
         "wires": [
             [
-                "81d47a72d453604e",
                 "526bce4591c7ae53"
             ]
         ]
@@ -1486,8 +1450,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 970,
-        "y": 500,
+        "x": 990,
+        "y": 560,
         "wires": [
             [
                 "dcb029b942a1982f"
@@ -1505,46 +1469,12 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1150,
-        "y": 500,
+        "y": 560,
         "wires": [
             [
                 "dfa4fa357c591b6c"
             ]
         ]
-    },
-    {
-        "id": "e06d15a4fbe3829c",
-        "type": "function",
-        "z": "291b0c173e143ef0",
-        "name": "prepare for UI",
-        "func": "msg.owners = msg.payload;\n// msg.owners = msg.owners.map(e => (\n//     {\n//         _id: e._id,\n//         email: e.email,\n//         firstname: e.firstname,\n//         lastname: e.lastname,\n//     }\n// ));\n\nmsg.deals = msg.deals.map(e => {    \n    return {\n        dealID: e._id,\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        closeDate: e.closeDate,\n        priority: e.priority,\n        ownerID: e.owner,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n        dealWithContact: e.dealWithContact,\n    };\n});\n\nmsg.payload = msg.deals[0];\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1320,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "76a31d6eef79651f",
-        "type": "debug",
-        "z": "291b0c173e143ef0",
-        "name": "debug 56",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1380,
-        "y": 600,
-        "wires": []
     },
     {
         "id": "587c4d3f26fe4852",
