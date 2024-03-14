@@ -128,9 +128,7 @@
             "a2b1bc579a4c0ced"
         ],
         "x": 14,
-        "y": 719,
-        "w": 932,
-        "h": 122
+        "y": 719
     },
     {
         "id": "398457a4bc6d8725",
@@ -190,9 +188,7 @@
             "c13baca0a8f18f1a"
         ],
         "x": 14,
-        "y": 1319,
-        "w": 3312,
-        "h": 462
+        "y": 1319
     },
     {
         "id": "b0ef14992c694846",
@@ -296,9 +292,7 @@
             "f3fae0dbf2c5f9ec"
         ],
         "x": 14,
-        "y": 39,
-        "w": 1792,
-        "h": 642
+        "y": 39
     },
     {
         "id": "0dd2dfd7df691836",
@@ -410,9 +404,7 @@
             "2f67916e0bc7be15"
         ],
         "x": 14,
-        "y": 879,
-        "w": 1372,
-        "h": 402
+        "y": 879
     },
     {
         "id": "fd9bc368cea45c71",
@@ -508,9 +500,7 @@
             "1e2c8c7cdacb7345"
         ],
         "x": 44,
-        "y": 39,
-        "w": 942,
-        "h": 762
+        "y": 39
     },
     {
         "id": "c8e4ab113b6b9056",
@@ -553,9 +543,7 @@
             "655fc308a4013906"
         ],
         "x": 1034,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "221ba791b89fb1e4",
@@ -1645,7 +1633,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "---",
-        "func": "msg.collection = 'contacts';\n\nmsg.payload = {\n    _id: objectid('65eaecb9204d01110000001d')\n};\n\nreturn msg;\n",
+        "func": "msg.collection = 'contacts';\n\n// msg.payload = {\n//     _id: objectid('65eaecb9204d01110000001d')\n// };\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1842,12 +1830,11 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 750,
+        "x": 650,
         "y": 1040,
         "wires": [
             [
-                "4cf1f43e7c0fd6f8",
-                "ed5c0dec81a4bc6f"
+                "4cf1f43e7c0fd6f8"
             ]
         ]
     },
@@ -2108,7 +2095,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "contactOwners",
-        "func": "msg.collection = 'contactOwners';\n\n\nreturn msg;\n",
+        "func": "msg.collection = 'admins';\n\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2333,7 +2320,7 @@
         "wires": [
             [
                 "c27c7797df94b511",
-                "52772985efe77570"
+                "4d1d94526a582800"
             ]
         ]
     },
@@ -2360,7 +2347,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 910,
+        "x": 1510,
         "y": 900,
         "wires": []
     },
@@ -2369,13 +2356,13 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "prepare for ui",
-        "func": "// msg.payload = msg.payload.map(list => ({\n//     label: list.name,\n//     value: list._id,\n// }));\n\n\nswitch (msg.fromUI.responseType) {\n    case 'forSelector':\n        msg.payload = msg.payload.map(e => ({\n            label: `${e.firstName} ${e?.lastName}\n${e.email}`,\n            value: e._id,\n        }));\n\n        break;\n\n    default:\n        return msg;\n}\n\nreturn msg;\n",
+        "func": "msg.owners = msg.payload;\n\nswitch (msg.fromUI.responseType) {\n    case 'forSelector':\n        msg.payload = msg.contacts.map(e => ({\n            label: `${e.firstName} ${e?.lastName}\n${e.email}`,\n            value: e._id,\n        }));\n\n        break;\n\n    default:\n        msg.contacts = msg.contacts.map(contact => {\n            const owner = msg.owners?.find(owner => owner._id == contact.contactOwner);\n\n            const contactUpdated = {\n                ...contact,\n                contactOwnerEmail: owner.email,\n            };\n\n            return contactUpdated;\n        });\n\n        msg.payload = msg.contacts;\n\n        break;\n}\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 740,
+        "x": 1340,
         "y": 900,
         "wires": [
             [
@@ -3010,6 +2997,49 @@
         "x": 180,
         "y": 760,
         "wires": []
+    },
+    {
+        "id": "4d1d94526a582800",
+        "type": "function",
+        "z": "3db5a363b78466f5",
+        "name": "getOwners",
+        "func": "msg.contacts = msg.payload;\n\nmsg.collection = \"admins\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 790,
+        "y": 860,
+        "wires": [
+            [
+                "9de585db86aab85d"
+            ]
+        ]
+    },
+    {
+        "id": "9de585db86aab85d",
+        "type": "link call",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 950,
+        "y": 860,
+        "wires": [
+            [
+                "52772985efe77570",
+                "c27c7797df94b511"
+            ]
+        ]
     },
     {
         "id": "f03319fda5d70724",
