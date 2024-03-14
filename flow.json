@@ -128,7 +128,9 @@
             "a2b1bc579a4c0ced"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 932,
+        "h": 122
     },
     {
         "id": "398457a4bc6d8725",
@@ -188,7 +190,9 @@
             "c13baca0a8f18f1a"
         ],
         "x": 14,
-        "y": 1319
+        "y": 1319,
+        "w": 3312,
+        "h": 462
     },
     {
         "id": "b0ef14992c694846",
@@ -292,7 +296,9 @@
             "f3fae0dbf2c5f9ec"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 1792,
+        "h": 642
     },
     {
         "id": "0dd2dfd7df691836",
@@ -404,7 +410,9 @@
             "2f67916e0bc7be15"
         ],
         "x": 14,
-        "y": 879
+        "y": 879,
+        "w": 1372,
+        "h": 402
     },
     {
         "id": "fd9bc368cea45c71",
@@ -500,7 +508,9 @@
             "1e2c8c7cdacb7345"
         ],
         "x": 44,
-        "y": 39
+        "y": 39,
+        "w": 942,
+        "h": 762
     },
     {
         "id": "c8e4ab113b6b9056",
@@ -543,7 +553,9 @@
             "655fc308a4013906"
         ],
         "x": 1034,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 682
     },
     {
         "id": "221ba791b89fb1e4",
@@ -4692,7 +4704,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "398457a4bc6d8725",
         "name": "admins",
-        "func": "if (msg.payload.length > 0) {\n    let bcrypt = global.get('bcrypt')\n    let result = '';\n    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';\n    const charactersLength = characters.length;\n    for (let i = 0; i < 8; i++) {\n        result += characters.charAt(Math.floor(Math.random() * charactersLength));\n    }\n\n    // let encryptedPassword = await bcrypt.hash(result, 10);\n    let encryptedPassword = await bcrypt.hash(msg.password, 10);\n\n    // msg.password=result\n    msg.payload = {\n        \"deleted\": false,\n        \"avatarColor\": \"#80f124\",\n        \"createdAt\": global.get(\"convert_date\"),\n        \"updatedAt\": global.get(\"convert_date\"),\n        \"roles\": [msg.payload[0]._id],\n        \"active\": true,\n        \"firstname\": \"admin\",\n        \"lastname\": \"admin\",\n        \"email\": msg.email,\n        \"password\": encryptedPassword,\n        \"verifyToken\": null,\n        \"resetPassToken\": \"\",\n        \"resetPassExpireToken\": null,\n        \"attributes\": msg.adminAttributes\n    }\n    msg.collection = \"admins\";\n\n    return [msg, null];\n} else {\n    return [null, msg]\n}",
+        "func": "if (msg.payload.length > 0) {\n    let bcrypt = global.get('bcrypt')\n    let result = '';\n    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';\n    const charactersLength = characters.length;\n    for (let i = 0; i < 8; i++) {\n        result += characters.charAt(Math.floor(Math.random() * charactersLength));\n    }\n\n    // let encryptedPassword = await bcrypt.hash(result, 10);\n    let encryptedPassword = await bcrypt.hash(msg.password, 10);\n\n    // msg.password=result\n    msg.payload = {\n        \"deleted\": false,\n        \"avatarColor\": \"#80f124\",\n        \"createdAt\": global.get(\"convert_date\"),\n        \"updatedAt\": global.get(\"convert_date\"),\n        \"roles\": [msg.payload[0]._id],\n        \"active\": true,\n        \"firstname\": \"admin\",\n        \"lastname\": \"admin\",\n        \"email\": msg.email.toLowerCase().trim(),\n        \"password\": encryptedPassword,\n        \"verifyToken\": null,\n        \"resetPassToken\": \"\",\n        \"resetPassExpireToken\": null,\n        \"attributes\": msg.adminAttributes\n    }\n    msg.collection = \"admins\";\n\n    return [msg, null];\n} else {\n    return [null, msg]\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
