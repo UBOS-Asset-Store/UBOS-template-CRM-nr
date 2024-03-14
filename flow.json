@@ -745,7 +745,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 140,
+        "x": 160,
         "y": 100,
         "wires": []
     },
@@ -1204,7 +1204,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "to mongo",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        name: msg.fromUI.DealName,\n        stage: msg.fromUI.DealStage,\n        amount: msg.fromUI.Amount,\n        closeDate: msg.fromUI.CloseDate,\n        priority: msg.fromUI.Priority,\n    },\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        ...(msg.fromUI.DealName ? { name: msg.fromUI.DealName } : {}),\n        ...(msg.fromUI.DealStage ? { stage: msg.fromUI.DealStage } : {}),\n        ...(msg.fromUI.Amount ? { amount: msg.fromUI.Amount } : {}),\n        ...(msg.fromUI.CloseDate ? { closeDate: msg.fromUI.CloseDate } : {}),\n        ...(msg.fromUI.Priority ? { priority: msg.fromUI.Priority } : {}),\n    },\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
