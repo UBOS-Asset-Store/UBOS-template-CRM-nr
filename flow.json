@@ -128,7 +128,9 @@
             "a2b1bc579a4c0ced"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 932,
+        "h": 122
     },
     {
         "id": "398457a4bc6d8725",
@@ -188,7 +190,9 @@
             "c13baca0a8f18f1a"
         ],
         "x": 14,
-        "y": 1319
+        "y": 1319,
+        "w": 3312,
+        "h": 462
     },
     {
         "id": "b0ef14992c694846",
@@ -232,69 +236,9 @@
             "10c41f549cf86656"
         ],
         "x": 54,
-        "y": 459
-    },
-    {
-        "id": "d78377c07a215120",
-        "type": "group",
-        "z": "c8b39bad946d8ab6",
-        "name": "Authorization",
-        "style": {
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "5c6e2dd94ba411ce",
-            "672799ed948f1313",
-            "b085f10213c6a2fc",
-            "e594c405f087b6cf",
-            "0608e9f35bdcacf1",
-            "1adb12ad2ffdeb42",
-            "d390b9504c129252",
-            "b457f0b5c3fd5d96",
-            "097b05d6f95dab62",
-            "dd3e208dfbba0a56",
-            "73893182e2e2ed57",
-            "cfc7631182b5ef67",
-            "a602a24988dcc60f",
-            "6f81187c8d88e4de",
-            "1a6b5d862a0b4bfc",
-            "ca2dc46c7edc0fb2",
-            "e49d1c22247329f1",
-            "962e2be5ddd19cfc",
-            "79c17e7d8ed1f939",
-            "c67252247235be7c",
-            "d8f65e08d1802e8e",
-            "92a82d990292b9c2",
-            "e653dc9c2aa956f2",
-            "0b6ff6d92b1de7e7",
-            "0cfa0691dcae508d",
-            "14cc1d46a9f6856f",
-            "37e8938d6e6be501",
-            "3ec27d1aa2132072",
-            "f44a8595ea0bcb12",
-            "8e3d911803fb42c8",
-            "1e91697ac2db3998",
-            "96ddd1fd107d0fb1",
-            "e658de794a3c71fb",
-            "789c8b4acff2f6b7",
-            "8c1b30db3408fa4f",
-            "048839a0841bf326",
-            "b1a0dbb265b01eb0",
-            "3a8b64a602016860",
-            "7f716983a77c86a6",
-            "e30c726e83877e71",
-            "39af801020f87f81",
-            "22b08a1354cd7157",
-            "5762715365c99943",
-            "1b137c6a843f5af0",
-            "c6738f0c897830ef",
-            "769c853fb108cedb",
-            "d2bd362abdcf67e2",
-            "f3fae0dbf2c5f9ec"
-        ],
-        "x": 14,
-        "y": 39
+        "y": 459,
+        "w": 832,
+        "h": 182
     },
     {
         "id": "0dd2dfd7df691836",
@@ -339,7 +283,9 @@
             "2d32ffcf75d44831"
         ],
         "x": 34,
-        "y": 519
+        "y": 519,
+        "w": 1352,
+        "h": 562
     },
     {
         "id": "b2cb8a397b61947a",
@@ -408,7 +354,9 @@
             "2f67916e0bc7be15"
         ],
         "x": 14,
-        "y": 879
+        "y": 879,
+        "w": 1372,
+        "h": 402
     },
     {
         "id": "fd9bc368cea45c71",
@@ -504,7 +452,9 @@
             "1e2c8c7cdacb7345"
         ],
         "x": 44,
-        "y": 39
+        "y": 39,
+        "w": 942,
+        "h": 762
     },
     {
         "id": "c8e4ab113b6b9056",
@@ -547,7 +497,9 @@
             "655fc308a4013906"
         ],
         "x": 1034,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 682
     },
     {
         "id": "221ba791b89fb1e4",
@@ -597,7 +549,104 @@
             "6c2b81d3f58aa157"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1472,
+        "h": 482
+    },
+    {
+        "id": "d78377c07a215120",
+        "type": "group",
+        "z": "c8b39bad946d8ab6",
+        "name": "Authorization",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "5c6e2dd94ba411ce",
+            "672799ed948f1313",
+            "b085f10213c6a2fc",
+            "e594c405f087b6cf",
+            "0608e9f35bdcacf1",
+            "1adb12ad2ffdeb42",
+            "d390b9504c129252",
+            "b457f0b5c3fd5d96",
+            "097b05d6f95dab62",
+            "dd3e208dfbba0a56",
+            "73893182e2e2ed57",
+            "cfc7631182b5ef67",
+            "a602a24988dcc60f",
+            "6f81187c8d88e4de",
+            "1a6b5d862a0b4bfc",
+            "ca2dc46c7edc0fb2",
+            "e49d1c22247329f1",
+            "962e2be5ddd19cfc",
+            "79c17e7d8ed1f939",
+            "c67252247235be7c",
+            "d8f65e08d1802e8e",
+            "92a82d990292b9c2",
+            "e653dc9c2aa956f2",
+            "0b6ff6d92b1de7e7",
+            "0cfa0691dcae508d",
+            "14cc1d46a9f6856f",
+            "37e8938d6e6be501",
+            "3ec27d1aa2132072",
+            "f44a8595ea0bcb12",
+            "8e3d911803fb42c8",
+            "1e91697ac2db3998",
+            "96ddd1fd107d0fb1",
+            "e658de794a3c71fb",
+            "789c8b4acff2f6b7",
+            "8c1b30db3408fa4f",
+            "048839a0841bf326",
+            "b1a0dbb265b01eb0",
+            "3a8b64a602016860",
+            "7f716983a77c86a6",
+            "e30c726e83877e71",
+            "39af801020f87f81",
+            "22b08a1354cd7157",
+            "5762715365c99943",
+            "1b137c6a843f5af0",
+            "c6738f0c897830ef",
+            "769c853fb108cedb",
+            "d2bd362abdcf67e2",
+            "f3fae0dbf2c5f9ec"
+        ],
+        "x": 14,
+        "y": 39,
+        "w": 1792,
+        "h": 642
+    },
+    {
+        "id": "d8d6cfc2c521390d",
+        "type": "group",
+        "z": "3db5a363b78466f5",
+        "name": "Technical. You can delete it.",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8939051f184e68e3",
+            "bf4e03e8bc4c4c33",
+            "8a77e92bf79ce345",
+            "6919bc84caf16110",
+            "966ad6f5941168fa",
+            "c403afb8de1fdf9a",
+            "2543c5f821c8da9a",
+            "9c39e956120ff1d7",
+            "189008d7fc7dc7fd",
+            "87898c8ea5653f96",
+            "4573bb45913fbd76",
+            "2e181ddb411d9b92",
+            "c0e1cf988f37a271",
+            "fd9032dc3d062c2d",
+            "60caa5caafe51245",
+            "e8384769bf28d8a1"
+        ],
+        "x": 14,
+        "y": 1099,
+        "w": 712,
+        "h": 222
     },
     {
         "id": "c2ed02a101fd1361",
@@ -834,7 +883,6 @@
         "y": 780,
         "wires": [
             [
-                "dbfa879fbd03220a",
                 "79a0093a898d159f"
             ]
         ]
@@ -853,7 +901,6 @@
         "y": 780,
         "wires": [
             [
-                "dbfa879fbd03220a",
                 "928184e57c0da8fd"
             ]
         ]
@@ -870,7 +917,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 140,
+        "x": 160,
         "y": 820,
         "wires": []
     },
@@ -971,7 +1018,8 @@
         "y": 780,
         "wires": [
             [
-                "c075c10d6ab37070"
+                "c075c10d6ab37070",
+                "dbfa879fbd03220a"
             ]
         ]
     },
@@ -1013,7 +1061,6 @@
         "y": 560,
         "wires": [
             [
-                "2fb1d9ac8e766369",
                 "1c1bb517c2fc831c"
             ]
         ]
@@ -1032,7 +1079,6 @@
         "y": 560,
         "wires": [
             [
-                "2fb1d9ac8e766369",
                 "b6367eaa15460e77"
             ]
         ]
@@ -1196,7 +1242,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "to mongo",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        ...(msg.fromUI.dealName ? { name: msg.fromUI.dealName } : {}),\n        ...(msg.fromUI.dealStage ? { stage: msg.fromUI.dealStage } : {}),\n        ...(msg.fromUI.amount ? { amount: msg.fromUI.amount } : {}),\n        ...(msg.fromUI.closeDate ? { closeDate: msg.fromUI.closeDate } : {}),\n        ...(msg.fromUI.priority ? { priority: msg.fromUI.priority } : {}),\n        ...(msg.fromUI.dealComment ? { comment: msg.fromUI.dealComment } : {}),\n    },\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        ...(msg.fromUI.dealName ? { name: msg.fromUI.dealName } : {}),\n        ...(msg.fromUI.dealStage ? { stage: msg.fromUI.dealStage } : {}),\n        ...(msg.fromUI.amount ? { amount: msg.fromUI.amount } : {}),\n        ...(msg.fromUI.closeDate ? { closeDate: msg.fromUI.closeDate } : {}),\n        ...(msg.fromUI.priority ? { priority: msg.fromUI.priority } : {}),\n        ...(msg.fromUI.comment ? { comment: msg.fromUI.comment } : {}),\n    },\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1554,6 +1600,7 @@
         "id": "8939051f184e68e3",
         "type": "inject",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "",
         "props": [
             {
@@ -1583,6 +1630,7 @@
         "id": "bf4e03e8bc4c4c33",
         "type": "link call",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "",
         "links": [
             "ba97e8986832bd94"
@@ -1601,6 +1649,7 @@
         "id": "8a77e92bf79ce345",
         "type": "debug",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "debug 8",
         "active": true,
         "tosidebar": true,
@@ -1617,8 +1666,9 @@
         "id": "6919bc84caf16110",
         "type": "function",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "---",
-        "func": "msg.collection = 'contacts';\n\n// msg.payload = {\n//     _id: objectid('65eaecb9204d01110000001d')\n// };\n\nreturn msg;\n",
+        "func": "msg.collection = 'contacts';\n\nmsg.payload = {\n    contactOwner: '65e5d87ab5ecf200117a18d4'\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1641,6 +1691,7 @@
         "id": "966ad6f5941168fa",
         "type": "inject",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "",
         "props": [
             {
@@ -1670,6 +1721,7 @@
         "id": "c403afb8de1fdf9a",
         "type": "link call",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "",
         "links": [
             "ba97e8986832bd94"
@@ -1688,6 +1740,7 @@
         "id": "2543c5f821c8da9a",
         "type": "debug",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "debug 9",
         "active": true,
         "tosidebar": true,
@@ -1704,6 +1757,7 @@
         "id": "9c39e956120ff1d7",
         "type": "function",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "lists",
         "func": "msg.collection = 'lists';\n\n// msg.query = {\n//     _id: objectid('65eed5b1204d011100000030'),\n// };\n\n// msg.payload = {\n//     _id: objectid('65ef443d204d011100000046'),\n// };\n\nreturn msg;\n",
         "outputs": 1,
@@ -1728,6 +1782,7 @@
         "id": "189008d7fc7dc7fd",
         "type": "inject",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "",
         "props": [
             {
@@ -1757,6 +1812,7 @@
         "id": "87898c8ea5653f96",
         "type": "link call",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "",
         "links": [
             "ba97e8986832bd94"
@@ -1775,6 +1831,7 @@
         "id": "4573bb45913fbd76",
         "type": "debug",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "debug 10",
         "active": true,
         "tosidebar": true,
@@ -1791,6 +1848,7 @@
         "id": "2e181ddb411d9b92",
         "type": "function",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "deals",
         "func": "msg.collection = 'deals';\n\n\nreturn msg;\n",
         "outputs": 1,
@@ -1805,94 +1863,6 @@
                 "87898c8ea5653f96"
             ]
         ]
-    },
-    {
-        "id": "0658976922c54b67",
-        "type": "http in",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "url": "/addContactOwner",
-        "method": "post",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 150,
-        "y": 1020,
-        "wires": [
-            [
-                "4cf1f43e7c0fd6f8"
-            ]
-        ]
-    },
-    {
-        "id": "ed5c0dec81a4bc6f",
-        "type": "function",
-        "z": "3db5a363b78466f5",
-        "name": "addContactOwner",
-        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"contactOwners\";\n\nmsg.payload = {\n    _id: msg.fromUI.email,\n    ...msg.fromUI,\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 490,
-        "y": 1020,
-        "wires": [
-            [
-                "4cf1f43e7c0fd6f8",
-                "f382aaafe52c4d67"
-            ]
-        ]
-    },
-    {
-        "id": "f382aaafe52c4d67",
-        "type": "link call",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "links": [
-            "193774ea3ceea673"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 690,
-        "y": 1020,
-        "wires": [
-            [
-                "4cf1f43e7c0fd6f8",
-                "bc9cfb132bd95bb9"
-            ]
-        ]
-    },
-    {
-        "id": "4cf1f43e7c0fd6f8",
-        "type": "debug",
-        "z": "3db5a363b78466f5",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 240,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "bc9cfb132bd95bb9",
-        "type": "http response",
-        "z": "3db5a363b78466f5",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 850,
-        "y": 1020,
-        "wires": []
     },
     {
         "id": "406c27b8c866bed1",
@@ -1987,6 +1957,7 @@
         "id": "c0e1cf988f37a271",
         "type": "inject",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "",
         "props": [
             {
@@ -2007,13 +1978,16 @@
         "x": 120,
         "y": 1280,
         "wires": [
-            []
+            [
+                "e8384769bf28d8a1"
+            ]
         ]
     },
     {
         "id": "fd9032dc3d062c2d",
         "type": "link call",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "",
         "links": [
             "f31e158d32908a90"
@@ -2032,6 +2006,7 @@
         "id": "60caa5caafe51245",
         "type": "debug",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "debug 15",
         "active": true,
         "tosidebar": true,
@@ -2048,8 +2023,9 @@
         "id": "e8384769bf28d8a1",
         "type": "function",
         "z": "3db5a363b78466f5",
+        "g": "d8d6cfc2c521390d",
         "name": "delete",
-        "func": "msg.collection = 'contactOwners';\n\n\n\nmsg.payload = {\n\n};\n\nreturn msg;\n",
+        "func": "msg.collection = 'lists';\n\n\n\nmsg.payload = {\n\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2128,7 +2104,8 @@
         "y": 800,
         "wires": [
             [
-                "335be961b97df98e"
+                "335be961b97df98e",
+                "5b6f6f180cfe6cef"
             ]
         ]
     },
@@ -2137,7 +2114,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "getContacts",
-        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"contacts\";\n\nmsg.payload = {\n    deleted: false,\n};\n\nif (msg.fromUI.owner) {\n    msg.payload.contactOwner = msg.fromUI.owner;\n}\n\nif (msg.fromUI.deal) {\n    msg.payload.dealStage = msg.fromUI.deal;\n}\n\nif (msg.fromUI.lead) {\n    msg.payload.leadStatus = msg.fromUI.lead;\n}\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    deleted: false,\n};\n\nif (msg.fromUI.owner) {\n    msg.payload.contactOwner = msg.fromUI.owner;\n}\n\nif (msg.fromUI.deal) {\n    msg.payload.dealStage = msg.fromUI.deal;\n}\n\nif (msg.fromUI.lead) {\n    msg.payload.leadStatus = msg.fromUI.lead;\n}\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2200,7 +2177,8 @@
         "y": 800,
         "wires": [
             [
-                "6251e1659fc16f00"
+                "6251e1659fc16f00",
+                "08105165c5a96aab"
             ]
         ]
     },
@@ -2652,6 +2630,38 @@
                 "52772985efe77570"
             ]
         ]
+    },
+    {
+        "id": "5b6f6f180cfe6cef",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 55",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 160,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "08105165c5a96aab",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 59",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 840,
+        "wires": []
     },
     {
         "id": "f03319fda5d70724",
@@ -3866,7 +3876,7 @@
         "fieldType": "msg",
         "format": "css",
         "syntax": "mustache",
-        "template": ":root {\n  --sideBarWidth: 160px;\n  --sideBarGap: 8px;\n}\n\n* {\n  box-sizing: border-box !important;\n}\n\nbody section{\n    background-color: #ffffff !important;\n}\ninput, .rc-select-show-arrow.rc-select-multiple .rc-select-selector, .select-button{\n  border-radius: 4px !important;\n}\n\nlabel {\n  border-radius: 4px !important;\n}\n\nspan > textarea {\n  border-radius: 4px !important;\n}\n.bp3-button .bp3-input-group{\n  border-radius: 8px!important;\n}\n::-webkit-scrollbar {\n  width: 0.1px;\n}\n\n.bp3-overlay{\nz-index: 5 !important;\n}\n\ndiv[id=\"comment-overlay-wrapper-0\"]\n  .bp3-overlay-content.bp3-overlay-appear-done {\n  /* height: 90vh !important; */\n  max-height: 90vh !important;\n  border-radius: 10px !important;\n  box-shadow: 0px 6px 14px -4px rgb(255 255 255 / 88%) !important;\n  \n}\n.sidemenu {\n  background-color: #FFFFFF !important;\n}\n\n.loginForm_wrapper > div > div > div > div > div {\n  border-radius: 30px !important\n}\n.loginForm_wrapper:before,\n.loginForm_wrapper:after {\n  z-index: -1 !important;\n  position: absolute !important;\n  content: \"\" !important;\n  bottom: 18px !important;\n  left: 10px !important;\n  width: 50% !important;\n  top: 80% !important;\n  max-width: 300px !important;\n  background: #777 !important;\n  box-shadow: 0 18px 10px #777 !important;\n  transform: rotate(-3deg) !important;\n  border-radius: 10px !important;\n}\n\n.loginForm_wrapper:after {\n  transform: rotate(3deg) !important;\n  right: 10px !important;\n  left: auto !important;\n}\n\n.loginForm_btnWrapper > div > div> div> div> div> div> div> div> div> div> div> div> div {\n  display: flex !important;\n  align-items: center !important;\n  justify-content: center !important;\n}\n\n.loginForm_divider {\n  flex-grow: 1 !important;\n}\n\n.addUserModal_select button {\n  height: 40px !important;\n}\n\n.addUserModal_multiSelect div.rc-select-multiple {\n  height: 40px !important;\n}\n\n.accordionBtnWrapper button{\n  border-radius: 5px !important;\n  margin-bottom: 10px !important;\n  border: 1px solid rgb(131, 131, 131) !important;\n} \n\n.tabs {\n  top:0 !important;\n  left: 0 !important; \n  height: 100vh !important;\n  width: 100% !important;\n  padding: 10px !important;\n  /* background-image: linear-gradient(34deg, rgba(102,102,102,1) 0%, rgba(255,255,255,1) 76%) !important; */\n\n  background: rgb(187,187,187) !important;\n  background: linear-gradient(0deg, rgba(187,187,187,1) 0%, rgba(255,255,255,1) 80%) !important;\n  }\n\n.tabs>div>div>div>div>div {\n  background-color: transparent !important;\n}\n\n.tabs>div>div>div>div {\n  box-shadow: none !important;\n}\n\n.center_container{\n  top: 50% !important;\n  left: 50% !important;\n  transform: translate(-50%, -50%) !important;\n}\n.centerUp_container{\n  top: 5% !important;\n  left: 50% !important;\n  transform: translate(-50%, -5%) !important;\n}\n\n.sidebar {\n  position: fixed !important;\n  height: 100vh !important;\n  top: 0 !important;\n  left: 0 !important;\n  padding: 0 !important;\n  width: var(--sideBarWidth) !important;\n  box-shadow: 9px 0px 4px -6px rgba(199,199,199,0.7) !important;\n\n  background: rgb(187,187,187) !important;\n  background: linear-gradient(0deg, rgba(187,187,187,1) 0%, rgba(255,255,255,1) 80%) !important;\n \n  z-index: 5 !important;\n}\n\n.sidebar>div>div>div>div>div>div>div>div>div>div>div>div>div div {\n  left: 0 !important;\n}\n\n.logo{\n  width: 100% !important;\n  left:0 !important;\n}\n\n.header{\n  top: 0 !important;\n  left: var(--sideBarWidth) !important;\n  padding: 0px !important; \n  width: calc(100% - var(--sideBarWidth) - var(--sideBarGap)) !important;\n\n  height: 60px !important;\n}\n.accordion{\n  padding: 9px !important;\n  width: 100% !important;\n  \n}\n.accordion .bp3-button:not([class*=bp3-intent-]) {\n  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75) !important;\n  padding: 9px 10px !important;\n  border-radius: 5px !important;\n  background: rgba(239, 239, 239, 0.2) !important;\n\n}\n.accordion .sub_category {\n  padding: 9px !important;\n}\n.accordion .bp3-button.active, .sub_category.active{\n  border-radius: 5px !important;\n\n  background: radial-gradient(circle, rgba(102,102,102,1) 0%, rgba(153,153,153,1) 100%) !important;\n  color: white !important;\n}\n.accordion .bp3-button:hover, .sub_category:hover{\n  box-shadow: inset 0 0 0 1px rgba(176, 176, 176, 0.5), inset 0 -1px 0 rgba(176, 176, 176, 0.5) !important;\n  border-radius: 5px !important;\n}\n.accordion .bp3-button::after, .sub_category::after{\n  border: none !important;\n}\n.CUSTOM_ACCORDION_WIDGET{\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n.modules {\n  left: var(--sideBarWidth)  !important;\n  padding: 0px !important;\n  width: calc(100% - var(--sideBarWidth)  - var(--sideBarGap)) !important;\n\n}\n\n.containerFilter {\n  padding: 0px !important;\n  left: 0 !important;\n}\n\n.modalCancel {\n  height: max-content !important;\n}\n\n.tabsActivities>div>div>div>div>div>div>div {\n  box-shadow: none !important;\n}",
+        "template": ":root {\n  --sideBarWidth: 160px;\n  --sideBarGap: 8px;\n}\n\n* {\n  box-sizing: border-box !important;\n}\n\nbody section{\n    background-color: #ffffff !important;\n}\ninput, .rc-select-show-arrow.rc-select-multiple .rc-select-selector, .select-button{\n  border-radius: 4px !important;\n}\n\nlabel {\n  border-radius: 4px !important;\n}\n\nspan > textarea {\n  border-radius: 4px !important;\n}\n.bp3-button .bp3-input-group{\n  border-radius: 8px!important;\n}\n::-webkit-scrollbar {\n  width: 0.1px;\n}\n\n.bp3-overlay{\nz-index: 5 !important;\n}\n\ndiv[id=\"comment-overlay-wrapper-0\"]\n  .bp3-overlay-content.bp3-overlay-appear-done {\n  /* height: 90vh !important; */\n  max-height: 90vh !important;\n  border-radius: 10px !important;\n  box-shadow: 0px 6px 14px -4px rgb(255 255 255 / 88%) !important;\n  \n}\n.sidemenu {\n  background-color: #FFFFFF !important;\n}\n\n.loginForm_wrapper > div > div > div > div > div {\n  border-radius: 30px !important\n}\n.loginForm_wrapper:before,\n.loginForm_wrapper:after {\n  z-index: -1 !important;\n  position: absolute !important;\n  content: \"\" !important;\n  bottom: 18px !important;\n  left: 10px !important;\n  width: 50% !important;\n  top: 80% !important;\n  max-width: 300px !important;\n  background: #777 !important;\n  box-shadow: 0 18px 10px #777 !important;\n  transform: rotate(-3deg) !important;\n  border-radius: 10px !important;\n}\n\n.loginForm_wrapper:after {\n  transform: rotate(3deg) !important;\n  right: 10px !important;\n  left: auto !important;\n}\n\n.loginForm_btnWrapper > div > div> div> div> div> div> div> div> div> div> div> div> div {\n  display: flex !important;\n  align-items: center !important;\n  justify-content: center !important;\n}\n\n.loginForm_divider {\n  flex-grow: 1 !important;\n}\n\n.addUserModal_select button {\n  height: 40px !important;\n}\n\n.addUserModal_multiSelect div.rc-select-multiple {\n  height: 40px !important;\n}\n\n.accordionBtnWrapper button {\n  border-radius: 5px !important;\n  margin-bottom: 10px !important;\n  border: 1px solid rgb(131, 131, 131) !important;\n} \n\n.tabs {\n  top:0 !important;\n  left: 0 !important; \n  height: 100vh !important;\n  width: 100% !important;\n  padding: 10px !important;\n  /* background-image: linear-gradient(34deg, rgba(102,102,102,1) 0%, rgba(255,255,255,1) 76%) !important; */\n\n  background: rgb(187,187,187) !important;\n  background: linear-gradient(0deg, rgba(187,187,187,1) 0%, rgba(255,255,255,1) 80%) !important;\n  }\n\n.tabs>div>div>div>div>div {\n  background-color: transparent !important;\n}\n\n.tabs>div>div>div>div {\n  box-shadow: none !important;\n}\n\n.center_container{\n  top: 50% !important;\n  left: 50% !important;\n  transform: translate(-50%, -50%) !important;\n}\n.centerUp_container{\n  top: 5% !important;\n  left: 50% !important;\n  transform: translate(-50%, -5%) !important;\n}\n\n.sidebar {\n  position: fixed !important;\n  height: 100vh !important;\n  top: 0 !important;\n  left: 0 !important;\n  padding: 0 !important;\n  width: var(--sideBarWidth) !important;\n  box-shadow: 9px 0px 4px -6px rgba(199,199,199,0.7) !important;\n\n  background: rgb(187,187,187) !important;\n  background: linear-gradient(0deg, rgba(187,187,187,1) 0%, rgba(255,255,255,1) 80%) !important;\n \n  z-index: 5 !important;\n}\n\n.sidebar>div>div>div>div>div>div>div>div>div>div>div>div>div div {\n  left: 0 !important;\n}\n\n.logo{\n  width: 100% !important;\n  left:0 !important;\n}\n\n.header{\n  top: 0 !important;\n  left: var(--sideBarWidth) !important;\n  padding: 0px !important; \n  width: calc(100% - var(--sideBarWidth) - var(--sideBarGap)) !important;\n\n  height: 60px !important;\n}\n.accordion{\n  padding: 9px !important;\n  width: 100% !important;\n  \n}\n.accordion .bp3-button:not([class*=bp3-intent-]) {\n  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75) !important;\n  padding: 9px 10px !important;\n  border-radius: 5px !important;\n  background: rgba(239, 239, 239, 0.2) !important;\n  transition: 300ms !important;\n}\n.accordion .sub_category {\n  padding: 9px !important;\n}\n.accordion .bp3-button.active, .sub_category.active{\n  border-radius: 5px !important;\n\n  background: radial-gradient(circle, rgba(102,102,102,1) 0%, rgba(153,153,153,1) 100%) !important;\n  color: white !important;\n}\n.accordion .bp3-button:hover, .sub_category:hover{\n  box-shadow: inset 0 0 0 1px rgba(176, 176, 176, 0.5), inset 0 -1px 0 rgba(176, 176, 176, 0.5) !important;\n  border-radius: 5px !important;\n}\n.accordion .bp3-button::after, .sub_category::after{\n  border: none !important;\n}\n.CUSTOM_ACCORDION_WIDGET{\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n.modules {\n  left: var(--sideBarWidth)  !important;\n  padding: 0px !important;\n  width: calc(100% - var(--sideBarWidth)  - var(--sideBarGap)) !important;\n\n}\n\n.containerFilter {\n  padding: 0px !important;\n  left: 0 !important;\n}\n\n.modalCancel {\n  height: max-content !important;\n}\n\n.tabsActivities>div>div>div>div>div>div>div {\n  box-shadow: none !important;\n}\n\n.userEmail a {\n  color: #2E3D49 !important;\n}\n",
         "output": "str",
         "x": 280,
         "y": 60,
@@ -4081,18 +4091,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "769c853fb108cedb",
-        "type": "http response",
-        "z": "c8b39bad946d8ab6",
-        "g": "d78377c07a215120",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 470,
-        "y": 160,
-        "wires": []
     },
     {
         "id": "1bbb86d99a93fe67",
@@ -4758,43 +4756,6 @@
         "l": false
     },
     {
-        "id": "c6738f0c897830ef",
-        "type": "http response",
-        "z": "c8b39bad946d8ab6",
-        "g": "d78377c07a215120",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 1550,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "d2bd362abdcf67e2",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "g": "d78377c07a215120",
-        "name": "jwt token",
-        "func": "const token = jwt.sign(\n    { user_id: msg.activatedUser._id, email:msg.activatedUser.email },\n    \"test\",\n    {\n        expiresIn: \"1400m\",\n    }\n);\n\nmsg.cookies = {};\nmsg.cookies[\"user_token\"] = token;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jwt",
-                "module": "jsonwebtoken"
-            }
-        ],
-        "x": 1400,
-        "y": 160,
-        "wires": [
-            [
-                "c6738f0c897830ef"
-            ]
-        ]
-    },
-    {
         "id": "a13bfdb8dea8d162",
         "type": "function",
         "z": "c8b39bad946d8ab6",
@@ -5014,6 +4975,529 @@
         "wires": [
             [
                 "10007edf417c9898"
+            ]
+        ]
+    },
+    {
+        "id": "743c16cb0b7d1758",
+        "type": "delay",
+        "z": "c8b39bad946d8ab6",
+        "g": "398457a4bc6d8725",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "200",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2070,
+        "y": 1660,
+        "wires": [
+            [
+                "2158a44ab877d5a3"
+            ]
+        ]
+    },
+    {
+        "id": "c13baca0a8f18f1a",
+        "type": "delay",
+        "z": "c8b39bad946d8ab6",
+        "g": "398457a4bc6d8725",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "200",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2350,
+        "y": 1740,
+        "wires": [
+            [
+                "eae728e933c02b8c"
+            ]
+        ]
+    },
+    {
+        "id": "970bf1d3e8383bba",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "queryToResetPassword",
+        "url": "/queryToResetPassword",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 1100,
+        "wires": [
+            [
+                "2082fa66df328468"
+            ]
+        ]
+    },
+    {
+        "id": "2082fa66df328468",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query to db",
+        "func": "msg.collection = \"admins\";\nmsg.token = msg.payload.token;\n\nmsg.payload = {\n    resetPassToken: msg.payload.token\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1100,
+        "wires": [
+            [
+                "bdbcc19d02a07b56"
+            ]
+        ]
+    },
+    {
+        "id": "bdbcc19d02a07b56",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "find",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 550,
+        "y": 1100,
+        "wires": [
+            [
+                "9c78085fd79972cb"
+            ]
+        ]
+    },
+    {
+        "id": "9c78085fd79972cb",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "redirect to page",
+        "func": "const dateNow = new Date().getTime();\nconst uiUrl = env.get(\"uiUrl\");\n\nif (msg.payload[0].resetPassExpireToken > dateNow) {\n    msg.statusCode = 302\n    msg.headers = {\n        \"Access-Control-Allow-Origin\": \"*\",\n        \"Access-Control-Allow-Credentials\": true,\n        \"location\": `${uiUrl}/ResetPassword?token=${msg.token}`\n    }\n} else {\n    msg.payload = '<h1>Link expired</h1>';\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            },
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 720,
+        "y": 1100,
+        "wires": [
+            [
+                "2687dc71562c4d72"
+            ]
+        ]
+    },
+    {
+        "id": "2687dc71562c4d72",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "d09ec9996f8a154c",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "sendEmailForResetPassword",
+        "url": "/sendEmailForResetPassword",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 1000,
+        "wires": [
+            [
+                "17248297231b9d88"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg"
+    },
+    {
+        "id": "17248297231b9d88",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query to db",
+        "func": "const regexEmail = /^(([^<>()[\\]\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$/i;\nconst email = msg.payload.email.toLowerCase();\n\nif (!regexEmail.test(email)) {\n\n    msg.statusCode = 401;\n    msg.payload = {\n        data: \"Email is invalid\",\n        code: 401\n    }\n\n    return [null, msg];\n\n} else {\n    msg.collection = \"admins\";\n\n    msg.email = msg.payload.email;\n\n    msg.payload = {\n        email: email,\n        deleted: false\n    }\n\n    return [msg, null];\n} \n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1000,
+        "wires": [
+            [
+                "59a6366d8be0ed5e"
+            ],
+            [
+                "5164464dd17d2bc2"
+            ]
+        ]
+    },
+    {
+        "id": "59a6366d8be0ed5e",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "find",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 550,
+        "y": 980,
+        "wires": [
+            [
+                "a605c9337c4c16d3"
+            ]
+        ]
+    },
+    {
+        "id": "a605c9337c4c16d3",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "send response",
+        "func": "if (msg.payload.length === 0){\n    msg.statusCode = 401;\n\n    msg.payload = {\n        data: \"Forbidden! Incorrect email.\",\n        code: 401\n    }\n    return [null, msg]\n}\n\nmsg.payload = msg.payload[0];\n    \nreturn[msg, null]\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 980,
+        "wires": [
+            [
+                "97dc27c464c28717"
+            ],
+            [
+                "4f97e46839f52868"
+            ]
+        ]
+    },
+    {
+        "id": "97dc27c464c28717",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query to db",
+        "func": "// Add 30 minutes\nconst date = new Date();\nconst expireTime = date.setMinutes(date.getMinutes() + 30);\nconst token = crypto.randomBytes(64).toString('hex');\n\nmsg.oldpayload = msg.payload;\nmsg.token = token;\n\nmsg.cookies = {};\nmsg.cookies[\"user_email\"] = msg.email;\n\nmsg.collection = \"admins\";\nmsg.query = {\n    _id: objectid(msg.payload._id)\n}\nmsg.payload = {\n    $set: {\n        resetPassToken: token,\n        resetPassExpireToken: expireTime\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            },
+            {
+                "var": "crypto",
+                "module": "crypto"
+            }
+        ],
+        "x": 930,
+        "y": 960,
+        "wires": [
+            [
+                "0d5a011ed0707629",
+                "0c205d18a44a5419"
+            ]
+        ]
+    },
+    {
+        "id": "4f97e46839f52868",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "0d5a011ed0707629",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "update",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1100,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2212b62e77474999",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1310,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "6730dfa61287b9f2",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "resetPassword",
+        "url": "/resetPassword",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 1220,
+        "wires": [
+            [
+                "a2eb69e6ad5db371"
+            ]
+        ],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "a2eb69e6ad5db371",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query to db",
+        "func": "msg.newPassword = msg.payload.password;\n\nmsg.collection = \"admins\";\nmsg.payload = {\n    resetPassToken: msg.payload.token\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1220,
+        "wires": [
+            [
+                "80ae78b49345f62c"
+            ]
+        ]
+    },
+    {
+        "id": "80ae78b49345f62c",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "find",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 550,
+        "y": 1220,
+        "wires": [
+            [
+                "654fcb097eed7e68"
+            ]
+        ]
+    },
+    {
+        "id": "654fcb097eed7e68",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query update pass",
+        "func": "const dateNow = new Date().getTime();\nlet check = await bcrypt.compare(msg.newPassword, msg.payload[0].password);\nlet encryptedPassword = await bcrypt.hash(msg.newPassword, 10);\n\nmsg.oldpayload = msg.payload;\n\nif (msg.payload[0].resetPassExpireToken < dateNow) {\n\n    msg.payload = '<h1>link expired</h1>';\n\n} else {\n\n    if (!!check) {\n\n        msg.statusCode = 401;\n        msg.payload = {\n            data: 'The password must be different from the previous one',\n            code: 401\n        }\n\n        return [null, msg];\n\n    } else {\n        \n        msg.collection = \"admins\";\n        msg.query = {\n            _id: objectid(msg.payload[0]._id)\n        }\n        msg.payload = {\n            $set: {\n                password: encryptedPassword,\n                resetPassToken: \"\",\n                resetPassExpireToken: null\n            }\n        }\n        \n        return [msg, null];\n\n    }\n\n}\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            },
+            {
+                "var": "objectid",
+                "module": "objectid"
+            },
+            {
+                "var": "bcrypt",
+                "module": "bcrypt"
+            }
+        ],
+        "x": 720,
+        "y": 1220,
+        "wires": [
+            [
+                "45455fa4faeda4c6",
+                "2f67916e0bc7be15"
+            ],
+            [
+                "7df30165a4d0a7eb"
+            ]
+        ]
+    },
+    {
+        "id": "45455fa4faeda4c6",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "update",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 920,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ca0b1f9a3c42aad6",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1130,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "7df30165a4d0a7eb",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "same pasword",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1240,
+        "wires": [
+            [
+                "36a8ed88d4ee5217"
+            ]
+        ]
+    },
+    {
+        "id": "36a8ed88d4ee5217",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1130,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "5164464dd17d2bc2",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 550,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "0c205d18a44a5419",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "send email for app",
+        "func": "// const nodeUrl = env.get(\"uiUrl\");\n// const url = `${nodeUrl}/Login`;\nconst nodeUrl = env.get(\"nodeUrl\");\nconst url = `${nodeUrl}/queryToResetPassword?token=${msg.token}`;\n\n\nconst text = `\n<div style=\"padding: 10px 0; color: black;\">\n    <h1>We received a request to reset your password</h1>\n    <p>Use the link below to set up a new password for your account. If you did not request to reset your password, ignore this email and the link will expire on its own.</p>\n    <a href=\"${url}\" target=\"_blank\" style=\"margin: 10px 0; display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px; background: #2E3D49;\">\n        SET NEW PASSWORD\n    </a>\n</div>\n`;\n    \nmsg.topic = 'Access to Unified_Auth_Template';\n\n\nconst email = global.get('credential').email;\nconst googleAppPassword = global.get('credential').googleAppPassword;\n\n\nlet transporter = nodemailer.createTransport({\n    \"host\": \"smtp.gmail.com\",\n    \"port\": 465,\n    \"secure\": true,\n    \"auth\": {\n        \"user\": email,\n        \"pass\": googleAppPassword\n    }\n});\n\nlet mailOptions = {\n    from: email,\n    to: msg.oldpayload.email,\n    subject: 'Reset password',\n    html: text\n};\n\ntransporter.sendMail(mailOptions, function (error, info) {\n    if (error) {\n        node.warn(error);\n    } else {\n        node.warn('Email sent: ' + info.response);\n    }\n});\nreturn msg;\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "nodemailer",
+                "module": "nodemailer"
+            }
+        ],
+        "x": 1130,
+        "y": 960,
+        "wires": [
+            [
+                "2212b62e77474999"
+            ]
+        ]
+    },
+    {
+        "id": "2f67916e0bc7be15",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "send email for app",
+        "func": "// const nodeUrl = env.get(\"uiUrl\");\n// const url = `${nodeUrl}/Login`;\nconst uiUrl = env.get(\"uiUrl\");\nconst url = `${uiUrl}/Login`;\nconst dateChanged = new Date().toString().slice(0, 24);\n\nconst text = `\n<div style=\"padding: 10px 0; color: black;\" display: block;>\n    <img src=\"https://www.iconpacks.net/icons/2/free-icon-check-mark-3280.png\"; alt=\"Success Icon\"; width=90px; height=90px;>\n    <h1 text-align=\"center\" >Password changed!</h1>\n    <p>\n        Your password has been changed successfully. \n        This is a confirmation that your password was changed at <b>${dateChanged}</b>\n        <br><br>\n        Use your new password to log in.\n    </p>\n    <a href=\"${url}\" target=\"_blank\" style=\"margin: 10px 0; display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px; background: #72D393;\">\n        <b>LOGIN NOW</b>\n    </a>\n</div>\n`;\n    \nmsg.topic = 'Access to Unified_Auth_Template';\n\n\nconst email = global.get('credential').email;\nconst googleAppPassword = global.get('credential').googleAppPassword;\n\n\nlet transporter = nodemailer.createTransport({\n    \"host\": \"smtp.gmail.com\",\n    \"port\": 465,\n    \"secure\": true,\n    \"auth\": {\n        \"user\": email,\n        \"pass\": googleAppPassword\n    }\n});\n\nlet mailOptions = {\n    from: email,\n    to: msg.oldpayload[0].email,\n    subject: 'Password changed',\n    html: text\n};\n\ntransporter.sendMail(mailOptions, function (error, info) {\n    if (error) {\n        node.warn(error);\n    } else {\n        node.warn('Email sent: ' + info.response);\n    }\n});\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "nodemailer",
+                "module": "nodemailer"
+            }
+        ],
+        "x": 950,
+        "y": 1200,
+        "wires": [
+            [
+                "ca0b1f9a3c42aad6"
             ]
         ]
     },
@@ -5242,7 +5726,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "d78377c07a215120",
         "name": "check auth",
-        "func": "\nif(msg.payload.length > 0){\n    msg.payload = msg.payload[0]\n    msg.user = {\n        auth: \"Success\",\n        code:200,\n        user: msg.payload\n    }\n    return [msg,null]\n}else{\n    msg.payload = {\n        auth: \"Unautorizate\",\n        code: 401,\n        login_id:msg.check.login_id,\n        app_id:msg.check.app_id\n    }\n    return [null,msg]\n}\n\n",
+        "func": "\nif(msg.payload.length > 0){\n    msg.payload = msg.payload[0]\n    msg.user = {\n        auth: \"Success\",\n        code: 200,\n        user: msg.payload\n    }\n\n    global.set('loggedInUserID', msg.payload._id);\n\n    return [msg,null]\n}else{\n    msg.payload = {\n        auth: \"Unautorizate\",\n        code: 401,\n        login_id:msg.check.login_id,\n        app_id:msg.check.app_id\n    }\n    return [null,msg]\n}\n\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -5906,121 +6390,36 @@
         ]
     },
     {
-        "id": "743c16cb0b7d1758",
-        "type": "delay",
+        "id": "c6738f0c897830ef",
+        "type": "http response",
         "z": "c8b39bad946d8ab6",
-        "g": "398457a4bc6d8725",
+        "g": "d78377c07a215120",
         "name": "",
-        "pauseType": "delay",
-        "timeout": "200",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 2070,
-        "y": 1660,
-        "wires": [
-            [
-                "2158a44ab877d5a3"
-            ]
-        ]
+        "statusCode": "",
+        "headers": {},
+        "x": 1550,
+        "y": 160,
+        "wires": []
     },
     {
-        "id": "c13baca0a8f18f1a",
-        "type": "delay",
+        "id": "769c853fb108cedb",
+        "type": "http response",
         "z": "c8b39bad946d8ab6",
-        "g": "398457a4bc6d8725",
+        "g": "d78377c07a215120",
         "name": "",
-        "pauseType": "delay",
-        "timeout": "200",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 2350,
-        "y": 1740,
-        "wires": [
-            [
-                "eae728e933c02b8c"
-            ]
-        ]
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 160,
+        "wires": []
     },
     {
-        "id": "970bf1d3e8383bba",
-        "type": "http in",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "queryToResetPassword",
-        "url": "/queryToResetPassword",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 140,
-        "y": 1100,
-        "wires": [
-            [
-                "2082fa66df328468"
-            ]
-        ]
-    },
-    {
-        "id": "2082fa66df328468",
+        "id": "d2bd362abdcf67e2",
         "type": "function",
         "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "query to db",
-        "func": "msg.collection = \"admins\";\nmsg.token = msg.payload.token;\n\nmsg.payload = {\n    resetPassToken: msg.payload.token\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 390,
-        "y": 1100,
-        "wires": [
-            [
-                "bdbcc19d02a07b56"
-            ]
-        ]
-    },
-    {
-        "id": "bdbcc19d02a07b56",
-        "type": "link call",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "find",
-        "links": [
-            "ba97e8986832bd94"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 550,
-        "y": 1100,
-        "wires": [
-            [
-                "9c78085fd79972cb"
-            ]
-        ]
-    },
-    {
-        "id": "9c78085fd79972cb",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "redirect to page",
-        "func": "const dateNow = new Date().getTime();\nconst uiUrl = env.get(\"uiUrl\");\n\nif (msg.payload[0].resetPassExpireToken > dateNow) {\n    msg.statusCode = 302\n    msg.headers = {\n        \"Access-Control-Allow-Origin\": \"*\",\n        \"Access-Control-Allow-Credentials\": true,\n        \"location\": `${uiUrl}/ResetPassword?token=${msg.token}`\n    }\n} else {\n    msg.payload = '<h1>Link expired</h1>';\n};\n\nreturn msg;\n",
+        "g": "d78377c07a215120",
+        "name": "jwt token",
+        "func": "const token = jwt.sign(\n    { user_id: msg.activatedUser._id, email:msg.activatedUser.email },\n    \"test\",\n    {\n        expiresIn: \"1400m\",\n    }\n);\n\nmsg.cookies = {};\nmsg.cookies[\"user_token\"] = token;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6029,402 +6428,13 @@
             {
                 "var": "jwt",
                 "module": "jsonwebtoken"
-            },
-            {
-                "var": "objectid",
-                "module": "objectid"
             }
         ],
-        "x": 720,
-        "y": 1100,
+        "x": 1400,
+        "y": 160,
         "wires": [
             [
-                "2687dc71562c4d72"
-            ]
-        ]
-    },
-    {
-        "id": "2687dc71562c4d72",
-        "type": "http response",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 910,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "d09ec9996f8a154c",
-        "type": "http in",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "sendEmailForResetPassword",
-        "url": "/sendEmailForResetPassword",
-        "method": "post",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 160,
-        "y": 1000,
-        "wires": [
-            [
-                "17248297231b9d88"
-            ]
-        ],
-        "icon": "node-red/arrow-in.svg"
-    },
-    {
-        "id": "17248297231b9d88",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "query to db",
-        "func": "const regexEmail = /^(([^<>()[\\]\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$/i;\nconst email = msg.payload.email.toLowerCase();\n\nif (!regexEmail.test(email)) {\n\n    msg.statusCode = 401;\n    msg.payload = {\n        data: \"Email is invalid\",\n        code: 401\n    }\n\n    return [null, msg];\n\n} else {\n    msg.collection = \"admins\";\n\n    msg.email = msg.payload.email;\n\n    msg.payload = {\n        email: email,\n        deleted: false\n    }\n\n    return [msg, null];\n} \n",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 390,
-        "y": 1000,
-        "wires": [
-            [
-                "59a6366d8be0ed5e"
-            ],
-            [
-                "5164464dd17d2bc2"
-            ]
-        ]
-    },
-    {
-        "id": "59a6366d8be0ed5e",
-        "type": "link call",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "find",
-        "links": [
-            "ba97e8986832bd94"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 550,
-        "y": 980,
-        "wires": [
-            [
-                "a605c9337c4c16d3"
-            ]
-        ]
-    },
-    {
-        "id": "a605c9337c4c16d3",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "send response",
-        "func": "if (msg.payload.length === 0){\n    msg.statusCode = 401;\n\n    msg.payload = {\n        data: \"Forbidden! Incorrect email.\",\n        code: 401\n    }\n    return [null, msg]\n}\n\nmsg.payload = msg.payload[0];\n    \nreturn[msg, null]\n",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 720,
-        "y": 980,
-        "wires": [
-            [
-                "97dc27c464c28717"
-            ],
-            [
-                "4f97e46839f52868"
-            ]
-        ]
-    },
-    {
-        "id": "97dc27c464c28717",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "query to db",
-        "func": "// Add 30 minutes\nconst date = new Date();\nconst expireTime = date.setMinutes(date.getMinutes() + 30);\nconst token = crypto.randomBytes(64).toString('hex');\n\nmsg.oldpayload = msg.payload;\nmsg.token = token;\n\nmsg.cookies = {};\nmsg.cookies[\"user_email\"] = msg.email;\n\nmsg.collection = \"admins\";\nmsg.query = {\n    _id: objectid(msg.payload._id)\n}\nmsg.payload = {\n    $set: {\n        resetPassToken: token,\n        resetPassExpireToken: expireTime\n    }\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            },
-            {
-                "var": "crypto",
-                "module": "crypto"
-            }
-        ],
-        "x": 930,
-        "y": 960,
-        "wires": [
-            [
-                "0d5a011ed0707629",
-                "0c205d18a44a5419"
-            ]
-        ]
-    },
-    {
-        "id": "4f97e46839f52868",
-        "type": "http response",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 910,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "0d5a011ed0707629",
-        "type": "link call",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "update",
-        "links": [
-            "a724f172bc7c2de5"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 1100,
-        "y": 920,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2212b62e77474999",
-        "type": "http response",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 1310,
-        "y": 960,
-        "wires": []
-    },
-    {
-        "id": "6730dfa61287b9f2",
-        "type": "http in",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "resetPassword",
-        "url": "/resetPassword",
-        "method": "put",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 120,
-        "y": 1220,
-        "wires": [
-            [
-                "a2eb69e6ad5db371"
-            ]
-        ],
-        "icon": "font-awesome/fa-edit"
-    },
-    {
-        "id": "a2eb69e6ad5db371",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "query to db",
-        "func": "msg.newPassword = msg.payload.password;\n\nmsg.collection = \"admins\";\nmsg.payload = {\n    resetPassToken: msg.payload.token\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 390,
-        "y": 1220,
-        "wires": [
-            [
-                "80ae78b49345f62c"
-            ]
-        ]
-    },
-    {
-        "id": "80ae78b49345f62c",
-        "type": "link call",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "find",
-        "links": [
-            "ba97e8986832bd94"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 550,
-        "y": 1220,
-        "wires": [
-            [
-                "654fcb097eed7e68"
-            ]
-        ]
-    },
-    {
-        "id": "654fcb097eed7e68",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "query update pass",
-        "func": "const dateNow = new Date().getTime();\nlet check = await bcrypt.compare(msg.newPassword, msg.payload[0].password);\nlet encryptedPassword = await bcrypt.hash(msg.newPassword, 10);\n\nmsg.oldpayload = msg.payload;\n\nif (msg.payload[0].resetPassExpireToken < dateNow) {\n\n    msg.payload = '<h1>link expired</h1>';\n\n} else {\n\n    if (!!check) {\n\n        msg.statusCode = 401;\n        msg.payload = {\n            data: 'The password must be different from the previous one',\n            code: 401\n        }\n\n        return [null, msg];\n\n    } else {\n        \n        msg.collection = \"admins\";\n        msg.query = {\n            _id: objectid(msg.payload[0]._id)\n        }\n        msg.payload = {\n            $set: {\n                password: encryptedPassword,\n                resetPassToken: \"\",\n                resetPassExpireToken: null\n            }\n        }\n        \n        return [msg, null];\n\n    }\n\n}\n\n",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jwt",
-                "module": "jsonwebtoken"
-            },
-            {
-                "var": "objectid",
-                "module": "objectid"
-            },
-            {
-                "var": "bcrypt",
-                "module": "bcrypt"
-            }
-        ],
-        "x": 720,
-        "y": 1220,
-        "wires": [
-            [
-                "45455fa4faeda4c6",
-                "2f67916e0bc7be15"
-            ],
-            [
-                "7df30165a4d0a7eb"
-            ]
-        ]
-    },
-    {
-        "id": "45455fa4faeda4c6",
-        "type": "link call",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "update",
-        "links": [
-            "a724f172bc7c2de5"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 920,
-        "y": 1160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ca0b1f9a3c42aad6",
-        "type": "http response",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 1130,
-        "y": 1200,
-        "wires": []
-    },
-    {
-        "id": "7df30165a4d0a7eb",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "same pasword",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 940,
-        "y": 1240,
-        "wires": [
-            [
-                "36a8ed88d4ee5217"
-            ]
-        ]
-    },
-    {
-        "id": "36a8ed88d4ee5217",
-        "type": "http response",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 1130,
-        "y": 1240,
-        "wires": []
-    },
-    {
-        "id": "5164464dd17d2bc2",
-        "type": "http response",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 550,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "0c205d18a44a5419",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "send email for app",
-        "func": "// const nodeUrl = env.get(\"uiUrl\");\n// const url = `${nodeUrl}/Login`;\nconst nodeUrl = env.get(\"nodeUrl\");\nconst url = `${nodeUrl}/queryToResetPassword?token=${msg.token}`;\n\n\nconst text = `\n<div style=\"padding: 10px 0; color: black;\">\n    <h1>We received a request to reset your password</h1>\n    <p>Use the link below to set up a new password for your account. If you did not request to reset your password, ignore this email and the link will expire on its own.</p>\n    <a href=\"${url}\" target=\"_blank\" style=\"margin: 10px 0; display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px; background: #2E3D49;\">\n        SET NEW PASSWORD\n    </a>\n</div>\n`;\n    \nmsg.topic = 'Access to Unified_Auth_Template';\n\n\nconst email = global.get('credential').email;\nconst googleAppPassword = global.get('credential').googleAppPassword;\n\n\nlet transporter = nodemailer.createTransport({\n    \"host\": \"smtp.gmail.com\",\n    \"port\": 465,\n    \"secure\": true,\n    \"auth\": {\n        \"user\": email,\n        \"pass\": googleAppPassword\n    }\n});\n\nlet mailOptions = {\n    from: email,\n    to: msg.oldpayload.email,\n    subject: 'Reset password',\n    html: text\n};\n\ntransporter.sendMail(mailOptions, function (error, info) {\n    if (error) {\n        node.warn(error);\n    } else {\n        node.warn('Email sent: ' + info.response);\n    }\n});\nreturn msg;\n\n\n\n\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "nodemailer",
-                "module": "nodemailer"
-            }
-        ],
-        "x": 1130,
-        "y": 960,
-        "wires": [
-            [
-                "2212b62e77474999"
-            ]
-        ]
-    },
-    {
-        "id": "2f67916e0bc7be15",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "g": "5bf7ccb6c6709633",
-        "name": "send email for app",
-        "func": "// const nodeUrl = env.get(\"uiUrl\");\n// const url = `${nodeUrl}/Login`;\nconst uiUrl = env.get(\"uiUrl\");\nconst url = `${uiUrl}/Login`;\nconst dateChanged = new Date().toString().slice(0, 24);\n\nconst text = `\n<div style=\"padding: 10px 0; color: black;\" display: block;>\n    <img src=\"https://www.iconpacks.net/icons/2/free-icon-check-mark-3280.png\"; alt=\"Success Icon\"; width=90px; height=90px;>\n    <h1 text-align=\"center\" >Password changed!</h1>\n    <p>\n        Your password has been changed successfully. \n        This is a confirmation that your password was changed at <b>${dateChanged}</b>\n        <br><br>\n        Use your new password to log in.\n    </p>\n    <a href=\"${url}\" target=\"_blank\" style=\"margin: 10px 0; display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px; background: #72D393;\">\n        <b>LOGIN NOW</b>\n    </a>\n</div>\n`;\n    \nmsg.topic = 'Access to Unified_Auth_Template';\n\n\nconst email = global.get('credential').email;\nconst googleAppPassword = global.get('credential').googleAppPassword;\n\n\nlet transporter = nodemailer.createTransport({\n    \"host\": \"smtp.gmail.com\",\n    \"port\": 465,\n    \"secure\": true,\n    \"auth\": {\n        \"user\": email,\n        \"pass\": googleAppPassword\n    }\n});\n\nlet mailOptions = {\n    from: email,\n    to: msg.oldpayload[0].email,\n    subject: 'Password changed',\n    html: text\n};\n\ntransporter.sendMail(mailOptions, function (error, info) {\n    if (error) {\n        node.warn(error);\n    } else {\n        node.warn('Email sent: ' + info.response);\n    }\n});\nreturn msg;\n\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "nodemailer",
-                "module": "nodemailer"
-            }
-        ],
-        "x": 950,
-        "y": 1200,
-        "wires": [
-            [
-                "ca0b1f9a3c42aad6"
+                "c6738f0c897830ef"
             ]
         ]
     },
