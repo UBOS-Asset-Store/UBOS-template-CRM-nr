@@ -128,9 +128,7 @@
             "a2b1bc579a4c0ced"
         ],
         "x": 14,
-        "y": 719,
-        "w": 932,
-        "h": 122
+        "y": 719
     },
     {
         "id": "398457a4bc6d8725",
@@ -190,9 +188,7 @@
             "c13baca0a8f18f1a"
         ],
         "x": 14,
-        "y": 1319,
-        "w": 3312,
-        "h": 462
+        "y": 1319
     },
     {
         "id": "b0ef14992c694846",
@@ -236,9 +232,7 @@
             "10c41f549cf86656"
         ],
         "x": 54,
-        "y": 459,
-        "w": 832,
-        "h": 182
+        "y": 459
     },
     {
         "id": "0dd2dfd7df691836",
@@ -283,9 +277,7 @@
             "2d32ffcf75d44831"
         ],
         "x": 34,
-        "y": 519,
-        "w": 1352,
-        "h": 562
+        "y": 519
     },
     {
         "id": "b2cb8a397b61947a",
@@ -354,9 +346,7 @@
             "2f67916e0bc7be15"
         ],
         "x": 14,
-        "y": 879,
-        "w": 1372,
-        "h": 402
+        "y": 879
     },
     {
         "id": "fd9bc368cea45c71",
@@ -452,9 +442,7 @@
             "1e2c8c7cdacb7345"
         ],
         "x": 44,
-        "y": 39,
-        "w": 942,
-        "h": 762
+        "y": 39
     },
     {
         "id": "c8e4ab113b6b9056",
@@ -497,9 +485,7 @@
             "655fc308a4013906"
         ],
         "x": 1034,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "221ba791b89fb1e4",
@@ -549,9 +535,7 @@
             "6c2b81d3f58aa157"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1472,
-        "h": 482
+        "y": 19
     },
     {
         "id": "d78377c07a215120",
@@ -613,9 +597,7 @@
             "f3fae0dbf2c5f9ec"
         ],
         "x": 14,
-        "y": 39,
-        "w": 1792,
-        "h": 642
+        "y": 39
     },
     {
         "id": "d8d6cfc2c521390d",
@@ -644,9 +626,7 @@
             "e8384769bf28d8a1"
         ],
         "x": 14,
-        "y": 1099,
-        "w": 712,
-        "h": 222
+        "y": 1099
     },
     {
         "id": "c2ed02a101fd1361",
@@ -3876,7 +3856,7 @@
         "fieldType": "msg",
         "format": "css",
         "syntax": "mustache",
-        "template": ":root {\n  --sideBarWidth: 160px;\n  --sideBarGap: 8px;\n}\n\n* {\n  box-sizing: border-box !important;\n}\n\nbody section{\n    background-color: #ffffff !important;\n}\ninput, .rc-select-show-arrow.rc-select-multiple .rc-select-selector, .select-button{\n  border-radius: 4px !important;\n}\n\nlabel {\n  border-radius: 4px !important;\n}\n\nspan > textarea {\n  border-radius: 4px !important;\n}\n.bp3-button .bp3-input-group{\n  border-radius: 8px!important;\n}\n::-webkit-scrollbar {\n  width: 0.1px;\n}\n\n.bp3-overlay{\nz-index: 5 !important;\n}\n\ndiv[id=\"comment-overlay-wrapper-0\"]\n  .bp3-overlay-content.bp3-overlay-appear-done {\n  /* height: 90vh !important; */\n  max-height: 90vh !important;\n  border-radius: 10px !important;\n  box-shadow: 0px 6px 14px -4px rgb(255 255 255 / 88%) !important;\n  \n}\n.sidemenu {\n  background-color: #FFFFFF !important;\n}\n\n.loginForm_wrapper > div > div > div > div > div {\n  border-radius: 30px !important\n}\n.loginForm_wrapper:before,\n.loginForm_wrapper:after {\n  z-index: -1 !important;\n  position: absolute !important;\n  content: \"\" !important;\n  bottom: 18px !important;\n  left: 10px !important;\n  width: 50% !important;\n  top: 80% !important;\n  max-width: 300px !important;\n  background: #777 !important;\n  box-shadow: 0 18px 10px #777 !important;\n  transform: rotate(-3deg) !important;\n  border-radius: 10px !important;\n}\n\n.loginForm_wrapper:after {\n  transform: rotate(3deg) !important;\n  right: 10px !important;\n  left: auto !important;\n}\n\n.loginForm_btnWrapper > div > div> div> div> div> div> div> div> div> div> div> div> div {\n  display: flex !important;\n  align-items: center !important;\n  justify-content: center !important;\n}\n\n.loginForm_divider {\n  flex-grow: 1 !important;\n}\n\n.addUserModal_select button {\n  height: 40px !important;\n}\n\n.addUserModal_multiSelect div.rc-select-multiple {\n  height: 40px !important;\n}\n\n.accordionBtnWrapper button {\n  border-radius: 5px !important;\n  margin-bottom: 10px !important;\n  border: 1px solid rgb(131, 131, 131) !important;\n} \n\n.tabs {\n  top:0 !important;\n  left: 0 !important; \n  height: 100vh !important;\n  width: 100% !important;\n  padding: 10px !important;\n  /* background-image: linear-gradient(34deg, rgba(102,102,102,1) 0%, rgba(255,255,255,1) 76%) !important; */\n\n  background: rgb(187,187,187) !important;\n  background: linear-gradient(0deg, rgba(187,187,187,1) 0%, rgba(255,255,255,1) 80%) !important;\n  }\n\n.tabs>div>div>div>div>div {\n  background-color: transparent !important;\n}\n\n.tabs>div>div>div>div {\n  box-shadow: none !important;\n}\n\n.center_container{\n  top: 50% !important;\n  left: 50% !important;\n  transform: translate(-50%, -50%) !important;\n}\n.centerUp_container{\n  top: 5% !important;\n  left: 50% !important;\n  transform: translate(-50%, -5%) !important;\n}\n\n.sidebar {\n  position: fixed !important;\n  height: 100vh !important;\n  top: 0 !important;\n  left: 0 !important;\n  padding: 0 !important;\n  width: var(--sideBarWidth) !important;\n  box-shadow: 9px 0px 4px -6px rgba(199,199,199,0.7) !important;\n\n  background: rgb(187,187,187) !important;\n  background: linear-gradient(0deg, rgba(187,187,187,1) 0%, rgba(255,255,255,1) 80%) !important;\n \n  z-index: 5 !important;\n}\n\n.sidebar>div>div>div>div>div>div>div>div>div>div>div>div>div div {\n  left: 0 !important;\n}\n\n.logo{\n  width: 100% !important;\n  left:0 !important;\n}\n\n.header{\n  top: 0 !important;\n  left: var(--sideBarWidth) !important;\n  padding: 0px !important; \n  width: calc(100% - var(--sideBarWidth) - var(--sideBarGap)) !important;\n\n  height: 60px !important;\n}\n.accordion{\n  padding: 9px !important;\n  width: 100% !important;\n  \n}\n.accordion .bp3-button:not([class*=bp3-intent-]) {\n  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75) !important;\n  padding: 9px 10px !important;\n  border-radius: 5px !important;\n  background: rgba(239, 239, 239, 0.2) !important;\n  transition: 300ms !important;\n}\n.accordion .sub_category {\n  padding: 9px !important;\n}\n.accordion .bp3-button.active, .sub_category.active{\n  border-radius: 5px !important;\n\n  background: radial-gradient(circle, rgba(102,102,102,1) 0%, rgba(153,153,153,1) 100%) !important;\n  color: white !important;\n}\n.accordion .bp3-button:hover, .sub_category:hover{\n  box-shadow: inset 0 0 0 1px rgba(176, 176, 176, 0.5), inset 0 -1px 0 rgba(176, 176, 176, 0.5) !important;\n  border-radius: 5px !important;\n}\n.accordion .bp3-button::after, .sub_category::after{\n  border: none !important;\n}\n.CUSTOM_ACCORDION_WIDGET{\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n.modules {\n  left: var(--sideBarWidth)  !important;\n  padding: 0px !important;\n  width: calc(100% - var(--sideBarWidth)  - var(--sideBarGap)) !important;\n\n}\n\n.containerFilter {\n  padding: 0px !important;\n  left: 0 !important;\n}\n\n.modalCancel {\n  height: max-content !important;\n}\n\n.tabsActivities>div>div>div>div>div>div>div {\n  box-shadow: none !important;\n}\n\n.userEmail a {\n  color: #2E3D49 !important;\n}\n",
+        "template": ":root {\n  --sideBarWidth: 160px;\n  --sideBarGap: 8px;\n}\n\n* {\n  box-sizing: border-box !important;\n}\n\nbody section{\n    background-color: #ffffff !important;\n}\ninput, .rc-select-show-arrow.rc-select-multiple .rc-select-selector, .select-button{\n  border-radius: 4px !important;\n}\n\nlabel {\n  border-radius: 4px !important;\n}\n\nspan > textarea {\n  border-radius: 4px !important;\n}\n.bp3-button .bp3-input-group{\n  border-radius: 8px!important;\n}\n::-webkit-scrollbar {\n  width: 0.1px;\n}\n\n.bp3-overlay{\nz-index: 5 !important;\n}\n\ndiv[id=\"comment-overlay-wrapper-0\"]\n  .bp3-overlay-content.bp3-overlay-appear-done {\n  /* height: 90vh !important; */\n  max-height: 90vh !important;\n  border-radius: 10px !important;\n  box-shadow: 0px 6px 14px -4px rgb(255 255 255 / 88%) !important;\n  \n}\n.sidemenu {\n  background-color: #FFFFFF !important;\n}\n\n.loginForm_wrapper > div > div > div > div > div {\n  border-radius: 30px !important\n}\n.loginForm_wrapper:before,\n.loginForm_wrapper:after {\n  z-index: -1 !important;\n  position: absolute !important;\n  content: \"\" !important;\n  bottom: 18px !important;\n  left: 10px !important;\n  width: 50% !important;\n  top: 80% !important;\n  max-width: 300px !important;\n  background: #777 !important;\n  box-shadow: 0 18px 10px #777 !important;\n  transform: rotate(-3deg) !important;\n  border-radius: 10px !important;\n}\n\n.loginForm_wrapper:after {\n  transform: rotate(3deg) !important;\n  right: 10px !important;\n  left: auto !important;\n}\n\n.loginForm_btnWrapper > div > div> div> div> div> div> div> div> div> div> div> div> div {\n  display: flex !important;\n  align-items: center !important;\n  justify-content: center !important;\n}\n\n.loginForm_divider {\n  flex-grow: 1 !important;\n}\n\n.addUserModal_select button {\n  height: 40px !important;\n}\n\n.addUserModal_multiSelect div.rc-select-multiple {\n  height: 40px !important;\n}\n\n.accordionBtnWrapper button {\n  border-radius: 5px !important;\n  margin-bottom: 10px !important;\n  border: 1px solid rgb(131, 131, 131) !important;\n} \n\n.tabs {\n  top:0 !important;\n  left: 0 !important; \n  height: 100vh !important;\n  width: 100% !important;\n  padding: 10px !important;\n  /* background-image: linear-gradient(34deg, rgba(102,102,102,1) 0%, rgba(255,255,255,1) 76%) !important; */\n\n  background: rgb(187,187,187) !important;\n  background: linear-gradient(0deg, rgba(187,187,187,1) 0%, rgba(255,255,255,1) 80%) !important;\n  }\n\n.tabs>div>div>div>div>div {\n  background-color: transparent !important;\n}\n\n.tabs>div>div>div>div {\n  box-shadow: none !important;\n}\n\n.center_container{\n  top: 50% !important;\n  left: 50% !important;\n  transform: translate(-50%, -50%) !important;\n}\n.centerUp_container{\n  top: 5% !important;\n  left: 50% !important;\n  transform: translate(-50%, -5%) !important;\n}\n\n.sidebar {\n  position: fixed !important;\n  height: 100vh !important;\n  top: 0 !important;\n  left: 0 !important;\n  padding: 0 !important;\n  width: var(--sideBarWidth) !important;\n  box-shadow: 9px 0px 4px -6px rgba(199,199,199,0.7) !important;\n\n  background: rgb(187,187,187) !important;\n  background: linear-gradient(0deg, rgba(187,187,187,1) 0%, rgba(255,255,255,1) 80%) !important;\n \n  z-index: 5 !important;\n}\n\n.sidebar>div>div>div>div>div>div>div>div>div>div>div>div>div div {\n  left: 0 !important;\n}\n\n.logo{\n  width: 100% !important;\n  left:0 !important;\n}\n\n.header{\n  top: 0 !important;\n  left: var(--sideBarWidth) !important;\n  padding: 0px !important; \n  width: calc(100% - var(--sideBarWidth) - var(--sideBarGap)) !important;\n\n  height: 60px !important;\n}\n.accordion{\n  padding: 9px !important;\n  width: 100% !important;\n  \n}\n.accordion .bp3-button:not([class*=bp3-intent-]) {\n  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75) !important;\n  padding: 9px 10px !important;\n  border-radius: 5px !important;\n  background: rgba(239, 239, 239, 0.2) !important;\n  transition: 300ms !important;\n}\n.accordion .sub_category {\n  padding: 9px !important;\n}\n.accordion .bp3-button.active, .sub_category.active{\n  border-radius: 5px !important;\n\n  background: radial-gradient(circle, rgba(102,102,102,1) 0%, rgba(153,153,153,1) 100%) !important;\n  color: white !important;\n}\n.accordion .bp3-button:hover, .sub_category:hover{\n  box-shadow: inset 0 0 0 1px rgba(176, 176, 176, 0.5), inset 0 -1px 0 rgba(176, 176, 176, 0.5) !important;\n  border-radius: 5px !important;\n}\n.accordion .bp3-button::after, .sub_category::after{\n  border: none !important;\n}\n.CUSTOM_ACCORDION_WIDGET{\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n\n.accordion .bp3-collapse>div {\n  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75) !important;\n  border-radius: 5px !important;\n}\n.accordion .bp3-collapse>div div {\n  background-color: transparent !important;\n}\n\n.modules {\n  left: var(--sideBarWidth)  !important;\n  padding: 0px !important;\n  width: calc(100% - var(--sideBarWidth)  - var(--sideBarGap)) !important;\n\n}\n\n.containerFilter {\n  padding: 0px !important;\n  left: 0 !important;\n}\n\n.modalCancel {\n  height: max-content !important;\n}\n\n.tabsActivities>div>div>div>div>div>div>div {\n  box-shadow: none !important;\n}\n\n.userEmail a {\n  color: #2E3D49 !important;\n}\n\n.padding-b>div {\n  padding-bottom: 11px !important;\n}\n",
         "output": "str",
         "x": 280,
         "y": 60,
