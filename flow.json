@@ -1,13 +1,5 @@
 [
     {
-        "id": "291b0c173e143ef0",
-        "type": "tab",
-        "label": "Deals",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "3db5a363b78466f5",
         "type": "tab",
         "label": "Contacts",
@@ -19,6 +11,14 @@
         "id": "04949f39d52b1544",
         "type": "tab",
         "label": "Lists",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "291b0c173e143ef0",
+        "type": "tab",
+        "label": "Deals",
         "disabled": false,
         "info": "",
         "env": []
@@ -748,562 +748,6 @@
         "y": 200,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "1611828d794cb86d",
-        "type": "http in",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "url": "/newDeal",
-        "method": "post",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 120,
-        "y": 60,
-        "wires": [
-            [
-                "779e0686b69cadf6"
-            ]
-        ]
-    },
-    {
-        "id": "779e0686b69cadf6",
-        "type": "function",
-        "z": "291b0c173e143ef0",
-        "name": "newDeal",
-        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"deals\";\n\nmsg.payload = {\n    ...msg.fromUI,\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 320,
-        "y": 60,
-        "wires": [
-            [
-                "a6ca2e5f2849d584"
-            ]
-        ]
-    },
-    {
-        "id": "a6ca2e5f2849d584",
-        "type": "link call",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "links": [
-            "193774ea3ceea673"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 510,
-        "y": 60,
-        "wires": [
-            [
-                "2924389c5e5332f2"
-            ]
-        ]
-    },
-    {
-        "id": "2924389c5e5332f2",
-        "type": "http response",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 690,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "1caf7887df4af2a7",
-        "type": "http in",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "url": "/getDeals",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 120,
-        "y": 460,
-        "wires": [
-            [
-                "f722d7cce8d7a468"
-            ]
-        ]
-    },
-    {
-        "id": "f722d7cce8d7a468",
-        "type": "function",
-        "z": "291b0c173e143ef0",
-        "name": "getDeals",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.payload = {\n    deleted: false\n};\n\nif (msg.fromUI.owner) {\n    msg.payload.owner = msg.fromUI.owner;\n}\n\nif (msg.fromUI.deal) {\n    msg.payload.stage = msg.fromUI.deal;\n}\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 300,
-        "y": 460,
-        "wires": [
-            [
-                "79a0093a898d159f"
-            ]
-        ]
-    },
-    {
-        "id": "79a0093a898d159f",
-        "type": "link call",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "links": [
-            "ba97e8986832bd94"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 450,
-        "y": 460,
-        "wires": [
-            [
-                "928184e57c0da8fd"
-            ]
-        ]
-    },
-    {
-        "id": "c075c10d6ab37070",
-        "type": "http response",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 1510,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "928184e57c0da8fd",
-        "type": "function",
-        "z": "291b0c173e143ef0",
-        "name": "getOwners",
-        "func": "msg.deals = msg.payload; // save deals for future \n\nmsg.collection = \"admins\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 650,
-        "y": 460,
-        "wires": [
-            [
-                "f2f98ce4a6f16476"
-            ]
-        ]
-    },
-    {
-        "id": "f2f98ce4a6f16476",
-        "type": "link call",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "links": [
-            "ba97e8986832bd94"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 810,
-        "y": 460,
-        "wires": [
-            [
-                "d25b720acf522464"
-            ]
-        ]
-    },
-    {
-        "id": "526bce4591c7ae53",
-        "type": "function",
-        "z": "291b0c173e143ef0",
-        "name": "prepare for UI",
-        "func": "msg.contacts = msg.payload;\n\nmsg.deals = msg.deals.map(e => {    \n    const contact = msg.contacts?.find(contact => contact._id == e.dealWithContact);\n\n    const deal = {\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        priority: e.priority,\n        comment: e.comment,\n        closeDate: e.closeDate,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n        ownerID: e.owner,\n        dealWithContactID: e.dealWithContact,\n        dealWithContactEmail: contact?.email,\n        dealWithContactFirstName: contact?.firstName,\n        dealWithContactLastName: contact?.lastName,\n        dealID: e._id,\n    };\n\n    return deal;\n});\n\nmsg.payload = msg.deals;\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1340,
-        "y": 460,
-        "wires": [
-            [
-                "c075c10d6ab37070"
-            ]
-        ]
-    },
-    {
-        "id": "b66115a7dcc1ff71",
-        "type": "http in",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "url": "/getDeal",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 110,
-        "y": 380,
-        "wires": [
-            [
-                "d89e317c984047d9"
-            ]
-        ]
-    },
-    {
-        "id": "d89e317c984047d9",
-        "type": "function",
-        "z": "291b0c173e143ef0",
-        "name": "getDeal",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.payload = {\n    _id: objectid(msg.fromUI.dealID),\n    deleted: false\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 300,
-        "y": 380,
-        "wires": [
-            [
-                "1c1bb517c2fc831c"
-            ]
-        ]
-    },
-    {
-        "id": "1c1bb517c2fc831c",
-        "type": "link call",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "links": [
-            "ba97e8986832bd94"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 450,
-        "y": 380,
-        "wires": [
-            [
-                "b6367eaa15460e77"
-            ]
-        ]
-    },
-    {
-        "id": "a311e6a3b2036066",
-        "type": "http response",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 1510,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "b6367eaa15460e77",
-        "type": "function",
-        "z": "291b0c173e143ef0",
-        "name": "getOwners",
-        "func": "msg.deal = msg.payload[0]; // save deals for future \n\nmsg.collection = \"admins\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 650,
-        "y": 380,
-        "wires": [
-            [
-                "3f1bf027224f4785"
-            ]
-        ]
-    },
-    {
-        "id": "3f1bf027224f4785",
-        "type": "link call",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "links": [
-            "ba97e8986832bd94"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 810,
-        "y": 380,
-        "wires": [
-            [
-                "97c05f87e7906426"
-            ]
-        ]
-    },
-    {
-        "id": "dfa4fa357c591b6c",
-        "type": "function",
-        "z": "291b0c173e143ef0",
-        "name": "prepare for UI",
-        "func": "msg.contacts = msg.payload;\n\nconst deal = msg.deal;\nconst contact = msg.contacts?.find(contact => contact._id == msg.deal.dealWithContact);\n\nconst dealUpdated = {\n    dealID: deal._id,\n    name: deal.name,\n    stage: deal.stage,\n    amount: deal.amount,\n    closeDate: deal.closeDate,\n    priority: deal.priority,\n    comment: deal.comment,\n    ownerID: deal.owner,\n    ownerEmail: msg.owners.find(owner => owner._id == deal.owner)?.email,\n    dealWithContactID: deal.dealWithContact,\n    dealWithContactEmail: contact?.email,\n    dealWithContactFirstName: contact?.firstName,\n    dealWithContactLastName: contact?.lastName,\n};\n\nmsg.payload = dealUpdated;\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1340,
-        "y": 380,
-        "wires": [
-            [
-                "a311e6a3b2036066"
-            ]
-        ]
-    },
-    {
-        "id": "872a895b50981ca6",
-        "type": "http in",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "url": "/editDeal",
-        "method": "put",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 110,
-        "y": 140,
-        "wires": [
-            [
-                "a5823dc0ae75b267"
-            ]
-        ]
-    },
-    {
-        "id": "1498d00fb731170c",
-        "type": "link call",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "links": [
-            "a724f172bc7c2de5"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 520,
-        "y": 140,
-        "wires": [
-            [
-                "2758945273714598"
-            ]
-        ]
-    },
-    {
-        "id": "a5823dc0ae75b267",
-        "type": "function",
-        "z": "291b0c173e143ef0",
-        "name": "to mongo",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        ...(msg.fromUI.dealName ? { name: msg.fromUI.dealName } : {}),\n        ...(msg.fromUI.dealStage ? { stage: msg.fromUI.dealStage } : {}),\n        ...(msg.fromUI.amount ? { amount: msg.fromUI.amount } : {}),\n        ...(msg.fromUI.closeDate ? { closeDate: msg.fromUI.closeDate } : {}),\n        ...(msg.fromUI.priority ? { priority: msg.fromUI.priority } : {}),\n        ...(msg.fromUI.comment ? { comment: msg.fromUI.comment } : {}),\n    },\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 320,
-        "y": 140,
-        "wires": [
-            [
-                "1498d00fb731170c"
-            ]
-        ]
-    },
-    {
-        "id": "2758945273714598",
-        "type": "http response",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 690,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "014dd7f8a6cb3b9e",
-        "type": "http in",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "url": "/deleteDeal",
-        "method": "put",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 120,
-        "y": 220,
-        "wires": [
-            [
-                "e27452a2a81c710e"
-            ]
-        ]
-    },
-    {
-        "id": "2e446f0dd0de8f16",
-        "type": "link call",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "links": [
-            "a724f172bc7c2de5"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 520,
-        "y": 220,
-        "wires": [
-            [
-                "f2c46c8214b966e5"
-            ]
-        ]
-    },
-    {
-        "id": "e27452a2a81c710e",
-        "type": "function",
-        "z": "291b0c173e143ef0",
-        "name": "to mongo",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        deleted: true,\n    },\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 320,
-        "y": 220,
-        "wires": [
-            [
-                "2e446f0dd0de8f16"
-            ]
-        ]
-    },
-    {
-        "id": "f2c46c8214b966e5",
-        "type": "http response",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 690,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "d25b720acf522464",
-        "type": "function",
-        "z": "291b0c173e143ef0",
-        "name": "getContacts",
-        "func": "msg.owners = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    deleted: false,\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 990,
-        "y": 460,
-        "wires": [
-            [
-                "dfdf7ad22463afd8"
-            ]
-        ]
-    },
-    {
-        "id": "dfdf7ad22463afd8",
-        "type": "link call",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "links": [
-            "ba97e8986832bd94"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 1150,
-        "y": 460,
-        "wires": [
-            [
-                "526bce4591c7ae53"
-            ]
-        ]
-    },
-    {
-        "id": "97c05f87e7906426",
-        "type": "function",
-        "z": "291b0c173e143ef0",
-        "name": "getContacts",
-        "func": "msg.owners = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    deleted: false,\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "objectid",
-                "module": "objectid"
-            }
-        ],
-        "x": 990,
-        "y": 380,
-        "wires": [
-            [
-                "dcb029b942a1982f"
-            ]
-        ]
-    },
-    {
-        "id": "dcb029b942a1982f",
-        "type": "link call",
-        "z": "291b0c173e143ef0",
-        "name": "",
-        "links": [
-            "ba97e8986832bd94"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 1150,
-        "y": 380,
-        "wires": [
-            [
-                "dfa4fa357c591b6c"
-            ]
         ]
     },
     {
@@ -3107,6 +2551,562 @@
         "wires": [
             [
                 "a49706b041abf611"
+            ]
+        ]
+    },
+    {
+        "id": "1611828d794cb86d",
+        "type": "http in",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "url": "/newDeal",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "779e0686b69cadf6"
+            ]
+        ]
+    },
+    {
+        "id": "779e0686b69cadf6",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "newDeal",
+        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"deals\";\n\nmsg.payload = {\n    ...msg.fromUI,\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 320,
+        "y": 60,
+        "wires": [
+            [
+                "a6ca2e5f2849d584"
+            ]
+        ]
+    },
+    {
+        "id": "a6ca2e5f2849d584",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "193774ea3ceea673"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 510,
+        "y": 60,
+        "wires": [
+            [
+                "2924389c5e5332f2"
+            ]
+        ]
+    },
+    {
+        "id": "2924389c5e5332f2",
+        "type": "http response",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "1caf7887df4af2a7",
+        "type": "http in",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "url": "/getDeals",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "f722d7cce8d7a468"
+            ]
+        ]
+    },
+    {
+        "id": "f722d7cce8d7a468",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "getDeals",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.payload = {\n    deleted: false\n};\n\nif (msg.fromUI.owner) {\n    msg.payload.owner = msg.fromUI.owner;\n}\n\nif (msg.fromUI.deal) {\n    msg.payload.stage = msg.fromUI.deal;\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 300,
+        "y": 460,
+        "wires": [
+            [
+                "79a0093a898d159f"
+            ]
+        ]
+    },
+    {
+        "id": "79a0093a898d159f",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 450,
+        "y": 460,
+        "wires": [
+            [
+                "928184e57c0da8fd"
+            ]
+        ]
+    },
+    {
+        "id": "c075c10d6ab37070",
+        "type": "http response",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1510,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "928184e57c0da8fd",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "getOwners",
+        "func": "msg.deals = msg.payload; // save deals for future \n\nmsg.collection = \"admins\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 650,
+        "y": 460,
+        "wires": [
+            [
+                "f2f98ce4a6f16476"
+            ]
+        ]
+    },
+    {
+        "id": "f2f98ce4a6f16476",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 810,
+        "y": 460,
+        "wires": [
+            [
+                "d25b720acf522464"
+            ]
+        ]
+    },
+    {
+        "id": "526bce4591c7ae53",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "prepare for UI",
+        "func": "msg.contacts = msg.payload;\n\nmsg.deals = msg.deals.map(e => {    \n    const contact = msg.contacts?.find(contact => contact._id == e.dealWithContact);\n\n    const deal = {\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        priority: e.priority,\n        comment: e.comment,\n        closeDate: e.closeDate,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n        ownerID: e.owner,\n        dealWithContactID: e.dealWithContact,\n        dealWithContactEmail: contact?.email,\n        dealWithContactFirstName: contact?.firstName,\n        dealWithContactLastName: contact?.lastName,\n        dealID: e._id,\n    };\n\n    return deal;\n});\n\nmsg.payload = msg.deals;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 460,
+        "wires": [
+            [
+                "c075c10d6ab37070"
+            ]
+        ]
+    },
+    {
+        "id": "b66115a7dcc1ff71",
+        "type": "http in",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "url": "/getDeal",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 380,
+        "wires": [
+            [
+                "d89e317c984047d9"
+            ]
+        ]
+    },
+    {
+        "id": "d89e317c984047d9",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "getDeal",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.payload = {\n    _id: objectid(msg.fromUI.dealID),\n    deleted: false\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 300,
+        "y": 380,
+        "wires": [
+            [
+                "1c1bb517c2fc831c"
+            ]
+        ]
+    },
+    {
+        "id": "1c1bb517c2fc831c",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "b6367eaa15460e77"
+            ]
+        ]
+    },
+    {
+        "id": "a311e6a3b2036066",
+        "type": "http response",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1510,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b6367eaa15460e77",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "getOwners",
+        "func": "msg.deal = msg.payload[0]; // save deals for future \n\nmsg.collection = \"admins\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 650,
+        "y": 380,
+        "wires": [
+            [
+                "3f1bf027224f4785"
+            ]
+        ]
+    },
+    {
+        "id": "3f1bf027224f4785",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 810,
+        "y": 380,
+        "wires": [
+            [
+                "97c05f87e7906426"
+            ]
+        ]
+    },
+    {
+        "id": "dfa4fa357c591b6c",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "prepare for UI",
+        "func": "msg.contacts = msg.payload;\n\nconst deal = msg.deal;\nconst contact = msg.contacts?.find(contact => contact._id == msg.deal.dealWithContact);\n\nconst dealUpdated = {\n    dealID: deal._id,\n    name: deal.name,\n    stage: deal.stage,\n    amount: deal.amount,\n    closeDate: deal.closeDate,\n    priority: deal.priority,\n    comment: deal.comment,\n    ownerID: deal.owner,\n    ownerEmail: msg.owners.find(owner => owner._id == deal.owner)?.email,\n    dealWithContactID: deal.dealWithContact,\n    dealWithContactEmail: contact?.email,\n    dealWithContactFirstName: contact?.firstName,\n    dealWithContactLastName: contact?.lastName,\n};\n\nmsg.payload = dealUpdated;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 380,
+        "wires": [
+            [
+                "a311e6a3b2036066"
+            ]
+        ]
+    },
+    {
+        "id": "872a895b50981ca6",
+        "type": "http in",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "url": "/editDeal",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "a5823dc0ae75b267"
+            ]
+        ]
+    },
+    {
+        "id": "1498d00fb731170c",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "2758945273714598"
+            ]
+        ]
+    },
+    {
+        "id": "a5823dc0ae75b267",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "to mongo",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        ...(msg.fromUI.dealName ? { name: msg.fromUI.dealName } : {}),\n        ...(msg.fromUI.dealStage ? { stage: msg.fromUI.dealStage } : {}),\n        ...(msg.fromUI.amount ? { amount: msg.fromUI.amount } : {}),\n        ...(msg.fromUI.closeDate ? { closeDate: msg.fromUI.closeDate } : {}),\n        ...(msg.fromUI.priority ? { priority: msg.fromUI.priority } : {}),\n        ...(msg.fromUI.comment ? { comment: msg.fromUI.comment } : {}),\n    },\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 320,
+        "y": 140,
+        "wires": [
+            [
+                "1498d00fb731170c"
+            ]
+        ]
+    },
+    {
+        "id": "2758945273714598",
+        "type": "http response",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "014dd7f8a6cb3b9e",
+        "type": "http in",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "url": "/deleteDeal",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 220,
+        "wires": [
+            [
+                "e27452a2a81c710e"
+            ]
+        ]
+    },
+    {
+        "id": "2e446f0dd0de8f16",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 520,
+        "y": 220,
+        "wires": [
+            [
+                "f2c46c8214b966e5"
+            ]
+        ]
+    },
+    {
+        "id": "e27452a2a81c710e",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "to mongo",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        deleted: true,\n    },\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "2e446f0dd0de8f16"
+            ]
+        ]
+    },
+    {
+        "id": "f2c46c8214b966e5",
+        "type": "http response",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d25b720acf522464",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "getContacts",
+        "func": "msg.owners = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    deleted: false,\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 990,
+        "y": 460,
+        "wires": [
+            [
+                "dfdf7ad22463afd8"
+            ]
+        ]
+    },
+    {
+        "id": "dfdf7ad22463afd8",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1150,
+        "y": 460,
+        "wires": [
+            [
+                "526bce4591c7ae53"
+            ]
+        ]
+    },
+    {
+        "id": "97c05f87e7906426",
+        "type": "function",
+        "z": "291b0c173e143ef0",
+        "name": "getContacts",
+        "func": "msg.owners = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    deleted: false,\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 990,
+        "y": 380,
+        "wires": [
+            [
+                "dcb029b942a1982f"
+            ]
+        ]
+    },
+    {
+        "id": "dcb029b942a1982f",
+        "type": "link call",
+        "z": "291b0c173e143ef0",
+        "name": "",
+        "links": [
+            "ba97e8986832bd94"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1150,
+        "y": 380,
+        "wires": [
+            [
+                "dfa4fa357c591b6c"
             ]
         ]
     },
