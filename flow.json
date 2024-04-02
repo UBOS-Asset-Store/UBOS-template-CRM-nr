@@ -209,9 +209,7 @@
             "8f8ca6e8d858b872"
         ],
         "x": 34,
-        "y": 19,
-        "w": 472,
-        "h": 82
+        "y": 19
     },
     {
         "id": "d78c837be83c52b2",
@@ -310,9 +308,7 @@
             "b5f800450862f3cd"
         ],
         "x": 34,
-        "y": 119,
-        "w": 632,
-        "h": 322
+        "y": 119
     },
     {
         "id": "5bf7ccb6c6709633",
@@ -398,7 +394,9 @@
             "f3211f80fa6b47f6"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 1452,
+        "h": 462
     },
     {
         "id": "a8bcf74ef7690d27",
@@ -448,9 +446,7 @@
             "1e2c8c7cdacb7345"
         ],
         "x": 44,
-        "y": 39,
-        "w": 942,
-        "h": 762
+        "y": 39
     },
     {
         "id": "c8e4ab113b6b9056",
@@ -493,9 +489,7 @@
             "655fc308a4013906"
         ],
         "x": 1034,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "221ba791b89fb1e4",
@@ -892,7 +886,7 @@
         "z": "3db5a363b78466f5",
         "g": "d8d6cfc2c521390d",
         "name": "---",
-        "func": "msg.collection = 'contacts';\n\nmsg.payload = {\n    contactOwner: '65e5d87ab5ecf200117a18d4'\n};\n\nreturn msg;\n",
+        "func": "msg.collection = 'admins';\n\nmsg.payload = {\n    // contactOwner: '65f82bd1714adb1200000023'\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1328,7 +1322,8 @@
         "y": 800,
         "wires": [
             [
-                "335be961b97df98e"
+                "335be961b97df98e",
+                "860717c73df855de"
             ]
         ]
     },
@@ -1426,7 +1421,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "getContact",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    _id: objectid(msg.fromUI.contactID),\n    deleted: false,\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"contacts\";\n\nmsg.payload = {\n    _id: objectid(msg.fromUI.contactID),\n    deleted: false,\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1685,7 +1680,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "to list",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"lists\";\nmsg.payload = {\n    \"contactIDs\": { $elemMatch: { $eq: msg.fromUI.contactID }},\n    deleted: false,\n}\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"lists\";\nmsg.payload = {\n    \"contactIDs\": {\n        $elemMatch: {\n            $eq: msg.fromUI.contactID\n        }\n    },\n    deleted: false,\n}\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1816,7 +1811,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "getOwners",
-        "func": "msg.contacts = msg.payload;\n\nmsg.collection = \"admins\";\nmsg.payload = {\n    deleted: false\n};\n\nreturn msg;\n",
+        "func": "msg.contacts = msg.payload;\n\nmsg.collection = \"admins\";\nmsg.payload = {\n    _id: { $in: msg.contacts.map((e => objectid(e.contactOwner)))},\n    deleted: false\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1831,7 +1826,8 @@
         "y": 800,
         "wires": [
             [
-                "9de585db86aab85d"
+                "9de585db86aab85d",
+                "860717c73df855de"
             ]
         ]
     },
@@ -1849,9 +1845,73 @@
         "y": 800,
         "wires": [
             [
-                "52772985efe77570"
+                "52772985efe77570",
+                "09e983c5c13191f0"
             ]
         ]
+    },
+    {
+        "id": "299e64edb918973c",
+        "type": "inject",
+        "z": "3db5a363b78466f5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 840,
+        "wires": [
+            [
+                "335be961b97df98e"
+            ]
+        ]
+    },
+    {
+        "id": "860717c73df855de",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "09e983c5c13191f0",
+        "type": "debug",
+        "z": "3db5a363b78466f5",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 740,
+        "wires": []
     },
     {
         "id": "f03319fda5d70724",
@@ -1968,7 +2028,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 110,
-        "y": 800,
+        "y": 760,
         "wires": [
             [
                 "1d5b0808453b5970"
@@ -1991,8 +2051,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 360,
-        "y": 800,
+        "x": 280,
+        "y": 760,
         "wires": [
             [
                 "7c2ad79f0d878edc"
@@ -2009,8 +2069,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 550,
-        "y": 800,
+        "x": 430,
+        "y": 760,
         "wires": [
             [
                 "98ce039bfecd322a"
@@ -2024,8 +2084,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 910,
-        "y": 800,
+        "x": 770,
+        "y": 760,
         "wires": []
     },
     {
@@ -2039,8 +2099,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 800,
+        "x": 620,
+        "y": 760,
         "wires": [
             [
                 "f47ebcd88b05288f"
@@ -2297,7 +2357,7 @@
                 "module": "objectid"
             }
         ],
-        "x": 610,
+        "x": 650,
         "y": 660,
         "wires": [
             [
@@ -2315,7 +2375,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 770,
+        "x": 810,
         "y": 660,
         "wires": [
             [
@@ -2330,7 +2390,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1090,
+        "x": 1150,
         "y": 660,
         "wires": []
     },
@@ -2345,7 +2405,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
+        "x": 1000,
         "y": 660,
         "wires": [
             [
@@ -2439,7 +2499,7 @@
                 "module": "objectid"
             }
         ],
-        "x": 310,
+        "x": 330,
         "y": 660,
         "wires": [
             [
@@ -2457,7 +2517,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 450,
+        "x": 470,
         "y": 660,
         "wires": [
             [
@@ -4013,7 +4073,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "398457a4bc6d8725",
         "name": "check_",
-        "func": "msg.collection = \"admins\";\nmsg.email = msg.payload.email.trim();\nmsg.password = msg.payload.password\nmsg.payload= {\n        deleted:false\n      }\nreturn msg;",
+        "func": "msg.collection = \"admins\";\nmsg.email = msg.payload.email.trim().toLowerCase();\nmsg.password = msg.payload.password\nmsg.payload= {\n        deleted:false\n      }\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4978,7 +5038,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "d78377c07a215120",
         "name": "check",
-        "func": "const regexEmail = /^(([^<>()[\\]\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$/i;\nconst regexPassword = /^(?!.*\\s).{8,}/;\nconst email = msg.payload.email.toLowerCase().trim();\n\nif (!regexEmail.test(email)) {\n    msg.statusCode = 401;\n    msg.payload = {\n        data: \"Email is invalid\",\n        code: 401\n    }\n\n    return [null, msg];\n\n} else if (!regexPassword.test(msg.payload.password)) {\n    msg.statusCode = 401;\n    msg.payload = {\n        data: \"The password is invalid. The value must be at least 8 characters and without whitespaces\",\n        code: 401\n    }\n\n    return [null, msg];\n    \n} else {\n    msg.collection = \"admins\"\n    msg.fromApp = msg.payload\n\n   msg.payload = {\n        email: email,\n        deleted: false,\n        \n    }\n\n    return [msg, null];\n}",
+        "func": "const regexEmail = /^(([^<>()[\\]\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$/i;\nconst regexPassword = /^(?!.*\\s).{8,}/;\nconst email = msg.payload.email.toLowerCase().trim().toLowerCase();\n\nif (!regexEmail.test(email)) {\n    msg.statusCode = 401;\n    msg.payload = {\n        data: \"Email is invalid\",\n        code: 401\n    }\n\n    return [null, msg];\n\n} else if (!regexPassword.test(msg.payload.password)) {\n    msg.statusCode = 401;\n    msg.payload = {\n        data: \"The password is invalid. The value must be at least 8 characters and without whitespaces\",\n        code: 401\n    }\n\n    return [null, msg];\n    \n} else {\n    msg.collection = \"admins\"\n    msg.fromApp = msg.payload\n\n   msg.payload = {\n        email: email,\n        deleted: false,\n        \n    }\n\n    return [msg, null];\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -7109,7 +7169,7 @@
         "z": "be827c2e9f2e7979",
         "g": "fd9bc368cea45c71",
         "name": "find user",
-        "func": "\nif (msg.payload.userAttributes.some(e => e.attributeName === \"create user\")) {\n    msg.oldpayload = msg.payload\n    msg.collection = \"admins\";\n\n    msg.payload = {\n        email: msg.payload.email,\n        deleted: false\n    }\n    return [msg, null]\n} else {\n    return [null, msg]\n}",
+        "func": "\nif (msg.payload.userAttributes.some(e => e.attributeName === \"create user\")) {\n    msg.oldpayload = msg.payload\n    msg.collection = \"admins\";\n\n    msg.payload = {\n        email: msg.payload.email.toLowerCase(),\n        deleted: false\n    }\n    return [msg, null]\n} else {\n    return [null, msg]\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
