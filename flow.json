@@ -977,8 +977,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
-        "y": 1900,
+        "x": 140,
+        "y": 2380,
         "wires": [
             [
                 "564f92623cb95077"
@@ -990,7 +990,7 @@
         "type": "function",
         "z": "038a93fcefdd21a9",
         "name": "function 598",
-        "func": "msg.collection = 'DEMO-lists';\n// msg.collection = 'DEMO-contacts';\n// msg.collection = 'contacts';\n\nmsg.payload = {};\n// msg.payload = { \"deleted\": false, \"contactOwner\": objectid(\"660c169c2efb131100000002\") };\n\nreturn msg;",
+        "func": "// msg.collection = 'DEMO-lists';\n// msg.collection = 'DEMO-contacts';\nmsg.collection = 'DEMO-deals';\n// msg.collection = 'contacts';\n\nmsg.payload = {};\n// msg.payload = { \"deleted\": false, \"contactOwner\": objectid(\"660c169c2efb131100000002\") };\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1001,8 +1001,8 @@
                 "module": "objectid"
             }
         ],
-        "x": 290,
-        "y": 1900,
+        "x": 310,
+        "y": 2380,
         "wires": [
             [
                 "015c66b171565474"
@@ -1022,8 +1022,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 1900,
+        "x": 640,
+        "y": 2380,
         "wires": []
     },
     {
@@ -1036,8 +1036,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 470,
-        "y": 1900,
+        "x": 490,
+        "y": 2380,
         "wires": [
             [
                 "c87bd774bf382b9c"
@@ -1513,14 +1513,14 @@
         "id": "a3348cdccbb09210",
         "type": "template",
         "z": "038a93fcefdd21a9",
-        "name": "DEMO contacts JSON",
+        "name": "DEMO contacts",
         "field": "payload",
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
         "template": "[\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T12:34:56.789Z\",\n        \"email\": \"john.smith@example.com\",\n        \"firstName\": \"John\",\n        \"lastName\": \"Smith\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+1 555 123 4567\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"United States\",\n        \"city\": \"New York\",\n        \"industry\": \"Information Technology\",\n        \"comment\": \"Potential lead for new software project.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T10:15:30.456Z\",\n        \"email\": \"maria.garcia@example.com\",\n        \"firstName\": \"Maria\",\n        \"lastName\": \"Garcia\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+52 555 987 6543\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Mexico\",\n        \"city\": \"Mexico City\",\n        \"industry\": \"Automotive\",\n        \"comment\": \"Interested in our fleet management solution.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T08:20:10.234Z\",\n        \"email\": \"pierre.dubois@example.com\",\n        \"firstName\": \"Pierre\",\n        \"lastName\": \"Dubois\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+33 1 23 45 67 89\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"France\",\n        \"city\": \"Paris\",\n        \"industry\": \"Fashion\",\n        \"comment\": \"Needs more information on pricing and features.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T06:45:20.789Z\",\n        \"email\": \"ahmed.ali@example.com\",\n        \"firstName\": \"Ahmed\",\n        \"lastName\": \"Ali\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+971 50 123 4567\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"United Arab Emirates\",\n        \"city\": \"Dubai\",\n        \"industry\": \"Construction\",\n        \"comment\": \"Interested in our project management tools.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T05:10:35.123Z\",\n        \"email\": \"sarah.thompson@example.com\",\n        \"firstName\": \"Sarah\",\n        \"lastName\": \"Thompson\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+44 20 1234 5678\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"United Kingdom\",\n        \"city\": \"London\",\n        \"industry\": \"Finance\",\n        \"comment\": \"New lead from trade show.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T03:25:45.678Z\",\n        \"email\": \"takeshi.tanaka@example.com\",\n        \"firstName\": \"Takeshi\",\n        \"lastName\": \"Tanaka\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+81 3 1234 5678\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Japan\",\n        \"city\": \"Tokyo\",\n        \"industry\": \"Electronics\",\n        \"comment\": \"Interested in our inventory management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T02:40:15.234Z\",\n        \"email\": \"anna.schmidt@example.com\",\n        \"firstName\": \"Anna\",\n        \"lastName\": \"Schmidt\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+49 30 1234 5678\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Germany\",\n        \"city\": \"Berlin\",\n        \"industry\": \"Retail\",\n        \"comment\": \"Needs more information on integration capabilities.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T01:55:30.789Z\",\n        \"email\": \"carlos.rodriguez@example.com\",\n        \"firstName\": \"Carlos\",\n        \"lastName\": \"Rodriguez\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+57 1 234 5678\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Colombia\",\n        \"city\": \"Bogota\",\n        \"industry\": \"Telecommunications\",\n        \"comment\": \"Interested in our customer support software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-01T23:35:10.456Z\",\n        \"email\": \"david.lee@example.com\",\n        \"firstName\": \"David\",\n        \"lastName\": \"Lee\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+82 2 1234 5678\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"South Korea\",\n        \"city\": \"Seoul\",\n        \"industry\": \"Manufacturing\",\n        \"comment\": \"Evaluating our CRM for potential implementation.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T14:20:30.789Z\",\n        \"email\": \"oleksiy.ivanov@example.com\",\n        \"firstName\": \"Oleksiy\",\n        \"lastName\": \"Ivanov\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+380 97 123 4567\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Ukraine\",\n        \"city\": \"Lviv\",\n        \"industry\": \"Tourism\",\n        \"comment\": \"Potential lead for travel booking software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T15:10:45.234Z\",\n        \"email\": \"mariya.kovalenko@example.com\",\n        \"firstName\": \"Mariya\",\n        \"lastName\": \"Kovalenko\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+380 63 987 6543\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Ukraine\",\n        \"city\": \"Kyiv\",\n        \"industry\": \"Education\",\n        \"comment\": \"Interested in our learning management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T17:20:15.789Z\",\n        \"email\": \"sofia.gonzalez@example.com\",\n        \"firstName\": \"Sofia\",\n        \"lastName\": \"Gonzalez\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+34 612 345 678\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Spain\",\n        \"city\": \"Madrid\",\n        \"industry\": \"Marketing\",\n        \"comment\": \"Potential lead for digital marketing tools.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T17:35:30.456Z\",\n        \"email\": \"luca.rossi@example.com\",\n        \"firstName\": \"Luca\",\n        \"lastName\": \"Rossi\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+39 06 1234 5678\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Italy\",\n        \"city\": \"Rome\",\n        \"industry\": \"Food and Beverage\",\n        \"comment\": \"Interested in our restaurant management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T17:50:45.234Z\",\n        \"email\": \"yuri.tanaka@example.com\",\n        \"firstName\": \"Yuri\",\n        \"lastName\": \"Tanaka\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+81 3 9876 5432\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Japan\",\n        \"city\": \"Osaka\",\n        \"industry\": \"Logistics\",\n        \"comment\": \"Needs more information on integration capabilities.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T18:05:10.789Z\",\n        \"email\": \"fatima.hassan@example.com\",\n        \"firstName\": \"Fatima\",\n        \"lastName\": \"Hassan\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+966 55 123 4567\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Saudi Arabia\",\n        \"city\": \"Riyadh\",\n        \"industry\": \"Healthcare\",\n        \"comment\": \"Interested in our patient management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T18:20:25.456Z\",\n        \"email\": \"daniel.nguyen@example.com\",\n        \"firstName\": \"Daniel\",\n        \"lastName\": \"Nguyen\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+84 28 1234 5678\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Vietnam\",\n        \"city\": \"Ho Chi Minh City\",\n        \"industry\": \"Retail\",\n        \"comment\": \"New lead from industry event.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T18:35:40.234Z\",\n        \"email\": \"natalia.kowalski@example.com\",\n        \"firstName\": \"Natalia\",\n        \"lastName\": \"Kowalski\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+48 22 987 6543\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Poland\",\n        \"city\": \"Warsaw\",\n        \"industry\": \"Finance\",\n        \"comment\": \"Evaluating our accounting software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T18:50:55.789Z\",\n        \"email\": \"mohamed.ali@example.com\",\n        \"firstName\": \"Mohamed\",\n        \"lastName\": \"Ali\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+20 10 1234 5678\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Egypt\",\n        \"city\": \"Cairo\",\n        \"industry\": \"Education\",\n        \"comment\": \"Needs more information on pricing and features.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T19:05:10.456Z\",\n        \"email\": \"julia.fernandez@example.com\",\n        \"firstName\": \"Julia\",\n        \"lastName\": \"Fernandez\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+56 9 1234 5678\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Chile\",\n        \"city\": \"Santiago\",\n        \"industry\": \"Mining\",\n        \"comment\": \"Interested in our fleet management solution.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T19:20:25.234Z\",\n        \"email\": \"hassan.khan@example.com\",\n        \"firstName\": \"Hassan\",\n        \"lastName\": \"Khan\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+92 321 1234 567\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Pakistan\",\n        \"city\": \"Karachi\",\n        \"industry\": \"Textiles\",\n        \"comment\": \"Potential lead for supply chain management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T19:35:40.789Z\",\n        \"email\": \"ana.silva@example.com\",\n        \"firstName\": \"Ana\",\n        \"lastName\": \"Silva\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+55 11 9876 5432\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Brazil\",\n        \"city\": \"Sao Paulo\",\n        \"industry\": \"Entertainment\",\n        \"comment\": \"Interested in our event management platform.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T19:50:55.456Z\",\n        \"email\": \"kemal.yilmaz@example.com\",\n        \"firstName\": \"Kemal\",\n        \"lastName\": \"Yilmaz\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+90 212 123 4567\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Turkey\",\n        \"city\": \"Istanbul\",\n        \"industry\": \"Tourism\",\n        \"comment\": \"Needs more information on integration capabilities.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T17:20:15.789Z\",\n        \"email\": \"sofia.gonzalez@example.com\",\n        \"firstName\": \"Sofia\",\n        \"lastName\": \"Gonzalez\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+34 612 345 678\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Spain\",\n        \"city\": \"Madrid\",\n        \"industry\": \"Marketing\",\n        \"comment\": \"Potential lead for digital marketing tools.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T17:35:30.456Z\",\n        \"email\": \"luca.rossi@example.com\",\n        \"firstName\": \"Luca\",\n        \"lastName\": \"Rossi\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+39 06 1234 5678\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Italy\",\n        \"city\": \"Rome\",\n        \"industry\": \"Food and Beverage\",\n        \"comment\": \"Interested in our restaurant management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T17:50:45.234Z\",\n        \"email\": \"yuri.tanaka@example.com\",\n        \"firstName\": \"Yuri\",\n        \"lastName\": \"Tanaka\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+81 3 9876 5432\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Japan\",\n        \"city\": \"Osaka\",\n        \"industry\": \"Logistics\",\n        \"comment\": \"Needs more information on integration capabilities.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T18:05:10.789Z\",\n        \"email\": \"fatima.hassan@example.com\",\n        \"firstName\": \"Fatima\",\n        \"lastName\": \"Hassan\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+966 55 123 4567\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Saudi Arabia\",\n        \"city\": \"Riyadh\",\n        \"industry\": \"Healthcare\",\n        \"comment\": \"Interested in our patient management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T18:20:25.456Z\",\n        \"email\": \"daniel.nguyen@example.com\",\n        \"firstName\": \"Daniel\",\n        \"lastName\": \"Nguyen\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+84 28 1234 5678\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Vietnam\",\n        \"city\": \"Ho Chi Minh City\",\n        \"industry\": \"Retail\",\n        \"comment\": \"New lead from industry event.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T18:35:40.234Z\",\n        \"email\": \"natalia.kowalski@example.com\",\n        \"firstName\": \"Natalia\",\n        \"lastName\": \"Kowalski\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+48 22 987 6543\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Poland\",\n        \"city\": \"Warsaw\",\n        \"industry\": \"Finance\",\n        \"comment\": \"Evaluating our accounting software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T18:50:55.789Z\",\n        \"email\": \"mohamed.ali@example.com\",\n        \"firstName\": \"Mohamed\",\n        \"lastName\": \"Ali\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+20 10 1234 5678\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Egypt\",\n        \"city\": \"Cairo\",\n        \"industry\": \"Education\",\n        \"comment\": \"Needs more information on pricing and features.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T19:05:10.456Z\",\n        \"email\": \"julia.fernandez@example.com\",\n        \"firstName\": \"Julia\",\n        \"lastName\": \"Fernandez\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+56 9 1234 5678\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Chile\",\n        \"city\": \"Santiago\",\n        \"industry\": \"Mining\",\n        \"comment\": \"Interested in our fleet management solution.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T19:20:25.234Z\",\n        \"email\": \"hassan.khan@example.com\",\n        \"firstName\": \"Hassan\",\n        \"lastName\": \"Khan\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+92 321 1234 567\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Pakistan\",\n        \"city\": \"Karachi\",\n        \"industry\": \"Textiles\",\n        \"comment\": \"Potential lead for supply chain management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T19:35:40.789Z\",\n        \"email\": \"ana.silva@example.com\",\n        \"firstName\": \"Ana\",\n        \"lastName\": \"Silva\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+55 11 9876 5432\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Brazil\",\n        \"city\": \"Sao Paulo\",\n        \"industry\": \"Entertainment\",\n        \"comment\": \"Interested in our event management platform.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T19:50:55.456Z\",\n        \"email\": \"kemal.yilmaz@example.com\",\n        \"firstName\": \"Kemal\",\n        \"lastName\": \"Yilmaz\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+90 212 123 4567\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Turkey\",\n        \"city\": \"Istanbul\",\n        \"industry\": \"Tourism\",\n        \"comment\": \"Needs more information on integration capabilities.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T23:20:25.789Z\",\n        \"email\": \"maksym.shevchenko@example.com\",\n        \"firstName\": \"Maksym\",\n        \"lastName\": \"Shevchenko\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+380 67 123 4567\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Ukraine\",\n        \"city\": \"Kharkiv\",\n        \"industry\": \"Manufacturing\",\n        \"comment\": \"Potential lead for inventory management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T23:35:40.456Z\",\n        \"email\": \"oksana.kozak@example.com\",\n        \"firstName\": \"Oksana\",\n        \"lastName\": \"Kozak\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+380 97 9876 5432\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Ukraine\",\n        \"city\": \"Odesa\",\n        \"industry\": \"Tourism\",\n        \"comment\": \"Interested in our hotel management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-02T23:50:55.234Z\",\n        \"email\": \"andrii.petrov@example.com\",\n        \"firstName\": \"Andrii\",\n        \"lastName\": \"Petrov\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+380 63 1234 5678\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Ukraine\",\n        \"city\": \"Dnipro\",\n        \"industry\": \"Logistics\",\n        \"comment\": \"Needs more information on integration capabilities.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T00:05:10.789Z\",\n        \"email\": \"iryna.kovalenko@example.com\",\n        \"firstName\": \"Iryna\",\n        \"lastName\": \"Kovalenko\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+380 95 9876 5432\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Ukraine\",\n        \"city\": \"Lviv\",\n        \"industry\": \"Education\",\n        \"comment\": \"Interested in our learning management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T00:20:25.456Z\",\n        \"email\": \"oleh.bondar@example.com\",\n        \"firstName\": \"Oleh\",\n        \"lastName\": \"Bondar\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+380 67 1234 5678\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Ukraine\",\n        \"city\": \"Zaporizhzhia\",\n        \"industry\": \"Manufacturing\",\n        \"comment\": \"Potential lead for project management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T00:35:40.234Z\",\n        \"email\": \"yulia.ivanova@example.com\",\n        \"firstName\": \"Yulia\",\n        \"lastName\": \"Ivanova\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+380 93 9876 5432\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Ukraine\",\n        \"city\": \"Kharkiv\",\n        \"industry\": \"Healthcare\",\n        \"comment\": \"Evaluating our patient management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T00:50:55.789Z\",\n        \"email\": \"oleksii.marchenko@example.com\",\n        \"firstName\": \"Oleksii\",\n        \"lastName\": \"Marchenko\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+380 99 1234 5678\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Ukraine\",\n        \"city\": \"Mariupol\",\n        \"industry\": \"Construction\",\n        \"comment\": \"Needs more information on pricing and features.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T01:05:10.456Z\",\n        \"email\": \"natalia.kolesnikova@example.com\",\n        \"firstName\": \"Natalia\",\n        \"lastName\": \"Kolesnikova\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+380 97 9876 5432\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Ukraine\",\n        \"city\": \"Yalta\",\n        \"industry\": \"Retail\",\n        \"comment\": \"Interested in our inventory management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T01:20:25.234Z\",\n        \"email\": \"mykola.kyrychenko@example.com\",\n        \"firstName\": \"Mykola\",\n        \"lastName\": \"Kyrychenko\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+380 63 1234 5678\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Ukraine\",\n        \"city\": \"Donetsk\",\n        \"industry\": \"Mining\",\n        \"comment\": \"Potential lead for fleet management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T01:35:40.789Z\",\n        \"email\": \"olha.ponomarenko@example.com\",\n        \"firstName\": \"Olha\",\n        \"lastName\": \"Ponomarenko\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+380 99 9876 5432\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Ukraine\",\n        \"city\": \"Kyiv\",\n        \"industry\": \"Information Technology\",\n        \"comment\": \"Evaluating our customer support software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T01:50:55.456Z\",\n        \"email\": \"jonas.petrauskas@example.com\",\n        \"firstName\": \"Jonas\",\n        \"lastName\": \"Petrauskas\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+370 5 1234 5678\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Lithuania\",\n        \"city\": \"Vilnius\",\n        \"industry\": \"Finance\",\n        \"comment\": \"Needs more information on integration capabilities.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T02:05:10.234Z\",\n        \"email\": \"inga.kalnina@example.com\",\n        \"firstName\": \"Inga\",\n        \"lastName\": \"Kalnina\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+371 67 9876 5432\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Latvia\",\n        \"city\": \"Riga\",\n        \"industry\": \"Manufacturing\",\n        \"comment\": \"Interested in our inventory management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T02:20:25.789Z\",\n        \"email\": \"maris.tamm@example.com\",\n        \"firstName\": \"Maris\",\n        \"lastName\": \"Tamm\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+372 5 1234 5678\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Estonia\",\n        \"city\": \"Tallinn\",\n        \"industry\": \"Information Technology\",\n        \"comment\": \"Potential lead for project management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T02:35:40.456Z\",\n        \"email\": \"gediminas.kuzminskas@example.com\",\n        \"firstName\": \"Gediminas\",\n        \"lastName\": \"Kuzminskas\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+370 6 9876 5432\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Lithuania\",\n        \"city\": \"Kaunas\",\n        \"industry\": \"Logistics\",\n        \"comment\": \"Evaluating our fleet management solution.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T02:50:55.234Z\",\n        \"email\": \"kadri.tamm@example.com\",\n        \"firstName\": \"Kadri\",\n        \"lastName\": \"Tamm\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+372 5 9876 5432\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Estonia\",\n        \"city\": \"Tartu\",\n        \"industry\": \"Education\",\n        \"comment\": \"Needs more information on pricing and features.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T03:05:10.789Z\",\n        \"email\": \"aurimas.jankauskas@example.com\",\n        \"firstName\": \"Aurimas\",\n        \"lastName\": \"Jankauskas\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+370 6 1234 5678\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Lithuania\",\n        \"city\": \"Klaipeda\",\n        \"industry\": \"Shipping\",\n        \"comment\": \"Interested in our logistics management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T03:20:25.456Z\",\n        \"email\": \"mari.saar@example.com\",\n        \"firstName\": \"Mari\",\n        \"lastName\": \"Saar\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+372 5 9876 5432\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Estonia\",\n        \"city\": \"Parnu\",\n        \"industry\": \"Tourism\",\n        \"comment\": \"Potential lead for travel booking software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T03:35:40.234Z\",\n        \"email\": \"mindaugas.butkevicius@example.com\",\n        \"firstName\": \"Mindaugas\",\n        \"lastName\": \"Butkevicius\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+370 6 9876 5432\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Lithuania\",\n        \"city\": \"Siauliai\",\n        \"industry\": \"Agriculture\",\n        \"comment\": \"Evaluating our farm management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T03:50:55.789Z\",\n        \"email\": \"kristjan.kask@example.com\",\n        \"firstName\": \"Kristjan\",\n        \"lastName\": \"Kask\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+372 5 1234 5678\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Estonia\",\n        \"city\": \"Narva\",\n        \"industry\": \"Manufacturing\",\n        \"comment\": \"Needs more information on integration capabilities.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T04:05:10.456Z\",\n        \"email\": \"giedrius.navickas@example.com\",\n        \"firstName\": \"Giedrius\",\n        \"lastName\": \"Navickas\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+370 6 9876 5432\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Lithuania\",\n        \"city\": \"Panevezys\",\n        \"industry\": \"Retail\",\n        \"comment\": \"Interested in our inventory management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T04:20:25.789Z\",\n        \"email\": \"hans.müller@example.com\",\n        \"firstName\": \"Hans\",\n        \"lastName\": \"Müller\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+49 30 1234 5678\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Germany\",\n        \"city\": \"Munich\",\n        \"industry\": \"Automotive\",\n        \"comment\": \"Potential lead for fleet management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T04:35:40.456Z\",\n        \"email\": \"sofia.morales@example.com\",\n        \"firstName\": \"Sofia\",\n        \"lastName\": \"Morales\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+34 91 9876 5432\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Spain\",\n        \"city\": \"Barcelona\",\n        \"industry\": \"Tourism\",\n        \"comment\": \"Evaluating our hotel management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T04:50:55.234Z\",\n        \"email\": \"luca.rossi@example.com\",\n        \"firstName\": \"Luca\",\n        \"lastName\": \"Rossi\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+39 02 1234 5678\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Italy\",\n        \"city\": \"Milan\",\n        \"industry\": \"Fashion\",\n        \"comment\": \"Needs more information on pricing and features.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T05:05:10.789Z\",\n        \"email\": \"janusz.nowak@example.com\",\n        \"firstName\": \"Janusz\",\n        \"lastName\": \"Nowak\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+48 22 9876 5432\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Poland\",\n        \"city\": \"Warsaw\",\n        \"industry\": \"Construction\",\n        \"comment\": \"Interested in our project management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T05:20:25.456Z\",\n        \"email\": \"mikael.andersson@example.com\",\n        \"firstName\": \"Mikael\",\n        \"lastName\": \"Andersson\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+46 8 1234 5678\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Sweden\",\n        \"city\": \"Gothenburg\",\n        \"industry\": \"Manufacturing\",\n        \"comment\": \"Potential lead for inventory management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T05:35:40.234Z\",\n        \"email\": \"emma.lucas@example.com\",\n        \"firstName\": \"Emma\",\n        \"lastName\": \"Lucas\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+33 1 9876 5432\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"France\",\n        \"city\": \"Lyon\",\n        \"industry\": \"Food and Beverage\",\n        \"comment\": \"Evaluating our restaurant management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T05:50:55.789Z\",\n        \"email\": \"jan.jansen@example.com\",\n        \"firstName\": \"Jan\",\n        \"lastName\": \"Jansen\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+31 20 1234 5678\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Netherlands\",\n        \"city\": \"Amsterdam\",\n        \"industry\": \"Logistics\",\n        \"comment\": \"Needs more information on integration capabilities.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T06:05:10.456Z\",\n        \"email\": \"marta.silva@example.com\",\n        \"firstName\": \"Marta\",\n        \"lastName\": \"Silva\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+351 21 9876 5432\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Portugal\",\n        \"city\": \"Lisbon\",\n        \"industry\": \"Retail\",\n        \"comment\": \"Interested in our inventory management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T06:35:40.789Z\",\n        \"email\": \"eva.horvath@example.com\",\n        \"firstName\": \"Eva\",\n        \"lastName\": \"Horvath\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+36 1 9876 5432\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Hungary\",\n        \"city\": \"Budapest\",\n        \"industry\": \"Healthcare\",\n        \"comment\": \"Evaluating our patient management system.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T06:50:55.456Z\",\n        \"email\": \"ana.petrovic@example.com\",\n        \"firstName\": \"Ana\",\n        \"lastName\": \"Petrovic\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+381 11 1234 5678\",\n        \"dealStage\": \"Objections\",\n        \"leadStatus\": \"Attempted to contact\",\n        \"country\": \"Serbia\",\n        \"city\": \"Belgrade\",\n        \"industry\": \"Agriculture\",\n        \"comment\": \"Needs more information on integration capabilities.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T07:05:10.234Z\",\n        \"email\": \"jakub.novak@example.com\",\n        \"firstName\": \"Jakub\",\n        \"lastName\": \"Novak\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+420 2 9876 5432\",\n        \"dealStage\": \"Follow up\",\n        \"leadStatus\": \"Connected\",\n        \"country\": \"Czech Republic\",\n        \"city\": \"Prague\",\n        \"industry\": \"Information Technology\",\n        \"comment\": \"Interested in our project management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T07:20:25.789Z\",\n        \"email\": \"nora.hansen@example.com\",\n        \"firstName\": \"Nora\",\n        \"lastName\": \"Hansen\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+45 33 1234 5678\",\n        \"dealStage\": \"Outreach\",\n        \"leadStatus\": \"New\",\n        \"country\": \"Denmark\",\n        \"city\": \"Copenhagen\",\n        \"industry\": \"Renewable Energy\",\n        \"comment\": \"Potential lead for energy management software.\"\n    },\n    {\n        \"deleted\": false,\n        \"createdAt\": \"2024-04-03T07:35:40.456Z\",\n        \"email\": \"mario.rossi@example.com\",\n        \"firstName\": \"Mario\",\n        \"lastName\": \"Rossi\",\n        \"contactOwner\": null,\n        \"phoneNumber\": \"+41 22 9876 5432\",\n        \"dealStage\": \"Testing Platform\",\n        \"leadStatus\": \"Open\",\n        \"country\": \"Switzerland\",\n        \"city\": \"Geneva\",\n        \"industry\": \"Finance\",\n        \"comment\": \"Evaluating our banking software.\"\n    }\n]",
         "output": "json",
-        "x": 660,
+        "x": 640,
         "y": 920,
         "wires": [
             [
@@ -1717,8 +1717,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 580,
-        "y": 2040,
+        "x": 600,
+        "y": 2520,
         "wires": [
             [
                 "86eebfe43855297b"
@@ -1735,8 +1735,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1060,
-        "y": 2040,
+        "x": 1080,
+        "y": 2520,
         "wires": [
             [
                 "11bb23f7e2c21849"
@@ -1755,8 +1755,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
-        "y": 2040,
+        "x": 1240,
+        "y": 2520,
         "wires": []
     },
     {
@@ -1770,8 +1770,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 830,
-        "y": 2040,
+        "x": 850,
+        "y": 2520,
         "wires": [
             [
                 "3676e55c89261865"
@@ -1799,8 +1799,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 580,
-        "y": 2080,
+        "x": 600,
+        "y": 2560,
         "wires": [
             [
                 "3d911b4beb828514"
@@ -1817,8 +1817,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1060,
-        "y": 2080,
+        "x": 1080,
+        "y": 2560,
         "wires": [
             [
                 "3f813882473b1854"
@@ -1837,8 +1837,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
-        "y": 2080,
+        "x": 1240,
+        "y": 2560,
         "wires": []
     },
     {
@@ -1852,8 +1852,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 2080,
+        "x": 830,
+        "y": 2560,
         "wires": [
             [
                 "66c21815139581c1"
@@ -1868,7 +1868,7 @@
         "links": [
             "6ae0a4ce29cfa675"
         ],
-        "x": 215,
+        "x": 195,
         "y": 1340,
         "wires": [
             [
@@ -1887,7 +1887,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 580,
+        "x": 560,
         "y": 1480,
         "wires": [
             [
@@ -1912,7 +1912,7 @@
                 "module": "objectid"
             }
         ],
-        "x": 370,
+        "x": 350,
         "y": 1480,
         "wires": [
             [
@@ -1934,19 +1934,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 220,
+        "x": 200,
         "y": 1400,
-        "wires": []
-    },
-    {
-        "id": "b2eb40c1f9ea559d",
-        "type": "http response",
-        "z": "038a93fcefdd21a9",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 790,
-        "y": 1260,
         "wires": []
     },
     {
@@ -1975,7 +1964,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
+        "x": 380,
         "y": 1520,
         "wires": []
     },
@@ -1992,25 +1981,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
+        "x": 600,
         "y": 1520,
-        "wires": []
-    },
-    {
-        "id": "7ad2e9efb6714791",
-        "type": "debug",
-        "z": "038a93fcefdd21a9",
-        "name": "debug 47",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 800,
-        "y": 1300,
         "wires": []
     },
     {
@@ -2030,7 +2002,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 790,
+        "x": 770,
         "y": 1480,
         "wires": [
             [
@@ -2049,7 +2021,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 350,
+        "x": 330,
         "y": 1340,
         "wires": [
             [
@@ -2070,7 +2042,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 760,
+        "x": 740,
         "y": 1380,
         "wires": []
     },
@@ -2085,16 +2057,354 @@
         "resetValue": "value-null",
         "array": "array",
         "arrayType": "msg",
-        "x": 540,
+        "x": 520,
         "y": 1340,
         "wires": [
             [
                 "7ad2e9efb6714791",
-                "b2eb40c1f9ea559d"
+                "649893b9d4a7a351"
             ],
             [
                 "9cd6204ad2da1425",
                 "2d39efe1cf84fb6f"
+            ]
+        ]
+    },
+    {
+        "id": "218043e83f9106ad",
+        "type": "link in",
+        "z": "038a93fcefdd21a9",
+        "name": "add demo deals IN",
+        "links": [
+            "649893b9d4a7a351"
+        ],
+        "x": 195,
+        "y": 1800,
+        "wires": [
+            [
+                "3f78bbebb3bae657",
+                "76f9cc1ecca7ea34"
+            ]
+        ]
+    },
+    {
+        "id": "3f78bbebb3bae657",
+        "type": "debug",
+        "z": "038a93fcefdd21a9",
+        "name": "debug 50",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 260,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "33d206689c36f3c0",
+        "type": "http response",
+        "z": "038a93fcefdd21a9",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 970,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "8958fcd130f0287b",
+        "type": "debug",
+        "z": "038a93fcefdd21a9",
+        "name": "debug 51",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "986b7eee5453cef1",
+        "type": "debug",
+        "z": "038a93fcefdd21a9",
+        "name": "debug 52",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "c2a9306952c3d674",
+        "type": "debug",
+        "z": "038a93fcefdd21a9",
+        "name": "debug 53",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "5e115ac009fcd696",
+        "type": "delay",
+        "z": "038a93fcefdd21a9",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 910,
+        "y": 1940,
+        "wires": [
+            [
+                "a27ce18b29af3132"
+            ]
+        ]
+    },
+    {
+        "id": "76f9cc1ecca7ea34",
+        "type": "function",
+        "z": "038a93fcefdd21a9",
+        "name": "Deals Array",
+        "func": "msg.array = [\n    {\n        \"name\": \"Endeavor Foxtrot\",\n        \"stage\": \"Testing Platform\",\n        \"amount\": 180000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"High\",\n        \"dealWithContact\": null,\n        \"comment\": \"Testing phase for a comprehensive solution.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Venture Golf\",\n        \"stage\": \"Objections\",\n        \"amount\": 95000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Medium\",\n        \"dealWithContact\": null,\n        \"comment\": \"Addressing client's concerns regarding pricing.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Initiative Hotel\",\n        \"stage\": \"Follow up\",\n        \"amount\": 225000,\n        \"owner\": null,\n        \"closeDate\": \"2024-06-30T00:00:00.000Z\",\n        \"priority\": \"High\",\n        \"dealWithContact\": null,\n        \"comment\": \"Follow up after addressing integration requirements.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Project India\",\n        \"stage\": \"Outreach\",\n        \"amount\": 350000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Medium\",\n        \"dealWithContact\": null,\n        \"comment\": \"New project for a potential client.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Solution Juliet\",\n        \"stage\": \"Testing Platform\",\n        \"amount\": 110000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Low\",\n        \"dealWithContact\": null,\n        \"comment\": \"Testing phase for a specialized solution.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"System Kilo\",\n        \"stage\": \"Objections\",\n        \"amount\": 85000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Medium\",\n        \"dealWithContact\": null,\n        \"comment\": \"Addressing client's integration concerns.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Platform Lima\",\n        \"stage\": \"Follow up\",\n        \"amount\": 275000,\n        \"owner\": null,\n        \"closeDate\": \"2024-07-15T00:00:00.000Z\",\n        \"priority\": \"High\",\n        \"dealWithContact\": null,\n        \"comment\": \"Follow up after addressing feature requirements.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Initiative Mike\",\n        \"stage\": \"Outreach\",\n        \"amount\": 190000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Medium\",\n        \"dealWithContact\": null,\n        \"comment\": \"New initiative for a potential client.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Venture November\",\n        \"stage\": \"Testing Platform\",\n        \"amount\": 135000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Low\",\n        \"dealWithContact\": null,\n        \"comment\": \"Testing phase for a new venture.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Project Oscar\",\n        \"stage\": \"Objections\",\n        \"amount\": 210000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"High\",\n        \"dealWithContact\": null,\n        \"comment\": \"Addressing client's objections regarding timeline.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Solution Papa\",\n        \"stage\": \"Follow up\",\n        \"amount\": 165000,\n        \"owner\": null,\n        \"closeDate\": \"2024-08-31T00:00:00.000Z\",\n        \"priority\": \"Medium\",\n        \"dealWithContact\": null,\n        \"comment\": \"Follow up after addressing customization requirements.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"System Quebec\",\n        \"stage\": \"Outreach\",\n        \"amount\": 285000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"High\",\n        \"dealWithContact\": null,\n        \"comment\": \"New system for a potential client.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Platform Romeo\",\n        \"stage\": \"Testing Platform\",\n        \"amount\": 145000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Medium\",\n        \"dealWithContact\": null,\n        \"comment\": \"Testing phase for a new platform.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Initiative Sierra\",\n        \"stage\": \"Objections\",\n        \"amount\": 95000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Low\",\n        \"dealWithContact\": null,\n        \"comment\": \"Addressing client's concerns regarding support.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Venture Tango\",\n        \"stage\": \"Follow up\",\n        \"amount\": 220000,\n        \"owner\": null,\n        \"closeDate\": \"2024-09-30T00:00:00.000Z\",\n        \"priority\": \"High\",\n        \"dealWithContact\": null,\n        \"comment\": \"Follow up after addressing scalability requirements.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Project Uniform\",\n        \"stage\": \"Outreach\",\n        \"amount\": 175000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Medium\",\n        \"dealWithContact\": null,\n        \"comment\": \"New project for a potential client.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Solution Victor\",\n        \"stage\": \"Testing Platform\",\n        \"amount\": 120000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Low\",\n        \"dealWithContact\": null,\n        \"comment\": \"Testing phase for a new solution.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"System Whiskey\",\n        \"stage\": \"Objections\",\n        \"amount\": 195000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"High\",\n        \"dealWithContact\": null,\n        \"comment\": \"Addressing client's objections regarding security.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Platform X-ray\",\n        \"stage\": \"Follow up\",\n        \"amount\": 260000,\n        \"owner\": null,\n        \"closeDate\": \"2024-10-31T00:00:00.000Z\",\n        \"priority\": \"Medium\",\n        \"dealWithContact\": null,\n        \"comment\": \"Follow up after addressing performance requirements.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Project Alpha\",\n        \"stage\": \"Outreach\",\n        \"amount\": 250000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"High\",\n        \"dealWithContact\": null,\n        \"comment\": \"Major project for a new client.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Solution Bravo\",\n        \"stage\": \"Testing Platform\",\n        \"amount\": 125000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Medium\",\n        \"dealWithContact\": null,\n        \"comment\": \"Client interested in our comprehensive solution.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"System Charlie\",\n        \"stage\": \"Objections\",\n        \"amount\": 75000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Low\",\n        \"dealWithContact\": null,\n        \"comment\": \"Need to address client's concerns.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Platform Delta\",\n        \"stage\": \"Follow up\",\n        \"amount\": 150000,\n        \"owner\": null,\n        \"closeDate\": \"2024-05-31T00:00:00.000Z\",\n        \"priority\": \"High\",\n        \"dealWithContact\": null,\n        \"comment\": \"Follow up after addressing objections.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    },\n    {\n        \"name\": \"Initiative Echo\",\n        \"stage\": \"Outreach\",\n        \"amount\": 300000,\n        \"owner\": null,\n        \"closeDate\": null,\n        \"priority\": \"Medium\",\n        \"dealWithContact\": null,\n        \"comment\": \"New initiative for potential client.\",\n        \"deleted\": false,\n        \"createdAt\": null\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1800,
+        "wires": [
+            [
+                "3f78bbebb3bae657",
+                "a27ce18b29af3132"
+            ]
+        ]
+    },
+    {
+        "id": "aad2f13c4b5151aa",
+        "type": "debug",
+        "z": "038a93fcefdd21a9",
+        "name": "debug 54",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "7ad2e9efb6714791",
+        "type": "debug",
+        "z": "038a93fcefdd21a9",
+        "name": "debug 47",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "649893b9d4a7a351",
+        "type": "link out",
+        "z": "038a93fcefdd21a9",
+        "name": "add demo deals OUT",
+        "mode": "link",
+        "links": [
+            "218043e83f9106ad"
+        ],
+        "x": 695,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "a27ce18b29af3132",
+        "type": "array-loop",
+        "z": "038a93fcefdd21a9",
+        "name": "",
+        "key": "ala27ce18b29af3132",
+        "keyType": "msg",
+        "reset": false,
+        "resetValue": "value-null",
+        "array": "array",
+        "arrayType": "msg",
+        "x": 700,
+        "y": 1800,
+        "wires": [
+            [
+                "c2a9306952c3d674",
+                "33d206689c36f3c0"
+            ],
+            [
+                "aad2f13c4b5151aa",
+                "b1dd44f58e2ae2df"
+            ]
+        ]
+    },
+    {
+        "id": "f94c8d28d9451732",
+        "type": "link call",
+        "z": "038a93fcefdd21a9",
+        "name": "",
+        "links": [
+            "193774ea3ceea673"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 710,
+        "y": 1940,
+        "wires": [
+            [
+                "986b7eee5453cef1",
+                "5e115ac009fcd696"
+            ]
+        ]
+    },
+    {
+        "id": "b1dd44f58e2ae2df",
+        "type": "function",
+        "z": "038a93fcefdd21a9",
+        "name": "demoContact",
+        "func": "msg.demoDeal = msg.payload;\n\nfunction getRandomElementFromArray(arr) {\n    const randomIndex = Math.floor(Math.random() * arr.length);\n    return arr[randomIndex];\n}\n\nconst randomContactID = getRandomElementFromArray(msg.contactsIDs);\n\nmsg.collection = 'DEMO-deals';\n\nmsg.payload = {\n    ...msg.demoDeal,\n    \"_id\": objectid(),\n    createdAt: new Date,\n    owner: objectid(msg.loggedInUserID),\n    dealWithContact: objectid(randomContactID),\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 520,
+        "y": 1940,
+        "wires": [
+            [
+                "f94c8d28d9451732",
+                "8958fcd130f0287b"
+            ]
+        ]
+    },
+    {
+        "id": "0318d6859b1321c0",
+        "type": "inject",
+        "z": "038a93fcefdd21a9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 600,
+        "y": 2600,
+        "wires": [
+            [
+                "8ab9773075132c52"
+            ]
+        ]
+    },
+    {
+        "id": "6e68c85e987ddd68",
+        "type": "link call",
+        "z": "038a93fcefdd21a9",
+        "name": "",
+        "links": [
+            "f31e158d32908a90"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1080,
+        "y": 2600,
+        "wires": [
+            [
+                "022dc96d9eb8e6a8"
+            ]
+        ]
+    },
+    {
+        "id": "022dc96d9eb8e6a8",
+        "type": "debug",
+        "z": "038a93fcefdd21a9",
+        "name": "debug 55",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "8ab9773075132c52",
+        "type": "function",
+        "z": "038a93fcefdd21a9",
+        "name": "delete 'DEMO-deals'",
+        "func": "// msg.collection = 'lists';\nmsg.collection = 'DEMO-deals';\n// msg.collection = 'DEMO-contacts'; \n\n\n\nmsg.payload = {\n\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2600,
+        "wires": [
+            [
+                "6e68c85e987ddd68"
             ]
         ]
     },
@@ -4013,7 +4323,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "newDeal",
-        "func": "msg.fromUI = msg.payload;\nmsg.collection = \"deals\";\n\nmsg.payload = {\n    ...msg.fromUI,\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-deals' : 'deals';\nmsg.payload = {\n    ...msg.fromUI,\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4083,7 +4393,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "getDeals",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.payload = {\n    deleted: false\n};\n\nif (msg.fromUI.owner) {\n    msg.payload.owner = objectid(msg.fromUI.owner);\n}\n\nif (msg.fromUI.deal) {\n    msg.payload.stage = msg.fromUI.deal;\n}\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-deals' : 'deals';\nmsg.payload = {\n    deleted: false\n};\n\nif (msg.fromUI.owner) {\n    msg.payload.owner = objectid(msg.fromUI.owner);\n}\n\nif (msg.fromUI.deal) {\n    msg.payload.stage = msg.fromUI.deal;\n}\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4179,17 +4489,23 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "prepare for UI",
-        "func": "msg.contacts = msg.payload;\n\nmsg.deals = msg.deals.map(e => {    \n    const contact = msg.contacts?.find(contact => contact._id == e.dealWithContact);\n\n    const deal = {\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        priority: e.priority,\n        comment: e.comment,\n        closeDate: e.closeDate,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n        ownerID: e.owner,\n        dealWithContactID: e.dealWithContact,\n        dealWithContactEmail: contact?.email,\n        dealWithContactFirstName: contact?.firstName,\n        dealWithContactLastName: contact?.lastName,\n        dealID: e._id,\n    };\n\n    return deal;\n});\n\nmsg.payload = msg.deals;\n\nreturn msg;\n",
+        "func": "msg.contacts = msg.payload;\n\nmsg.deals = msg.deals.map(e => {    \n    // const contact = msg.contacts?.find(contact => contact._id == e.dealWithContact);\n    const contact = msg.contacts?.find(contact => objectid(contact._id) == objectid(e.dealWithContact));\n\n    const deal = {\n        name: e.name,\n        stage: e.stage,\n        amount: e.amount,\n        priority: e.priority,\n        comment: e.comment,\n        closeDate: e.closeDate,\n        ownerEmail: msg.owners.find(owner => owner._id == e.owner)?.email,\n        ownerID: e.owner,\n        dealWithContactID: e.dealWithContact,\n        dealWithContactEmail: contact?.email,\n        dealWithContactFirstName: contact?.firstName,\n        dealWithContactLastName: contact?.lastName,\n        dealID: e._id,\n    };\n\n    return deal;\n});\n\nmsg.payload = msg.deals;\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "libs": [],
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
         "x": 1340,
         "y": 460,
         "wires": [
             [
-                "c075c10d6ab37070"
+                "c075c10d6ab37070",
+                "f75c5454ad3cc8f7"
             ]
         ]
     },
@@ -4215,7 +4531,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "getDeal",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.payload = {\n    _id: objectid(msg.fromUI.dealID),\n    deleted: false\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-deals' : 'deals';\nmsg.payload = {\n    _id: objectid(msg.fromUI.dealID),\n    deleted: false\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4364,7 +4680,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "to mongo",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        ...(msg.fromUI.dealName ? { name: msg.fromUI.dealName } : {}),\n        ...(msg.fromUI.dealStage ? { stage: msg.fromUI.dealStage } : {}),\n        ...(msg.fromUI.amount ? { amount: msg.fromUI.amount } : {}),\n        ...(msg.fromUI.closeDate ? { closeDate: msg.fromUI.closeDate } : {}),\n        ...(msg.fromUI.priority ? { priority: msg.fromUI.priority } : {}),\n        ...(msg.fromUI.comment ? { comment: msg.fromUI.comment } : {}),\n    },\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-deals' : 'deals';\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        ...(msg.fromUI.dealName ? { name: msg.fromUI.dealName } : {}),\n        ...(msg.fromUI.dealStage ? { stage: msg.fromUI.dealStage } : {}),\n        ...(msg.fromUI.amount ? { amount: msg.fromUI.amount } : {}),\n        ...(msg.fromUI.closeDate ? { closeDate: msg.fromUI.closeDate } : {}),\n        ...(msg.fromUI.priority ? { priority: msg.fromUI.priority } : {}),\n        ...(msg.fromUI.comment ? { comment: msg.fromUI.comment } : {}),\n    },\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4434,7 +4750,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "to mongo",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.collection = \"deals\";\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        deleted: true,\n    },\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-deals' : 'deals';\nmsg.query = {\n    _id: objectid(msg.fromUI.dealID),\n};\n\nmsg.payload = {\n    $set: {\n        deleted: true,\n    },\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4469,7 +4785,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "getContacts",
-        "func": "msg.owners = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    deleted: false,\n};\n\nreturn msg;\n",
+        "func": "msg.owners = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-contacts' : 'contacts';\nmsg.payload = {\n    deleted: false,\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4502,7 +4818,8 @@
         "y": 460,
         "wires": [
             [
-                "526bce4591c7ae53"
+                "526bce4591c7ae53",
+                "f75c5454ad3cc8f7"
             ]
         ]
     },
@@ -4511,7 +4828,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "getContacts",
-        "func": "msg.owners = msg.payload;\n\nmsg.collection = \"contacts\";\nmsg.payload = {\n    deleted: false,\n};\n\nreturn msg;\n",
+        "func": "msg.owners = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-contacts' : 'contacts';\nmsg.payload = {\n    deleted: false,\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4589,8 +4906,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 520,
+        "x": 540,
+        "y": 540,
         "wires": []
     },
     {
