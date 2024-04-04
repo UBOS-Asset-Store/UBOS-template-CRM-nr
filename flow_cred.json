@@ -1,7 +1,7 @@
 {
     "ab6475898c71d570": {
-        "user": "${AUTHDB-MONGO-USER-NAME}",
-        "password": "${AUTHDB-MONGO-PASSWORD}"
+        "user": "${CRM-MONGO-USER-NAME}",
+        "password": "${CRM-MONGO-PASSWORD}"
     },
     "f3211f80fa6b47f6": {}
 }
