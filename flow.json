@@ -610,11 +610,12 @@
             "769c853fb108cedb",
             "d2bd362abdcf67e2",
             "f3fae0dbf2c5f9ec",
-            "ce7b41fa296eedb5"
+            "ce7b41fa296eedb5",
+            "f0de9e096ea386aa"
         ],
         "x": 14,
         "y": 39,
-        "w": 1792,
+        "w": 1802,
         "h": 642
     },
     {
@@ -956,7 +957,8 @@
                 "303e6fcf2a490c3e"
             ],
             [
-                "d40132253e09c20a"
+                "d40132253e09c20a",
+                "6de7c07d78e2ca0a"
             ]
         ],
         "icon": "font-awesome/fa-arrows-v",
@@ -1189,7 +1191,7 @@
         "links": [
             "e2f123eb637b254d"
         ],
-        "x": 1525,
+        "x": 1595,
         "y": 60,
         "wires": []
     },
@@ -1285,7 +1287,8 @@
                 "a3348cdccbb09210"
             ],
             [
-                "17baa0b65f42b775"
+                "17baa0b65f42b775",
+                "c910f0a0ae645c1f"
             ]
         ],
         "icon": "font-awesome/fa-arrows-v",
@@ -1334,7 +1337,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 590,
+        "x": 550,
         "y": 680,
         "wires": []
     },
@@ -1474,7 +1477,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 590,
+        "x": 570,
         "y": 340,
         "wires": []
     },
@@ -2276,11 +2279,12 @@
         "links": [
             "ce7b41fa296eedb5"
         ],
-        "x": 285,
-        "y": 220,
+        "x": 55,
+        "y": 260,
         "wires": [
             [
-                "9cfcd6cb35e2a2a0"
+                "3445e3ac53f85a8e",
+                "a5dbf8226fed71a0"
             ]
         ]
     },
@@ -2297,6 +2301,41 @@
         "libs": [],
         "x": 290,
         "y": 300,
+        "wires": [
+            [
+                "9cfcd6cb35e2a2a0"
+            ]
+        ]
+    },
+    {
+        "id": "3445e3ac53f85a8e",
+        "type": "debug",
+        "z": "038a93fcefdd21a9",
+        "name": "debug 58",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 120,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a5dbf8226fed71a0",
+        "type": "function",
+        "z": "038a93fcefdd21a9",
+        "name": "first Demo",
+        "func": "global.set('isFirstDemo', false);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 260,
         "wires": [
             [
                 "9cfcd6cb35e2a2a0"
@@ -7117,7 +7156,7 @@
         "wires": [
             [
                 "a602a24988dcc60f",
-                "ce7b41fa296eedb5"
+                "f0de9e096ea386aa"
             ]
         ]
     },
@@ -7565,7 +7604,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "398457a4bc6d8725",
         "name": "SET-DEMO-VERSION",
-        "func": "global.set('isDemoON', true);\n\nreturn msg;\n",
+        "func": "global.set('isDemoON', true);\nglobal.set('isFirstDemo', true);\n\nreturn msg;\n",
         "outputs": 0,
         "noerr": 0,
         "initialize": "",
@@ -7585,9 +7624,29 @@
         "links": [
             "819ba1810bfb6cc3"
         ],
-        "x": 1695,
+        "x": 1775,
         "y": 480,
         "wires": []
+    },
+    {
+        "id": "f0de9e096ea386aa",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "to DemoVersion",
+        "func": "if ( global.get('isFirstDemo') === true ) {\n\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 480,
+        "wires": [
+            [
+                "ce7b41fa296eedb5"
+            ]
+        ]
     },
     {
         "id": "081c8c3d3092e3d2",
