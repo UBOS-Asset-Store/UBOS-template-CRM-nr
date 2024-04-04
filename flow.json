@@ -200,7 +200,7 @@
         ],
         "x": 14,
         "y": 1299,
-        "w": 3432,
+        "w": 3412,
         "h": 482
     },
     {
@@ -609,7 +609,8 @@
             "c6738f0c897830ef",
             "769c853fb108cedb",
             "d2bd362abdcf67e2",
-            "f3fae0dbf2c5f9ec"
+            "f3fae0dbf2c5f9ec",
+            "ce7b41fa296eedb5"
         ],
         "x": 14,
         "y": 39,
@@ -942,7 +943,7 @@
         "type": "function",
         "z": "038a93fcefdd21a9",
         "name": "isDemoON",
-        "func": "global.set('isDemoON', msg.payload.isDemoON);\n\nif (msg.payload.isDemoON) {\n    msg.payload = {};\n    msg.collection = 'DEMO-lists';\n    msg.operation = 'count';\n\n    return [msg, null];\n} else {\n\n    return [null, msg];\n}\n",
+        "func": "const isDemoON = global.get('isDemoON');\n\nif (isDemoON) {\n    msg.payload = {};\n    msg.collection = 'DEMO-lists';\n    msg.operation = 'count';\n\n    return [msg, null];\n} else {\n\n    return [null, msg];\n}\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -1173,7 +1174,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 130,
-        "y": 300,
+        "y": 320,
         "wires": [
             [
                 "9cfcd6cb35e2a2a0"
@@ -2268,6 +2269,22 @@
         "x": 800,
         "y": 920,
         "wires": []
+    },
+    {
+        "id": "819ba1810bfb6cc3",
+        "type": "link in",
+        "z": "038a93fcefdd21a9",
+        "name": "Demo-Version IN",
+        "links": [
+            "ce7b41fa296eedb5"
+        ],
+        "x": 205,
+        "y": 280,
+        "wires": [
+            [
+                "9cfcd6cb35e2a2a0"
+            ]
+        ]
     },
     {
         "id": "587c4d3f26fe4852",
@@ -7064,7 +7081,8 @@
         "y": 540,
         "wires": [
             [
-                "a602a24988dcc60f"
+                "a602a24988dcc60f",
+                "ce7b41fa296eedb5"
             ]
         ]
     },
@@ -7511,15 +7529,29 @@
         "type": "function",
         "z": "c8b39bad946d8ab6",
         "g": "398457a4bc6d8725",
-        "name": "START-DEMO-VERSION",
+        "name": "SET-DEMO-VERSION",
         "func": "global.set('isDemoON', true);\n\nreturn msg;\n",
         "outputs": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3310,
+        "x": 3300,
         "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "ce7b41fa296eedb5",
+        "type": "link out",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "Demo-Version OUT",
+        "mode": "link",
+        "links": [
+            "819ba1810bfb6cc3"
+        ],
+        "x": 1695,
+        "y": 480,
         "wires": []
     },
     {
