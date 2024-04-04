@@ -196,13 +196,11 @@
             "a8a3190cf08137cd",
             "743c16cb0b7d1758",
             "c13baca0a8f18f1a",
-            "fba39a476e676844",
-            "b1fede37a251ebae",
-            "8b7fe8e7379a3010"
+            "94a050d0ca318a97"
         ],
         "x": 14,
         "y": 1299,
-        "w": 3482,
+        "w": 3432,
         "h": 482
     },
     {
@@ -407,7 +405,9 @@
             "f3211f80fa6b47f6"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 1452,
+        "h": 462
     },
     {
         "id": "a8bcf74ef7690d27",
@@ -643,7 +643,9 @@
             "e8384769bf28d8a1"
         ],
         "x": 34,
-        "y": 979
+        "y": 979,
+        "w": 772,
+        "h": 222
     },
     {
         "id": "eebc28d6e90a33d8",
@@ -2266,22 +2268,6 @@
         "x": 800,
         "y": 920,
         "wires": []
-    },
-    {
-        "id": "542bc371e4ae718c",
-        "type": "link in",
-        "z": "038a93fcefdd21a9",
-        "name": "On First Start IN",
-        "links": [
-            "8b7fe8e7379a3010"
-        ],
-        "x": 205,
-        "y": 260,
-        "wires": [
-            [
-                "9cfcd6cb35e2a2a0"
-            ]
-        ]
     },
     {
         "id": "587c4d3f26fe4852",
@@ -5499,11 +5485,10 @@
         "wires": [
             [
                 "2f113294e97b1d54",
-                "b1fede37a251ebae"
+                "94a050d0ca318a97"
             ],
             [
-                "1150b7e9a28cb02e",
-                "fba39a476e676844"
+                "1150b7e9a28cb02e"
             ]
         ]
     },
@@ -7522,54 +7507,20 @@
         "wires": []
     },
     {
-        "id": "fba39a476e676844",
-        "type": "function",
-        "z": "c8b39bad946d8ab6",
-        "g": "398457a4bc6d8725",
-        "name": "TURN-ON-DEMO-VERSION",
-        "func": "global.set('isDemoON', true);\n\nreturn msg;",
-        "outputs": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 3180,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "8b7fe8e7379a3010",
-        "type": "link out",
-        "z": "c8b39bad946d8ab6",
-        "g": "398457a4bc6d8725",
-        "name": "On First Start OUT",
-        "mode": "link",
-        "links": [
-            "542bc371e4ae718c"
-        ],
-        "x": 3455,
-        "y": 1340,
-        "wires": []
-    },
-    {
-        "id": "b1fede37a251ebae",
+        "id": "94a050d0ca318a97",
         "type": "function",
         "z": "c8b39bad946d8ab6",
         "g": "398457a4bc6d8725",
         "name": "START-DEMO-VERSION",
-        "func": "msg.payload = { \"isDemoON\": true };\n\nreturn msg;",
-        "outputs": 1,
+        "func": "global.set('isDemoON', true);\n\nreturn msg;\n",
+        "outputs": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 3310,
         "y": 1340,
-        "wires": [
-            [
-                "8b7fe8e7379a3010"
-            ]
-        ]
+        "wires": []
     },
     {
         "id": "081c8c3d3092e3d2",
