@@ -245,9 +245,7 @@
             "10c41f549cf86656"
         ],
         "x": 54,
-        "y": 459,
-        "w": 832,
-        "h": 182
+        "y": 459
     },
     {
         "id": "0dd2dfd7df691836",
@@ -292,9 +290,7 @@
             "2d32ffcf75d44831"
         ],
         "x": 34,
-        "y": 519,
-        "w": 1352,
-        "h": 562
+        "y": 519
     },
     {
         "id": "b2cb8a397b61947a",
@@ -562,9 +558,7 @@
             "6c2b81d3f58aa157"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1472,
-        "h": 482
+        "y": 19
     },
     {
         "id": "d78377c07a215120",
@@ -1520,9 +1514,7 @@
         "x": 160,
         "y": 1880,
         "wires": [
-            [
-                "86eebfe43855297b"
-            ]
+            []
         ]
     },
     {
@@ -1606,9 +1598,7 @@
         "x": 160,
         "y": 1920,
         "wires": [
-            [
-                "3d911b4beb828514"
-            ]
+            []
         ]
     },
     {
@@ -1965,9 +1955,7 @@
         "x": 160,
         "y": 1960,
         "wires": [
-            [
-                "8ab9773075132c52"
-            ]
+            []
         ]
     },
     {
@@ -2853,7 +2841,7 @@
         "z": "3db5a363b78466f5",
         "g": "d8d6cfc2c521390d",
         "name": "delete",
-        "func": "// msg.collection = 'lists';\n// msg.collection = 'DEMO-lists';\nmsg.collection = 'DEMO-contacts'; \n\n\n\nmsg.payload = {\n\n};\n\nreturn msg;\n",
+        "func": "// msg.collection = 'lists';\n// msg.collection = 'deals';\nmsg.collection = 'contacts'; \n\n\n\nmsg.payload = {\n\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3295,7 +3283,7 @@
         "type": "function",
         "z": "3db5a363b78466f5",
         "name": "to list",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-lists' : 'lists';\nmsg.payload = {\n    \"contactIDs\": {\n        $elemMatch: {\n            $eq: msg.fromUI.contactID,\n        }\n    },\n    deleted: false,\n}\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-lists' : 'lists';\nmsg.payload = {\n    \"contactIDs\": {\n        $elemMatch: {\n            $eq: objectid(msg.fromUI.contactID),\n        }\n    },\n    deleted: false,\n}\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5339,7 +5327,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "398457a4bc6d8725",
         "name": "admin_modules",
-        "func": "// node.warn(msg.payload);\nif (msg.payload.length === 0) {\n     msg.payload = [\n          { \"name\": \"Contacts\", \"position\": 1, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Lists\", \"position\": 2, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Deals\", \"position\": 3, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          {\n               \"name\": \"Admin\",\n               \"position\": 9,\n               \"deleted\": false,\n               \"isParent\": true,\n               \"childModules\": [\n                    {\n                         \"name\": \"Page Management\",\n                         \"page_id\": \"Page Management\",\n                         \"position\": 1,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"Role Management\",\n                         \"page_id\": \"Role Management\",\n                         \"position\": 2,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"User Management\",\n                         \"page_id\": \"User Management\",\n                         \"position\": 3,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"AppSettings\",\n                         \"position\": 4,\n                         \"userAttributes\": [],\n                         \"deleted\": false,\n                    },\n               ]\n          },\n     ]\n\n     msg.collection = \"admin_modules\"\n\n     return msg;\n}",
+        "func": "// node.warn(msg.payload);\nif (msg.payload.length === 0) {\n     msg.payload = [\n          { \"name\": \"Contacts\", \"position\": 1, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Lists\", \"position\": 2, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Deals\", \"position\": 3, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Contact\", \"position\": 4, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false, \"isHidden\": false },\n          { \"name\": \"List\", \"position\": 5, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false, \"isHidden\": false },\n          { \"name\": \"Deal\", \"position\": 6, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false, \"isHidden\": false },\n          {\n               \"name\": \"Admin\",\n               \"position\": 9,\n               \"deleted\": false,\n               \"isParent\": true,\n               \"childModules\": [\n                    {\n                         \"name\": \"Page Management\",\n                         \"page_id\": \"Page Management\",\n                         \"position\": 1,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"Role Management\",\n                         \"page_id\": \"Role Management\",\n                         \"position\": 2,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"User Management\",\n                         \"page_id\": \"User Management\",\n                         \"position\": 3,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"AppSettings\",\n                         \"position\": 4,\n                         \"userAttributes\": [],\n                         \"deleted\": false,\n                    },\n               ]\n          },\n     ]\n\n     msg.collection = \"admin_modules\"\n\n     return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5417,7 +5405,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "398457a4bc6d8725",
         "name": "admin_roles",
-        "func": "if (msg.payload.length > 0) {\n    msg.payload =\n    {\n        \"name\": \"admin\", \"deleted\": false, \"permissions\": [\n            { \"module\": \"Contacts\", \"moduleId\": msg.payload.filter(e => e.name === 'Contacts')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            { \"module\": \"Lists\", \"moduleId\": msg.payload.filter(e => e.name === 'Lists')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            { \"module\": \"Deals\", \"moduleId\": msg.payload.filter(e => e.name === 'Deals')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            // { \"module\": \"Role Management\", \"moduleId\": msg.payload.filter(e => e.name === 'Role Management')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            // { \"module\": \"User Management\", \"moduleId\": msg.payload.filter(e => e.name === \"User Management\")[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            // { \"module\": \"Page Management\", \"moduleId\": msg.payload.filter(e => e.name === 'Page Management')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            // { \"module\": \"AppSettings\", \"moduleId\": msg.payload.filter(e => e.name === 'AppSettings')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            { \"module\": \"Admin\", \"moduleId\": msg.payload.filter(e => e.name === 'Admin')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n        ],\n        \"createdAt\": global.get(\"convert_date\")\n    }\n\n    msg.collection = \"admin_roles\"\n    return [msg, null];\n}\nelse {\n    return [null, msg]\n}\n",
+        "func": "if (msg.payload.length > 0) {\n    msg.payload =\n    {\n        \"name\": \"admin\", \"deleted\": false, \"permissions\": [\n            { \"module\": \"Contacts\", \"moduleId\": msg.payload.filter(e => e.name === 'Contacts')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            { \"module\": \"Lists\", \"moduleId\": msg.payload.filter(e => e.name === 'Lists')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            { \"module\": \"Deals\", \"moduleId\": msg.payload.filter(e => e.name === 'Deals')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            { \"module\": \"Contact\", \"moduleId\": msg.payload.filter(e => e.name === 'Contact')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            { \"module\": \"List\", \"moduleId\": msg.payload.filter(e => e.name === \"List\")[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            { \"module\": \"Deal\", \"moduleId\": msg.payload.filter(e => e.name === 'Deal')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            { \"module\": \"Admin\", \"moduleId\": msg.payload.filter(e => e.name === 'Admin')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            // { \"module\": \"Page Management\", \"moduleId\": msg.payload.filter(e => e.name === 'Page Management')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n        ],\n        \"createdAt\": global.get(\"convert_date\")\n    }\n\n    msg.collection = \"admin_roles\"\n    return [msg, null];\n}\nelse {\n    return [null, msg]\n}\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
