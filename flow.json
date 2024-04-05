@@ -218,9 +218,7 @@
             "8f8ca6e8d858b872"
         ],
         "x": 34,
-        "y": 19,
-        "w": 472,
-        "h": 82
+        "y": 19
     },
     {
         "id": "d78c837be83c52b2",
@@ -319,9 +317,7 @@
             "b5f800450862f3cd"
         ],
         "x": 34,
-        "y": 119,
-        "w": 632,
-        "h": 322
+        "y": 119
     },
     {
         "id": "5bf7ccb6c6709633",
@@ -407,9 +403,7 @@
             "f3211f80fa6b47f6"
         ],
         "x": 34,
-        "y": 39,
-        "w": 1452,
-        "h": 462
+        "y": 39
     },
     {
         "id": "a8bcf74ef7690d27",
@@ -460,9 +454,7 @@
             "43258fcd568f3992"
         ],
         "x": 54,
-        "y": 39,
-        "w": 932,
-        "h": 762
+        "y": 39
     },
     {
         "id": "c8e4ab113b6b9056",
@@ -506,9 +498,7 @@
             "a373b637682a690a"
         ],
         "x": 1034,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "221ba791b89fb1e4",
@@ -653,9 +643,7 @@
             "e8384769bf28d8a1"
         ],
         "x": 34,
-        "y": 979,
-        "w": 772,
-        "h": 222
+        "y": 979
     },
     {
         "id": "eebc28d6e90a33d8",
@@ -5327,7 +5315,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "398457a4bc6d8725",
         "name": "admin_modules",
-        "func": "// node.warn(msg.payload);\nif (msg.payload.length === 0) {\n     msg.payload = [\n          { \"name\": \"Contacts\", \"position\": 1, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Lists\", \"position\": 2, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Deals\", \"position\": 3, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Contact\", \"position\": 4, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false, \"isHidden\": false },\n          { \"name\": \"List\", \"position\": 5, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false, \"isHidden\": false },\n          { \"name\": \"Deal\", \"position\": 6, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false, \"isHidden\": false },\n          {\n               \"name\": \"Admin\",\n               \"position\": 9,\n               \"deleted\": false,\n               \"isParent\": true,\n               \"childModules\": [\n                    {\n                         \"name\": \"Page Management\",\n                         \"page_id\": \"Page Management\",\n                         \"position\": 1,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"Role Management\",\n                         \"page_id\": \"Role Management\",\n                         \"position\": 2,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"User Management\",\n                         \"page_id\": \"User Management\",\n                         \"position\": 3,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"AppSettings\",\n                         \"position\": 4,\n                         \"userAttributes\": [],\n                         \"deleted\": false,\n                    },\n               ]\n          },\n     ]\n\n     msg.collection = \"admin_modules\"\n\n     return msg;\n}",
+        "func": "// node.warn(msg.payload);\nif (msg.payload.length === 0) {\n     msg.payload = [\n          { \"name\": \"Contacts\", \"position\": 1, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false, \"isHidden\": false },\n          { \"name\": \"Lists\", \"position\": 2, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false, \"isHidden\": false },\n          { \"name\": \"Deals\", \"position\": 3, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false, \"isHidden\": false },\n          { \"name\": \"Contact\", \"position\": 4, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false, \"isHidden\": true },\n          { \"name\": \"List\", \"position\": 5, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false, \"isHidden\": true },\n          { \"name\": \"Deal\", \"position\": 6, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false, \"isHidden\": true },\n          {\n               \"name\": \"Admin\",\n               \"position\": 9,\n               \"deleted\": false,\n               \"isParent\": true,\n               \"isHidden\": false,\n               \"childModules\": [\n                    {\n                         \"name\": \"Page Management\",\n                         \"page_id\": \"Page Management\",\n                         \"position\": 1,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"Role Management\",\n                         \"page_id\": \"Role Management\",\n                         \"position\": 2,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"User Management\",\n                         \"page_id\": \"User Management\",\n                         \"position\": 3,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"AppSettings\",\n                         \"position\": 4,\n                         \"userAttributes\": [],\n                         \"deleted\": false,\n                    },\n               ]\n          },\n     ]\n\n     msg.collection = \"admin_modules\"\n\n     return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
