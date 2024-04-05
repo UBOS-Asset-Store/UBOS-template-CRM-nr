@@ -243,9 +243,7 @@
             "10c41f549cf86656"
         ],
         "x": 54,
-        "y": 459,
-        "w": 832,
-        "h": 182
+        "y": 459
     },
     {
         "id": "0dd2dfd7df691836",
@@ -405,9 +403,7 @@
             "f3211f80fa6b47f6"
         ],
         "x": 34,
-        "y": 39,
-        "w": 1452,
-        "h": 462
+        "y": 39
     },
     {
         "id": "a8bcf74ef7690d27",
@@ -454,9 +450,12 @@
             "732470b6749e6a6e",
             "729cfd584e3d6022",
             "21f47761140c09d8",
-            "1e2c8c7cdacb7345"
+            "1e2c8c7cdacb7345",
+            "43258fcd568f3992",
+            "e85c9b955e648643",
+            "cdd1329e1d0e8619"
         ],
-        "x": 44,
+        "x": 54,
         "y": 39
     },
     {
@@ -497,7 +496,8 @@
             "258e18ed74ffabde",
             "08b7f75f949f6937",
             "2709d229c1198629",
-            "655fc308a4013906"
+            "655fc308a4013906",
+            "a373b637682a690a"
         ],
         "x": 1034,
         "y": 39
@@ -611,7 +611,8 @@
             "d2bd362abdcf67e2",
             "f3fae0dbf2c5f9ec",
             "ce7b41fa296eedb5",
-            "f0de9e096ea386aa"
+            "f0de9e096ea386aa",
+            "ccc3fcbd47df7466"
         ],
         "x": 14,
         "y": 39,
@@ -645,9 +646,7 @@
             "e8384769bf28d8a1"
         ],
         "x": 34,
-        "y": 979,
-        "w": 772,
-        "h": 222
+        "y": 979
     },
     {
         "id": "eebc28d6e90a33d8",
@@ -5325,7 +5324,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "398457a4bc6d8725",
         "name": "admin_modules",
-        "func": "// node.warn(msg.payload);\nif(msg.payload.length===0){\n     msg.payload = [\n          { \"name\": \"Page Management\", \"position\": 1, \"icon\": \"\",\"userAttributes\":[], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Role Management\", \"position\": 2, \"icon\": \"\", \"userAttributes\": [],\"deleted\": false, \"isParent\": false },\n          { \"name\": \"User Management\", \"position\": 3, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"AppSettings\", \"position\": 4, \"icon\": \"\", \"userAttributes\": [],\"deleted\": false, \"isParent\": false },\n          { \"name\": \"Contacts\", \"position\": 5, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Lists\", \"position\": 6, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Deals\", \"position\": 7, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Analytics\", \"position\": 8, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n     ]\n  \nmsg.collection = \"admin_modules\"\n\nreturn msg;\n}",
+        "func": "// node.warn(msg.payload);\nif (msg.payload.length === 0) {\n     msg.payload = [\n          { \"name\": \"Contacts\", \"position\": 1, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Lists\", \"position\": 2, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Deals\", \"position\": 3, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          {\n               \"name\": \"Admin\",\n               \"position\": 9,\n               \"deleted\": false,\n               \"isParent\": true,\n               \"childModules\": [\n                    {\n                         \"name\": \"Page Management\",\n                         \"page_id\": \"Page Management\",\n                         \"position\": 1,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"Role Management\",\n                         \"page_id\": \"Role Management\",\n                         \"position\": 2,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"User Management\",\n                         \"page_id\": \"User Management\",\n                         \"position\": 3,\n                         \"userAttributes\": [],\n                         \"deleted\": false\n                    }, {\n                         \"name\": \"AppSettings\",\n                         \"position\": 4,\n                         \"userAttributes\": [],\n                         \"deleted\": false,\n                    },\n               ]\n          },\n     ]\n\n     msg.collection = \"admin_modules\"\n\n     return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5403,7 +5402,7 @@
         "z": "c8b39bad946d8ab6",
         "g": "398457a4bc6d8725",
         "name": "admin_roles",
-        "func": "if (msg.payload.length > 0) {\n    msg.payload =\n    {\n        \"name\": \"admin\", \"deleted\": false, \"permissions\": [\n            { \"module\": \"Role Management\", \"moduleId\": msg.payload.filter(e => e.name === 'Role Management')[0]._id, \"canRead\": true },\n            { \"module\": \"User Management\", \"moduleId\": msg.payload.filter(e => e.name === \"User Management\")[0]._id, \"canRead\": true },\n            { \"module\": \"Page Management\", \"moduleId\": msg.payload.filter(e => e.name === 'Page Management')[0]._id, \"canRead\": true },\n            { \"module\": \"AppSettings\", \"moduleId\": msg.payload.filter(e => e.name === 'AppSettings')[0]._id, \"canRead\": true },\n            { \"module\": \"Contacts\", \"moduleId\": msg.payload.filter(e => e.name === 'Contacts')[0]._id, \"canRead\": true },\n            { \"module\": \"Lists\", \"moduleId\": msg.payload.filter(e => e.name === 'Lists')[0]._id, \"canRead\": true },\n            { \"module\": \"Deals\", \"moduleId\": msg.payload.filter(e => e.name === 'Deals')[0]._id, \"canRead\": true },\n            { \"module\": \"Analytics\", \"moduleId\": msg.payload.filter(e => e.name === 'Analytics')[0]._id, \"canRead\": true },\n        ],\n        \"createdAt\": global.get(\"convert_date\")\n    }\n\n    msg.collection = \"admin_roles\"\n    return [msg, null];\n}\nelse {\n    return [null, msg]\n}\n",
+        "func": "if (msg.payload.length > 0) {\n    msg.payload =\n    {\n        \"name\": \"admin\", \"deleted\": false, \"permissions\": [\n            { \"module\": \"Contacts\", \"moduleId\": msg.payload.filter(e => e.name === 'Contacts')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            { \"module\": \"Lists\", \"moduleId\": msg.payload.filter(e => e.name === 'Lists')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            { \"module\": \"Deals\", \"moduleId\": msg.payload.filter(e => e.name === 'Deals')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            // { \"module\": \"Role Management\", \"moduleId\": msg.payload.filter(e => e.name === 'Role Management')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            // { \"module\": \"User Management\", \"moduleId\": msg.payload.filter(e => e.name === \"User Management\")[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            // { \"module\": \"Page Management\", \"moduleId\": msg.payload.filter(e => e.name === 'Page Management')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            // { \"module\": \"AppSettings\", \"moduleId\": msg.payload.filter(e => e.name === 'AppSettings')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n            { \"module\": \"Admin\", \"moduleId\": msg.payload.filter(e => e.name === 'Admin')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n        ],\n        \"createdAt\": global.get(\"convert_date\")\n    }\n\n    msg.collection = \"admin_roles\"\n    return [msg, null];\n}\nelse {\n    return [null, msg]\n}\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -6949,7 +6948,8 @@
         "y": 540,
         "wires": [
             [
-                "0cfa0691dcae508d"
+                "0cfa0691dcae508d",
+                "ccc3fcbd47df7466"
             ]
         ]
     },
@@ -7156,7 +7156,8 @@
         "wires": [
             [
                 "a602a24988dcc60f",
-                "f0de9e096ea386aa"
+                "f0de9e096ea386aa",
+                "ccc3fcbd47df7466"
             ]
         ]
     },
@@ -7649,6 +7650,94 @@
         ]
     },
     {
+        "id": "ccc3fcbd47df7466",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "debug 63",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "9938182aac5326e2",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "name": "admin_modules",
+        "func": "\nif(msg.payload.length===0){\n     msg.payload = [\n          \n          { \"name\": \"Dashboard\", \"position\": 1, \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Campagnes\", \"position\": 2, \"deleted\": false, \"isParent\": false }, \n          { \"name\": \"OpenMarket\", \"position\": 3, \"deleted\": false, \"isParent\": false },\n          { \"name\": \"MyContracts\", \"position\": 4, \"deleted\": false, \"isParent\": false },\n          { \"name\": \"AdminPanel\", \"position\": 5, \"deleted\": false, \"isParent\": false },\n          {\n               \"name\": \"Settings\", \"position\": 8, \"deleted\": false, \"isParent\": true, \"childModules\": [{\n                    \"name\": \"Page Management\",\n                    \"page_id\": \"Page Management\",\n                    \"position\": 1,\n                    \"deleted\": false\n               }, {\n                    \"name\": \"Role Management\",\n                    \"page_id\": \"Role Management\",\n                    \"position\": 2,\n                    \"deleted\": false\n                    }, {\n                    \"name\": \"User Management\",\n                    \"page_id\": \"User Management\",\n                    \"position\": 3,\n                    \"deleted\": false\n                    } ]},      \n     ]\n  \nmsg.collection = \"admin_modules\"\nmsg.fromDB = msg.payload\nreturn msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f60b02096306f42e",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "name": "admin_roles",
+        "func": "if(msg.payload.length>0){\nmsg.payload =\n{\n    \"name\": \"admin\", \"deleted\": false, \"permissions\": [\n        { \"module\": \"Dashboard\", \"moduleId\": msg.payload.filter(e => e.name === 'Dashboard')[0]._id, \"canCreate\": true,\"canRead\": true,\"canEdit\": true,\"canRemove\": true},\n        { \"module\": \"Campagnes\", \"moduleId\": msg.payload.filter(e => e.name === \"Campagnes\")[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n        { \"module\": \"OpenMarket\", \"moduleId\": msg.payload.filter(e => e.name === 'OpenMarket')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n        { \"module\": \"MyContracts\", \"moduleId\": msg.payload.filter(e => e.name === 'MyContracts')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n        { \"module\": \"AdminPanel\", \"moduleId\": msg.payload.filter(e => e.name === 'AdminPanel')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n        { \"module\": \"Settings\", \"moduleId\": msg.payload.filter(e => e.name === 'Settings')[0]._id, \"canCreate\": true, \"canRead\": true, \"canEdit\": true, \"canRemove\": true },\n        ],\n    \"createdAt\": global.get(\"convert_date\")\n}   \n        \nmsg.collection = \"admin_roles\"\n    return [msg,null];\n}\nelse{\n    return[null,msg]\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 1840,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "cf69deea9b497c92",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "name": "admin_modules",
+        "func": "// node.warn(msg.payload);\nif(msg.payload.length===0){\n     msg.payload = [\n          { \"name\": \"Page Management\", \"position\": 1, \"icon\": \"\",\"userAttributes\":[], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Role Management\", \"position\": 2, \"icon\": \"\", \"userAttributes\": [],\"deleted\": false, \"isParent\": false },\n          { \"name\": \"User Management\", \"position\": 3, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"AppSettings\", \"position\": 4, \"icon\": \"\", \"userAttributes\": [],\"deleted\": false, \"isParent\": false },\n          { \"name\": \"Contacts\", \"position\": 5, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Lists\", \"position\": 6, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          { \"name\": \"Deals\", \"position\": 7, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n          // { \"name\": \"Analytics\", \"position\": 8, \"icon\": \"\", \"userAttributes\": [], \"deleted\": false, \"isParent\": false },\n     ]\n  \nmsg.collection = \"admin_modules\"\n\nreturn msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dcbcab9c8b8cd6ca",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "name": "admin_roles",
+        "func": "if (msg.payload.length > 0) {\n    msg.payload =\n    {\n        \"name\": \"admin\", \"deleted\": false, \"permissions\": [\n            { \"module\": \"Role Management\", \"moduleId\": msg.payload.filter(e => e.name === 'Role Management')[0]._id, \"canRead\": true },\n            { \"module\": \"User Management\", \"moduleId\": msg.payload.filter(e => e.name === \"User Management\")[0]._id, \"canRead\": true },\n            { \"module\": \"Page Management\", \"moduleId\": msg.payload.filter(e => e.name === 'Page Management')[0]._id, \"canRead\": true },\n            { \"module\": \"AppSettings\", \"moduleId\": msg.payload.filter(e => e.name === 'AppSettings')[0]._id, \"canRead\": true },\n            { \"module\": \"Contacts\", \"moduleId\": msg.payload.filter(e => e.name === 'Contacts')[0]._id, \"canRead\": true },\n            { \"module\": \"Lists\", \"moduleId\": msg.payload.filter(e => e.name === 'Lists')[0]._id, \"canRead\": true },\n            { \"module\": \"Deals\", \"moduleId\": msg.payload.filter(e => e.name === 'Deals')[0]._id, \"canRead\": true },\n            // { \"module\": \"Analytics\", \"moduleId\": msg.payload.filter(e => e.name === 'Analytics')[0]._id, \"canRead\": true },\n        ],\n        \"createdAt\": global.get(\"convert_date\")\n    }\n\n    msg.collection = \"admin_roles\"\n    return [msg, null];\n}\nelse {\n    return [null, msg]\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 1740,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
         "id": "081c8c3d3092e3d2",
         "type": "http in",
         "z": "bbdd9d9b60f738e3",
@@ -7662,7 +7751,8 @@
         "y": 180,
         "wires": [
             [
-                "8e90850289063c0f"
+                "8e90850289063c0f",
+                "cdd1329e1d0e8619"
             ]
         ],
         "icon": "node-red/arrow-in.svg"
@@ -7696,7 +7786,8 @@
         "wires": [
             [
                 "5cbf5ba2c4c74a4f",
-                "8c9188bca9c91600"
+                "8c9188bca9c91600",
+                "cdd1329e1d0e8619"
             ]
         ]
     },
@@ -7886,7 +7977,8 @@
         "y": 80,
         "wires": [
             [
-                "48a302c4afb1b770"
+                "48a302c4afb1b770",
+                "e85c9b955e648643"
             ]
         ]
     },
@@ -8181,7 +8273,7 @@
         "method": "put",
         "upload": false,
         "swaggerDoc": "",
-        "x": 170,
+        "x": 180,
         "y": 260,
         "wires": [
             [
@@ -8826,6 +8918,302 @@
         ]
     },
     {
+        "id": "43258fcd568f3992",
+        "type": "inject",
+        "z": "bbdd9d9b60f738e3",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "c3b02c1f4edbee09"
+            ]
+        ]
+    },
+    {
+        "id": "e85c9b955e648643",
+        "type": "debug",
+        "z": "bbdd9d9b60f738e3",
+        "g": "a8bcf74ef7690d27",
+        "name": "debug 59",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "a373b637682a690a",
+        "type": "inject",
+        "z": "bbdd9d9b60f738e3",
+        "g": "c8e4ab113b6b9056",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1140,
+        "y": 120,
+        "wires": [
+            [
+                "68b716a28a9c06f9"
+            ]
+        ]
+    },
+    {
+        "id": "d43ed72517c63c27",
+        "type": "function",
+        "z": "bbdd9d9b60f738e3",
+        "name": "",
+        "func": "// msg.collection =\"admin_roles\"\n\n// msg.query={\n//     _id: objectid('65e5d875b5ecf200117a18d3');\n// }\n\n// msg.payload={\n//     $set:{\n//         name: msg.payload.name\n//     }\n// }\n// return msg;\n\nmsg.collection = \"admin_roles\";\n\nmsg.query = {\n    _id: objectid('65e5d875b5ecf200117a18d3')\n};\n\nmsg.payload = {\n    $push: {\n        permissions: {\n            $each: [\n                {\n                    module: \"Role Management\",\n                    moduleId: \"65e5d874b5ecf200117a18d0\",\n                    canRead: true\n                },\n                {\n                    module: \"User Management\",\n                    moduleId: \"65e5d874b5ecf200117a18d1\",\n                    canRead: true\n                },\n                {\n                    module: \"AppSettings\",\n                    moduleId: \"65e5d874b5ecf200117a18d2\",\n                    canRead: true\n                }\n            ]\n        }\n    }\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 1360,
+        "y": 860,
+        "wires": [
+            [
+                "5995108df629b959"
+            ]
+        ]
+    },
+    {
+        "id": "5995108df629b959",
+        "type": "link call",
+        "z": "bbdd9d9b60f738e3",
+        "name": "update",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "10",
+        "x": 1540,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d818c8f1363a97d7",
+        "type": "inject",
+        "z": "bbdd9d9b60f738e3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1140,
+        "y": 860,
+        "wires": [
+            [
+                "d43ed72517c63c27"
+            ]
+        ]
+    },
+    {
+        "id": "cdd1329e1d0e8619",
+        "type": "debug",
+        "z": "bbdd9d9b60f738e3",
+        "g": "a8bcf74ef7690d27",
+        "name": "debug 62",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "61a4fc275ea84b74",
+        "type": "inject",
+        "z": "bbdd9d9b60f738e3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1080,
+        "wires": [
+            [
+                "8a31ddb888d11832"
+            ]
+        ]
+    },
+    {
+        "id": "8a31ddb888d11832",
+        "type": "function",
+        "z": "bbdd9d9b60f738e3",
+        "name": "function 598",
+        "func": "msg.collection = \"admin_modules\"\n\nmsg.payload = { \"name\": \"User Management\", \"position\": 5, \"icon\": \"\", \"userAttributes\": [{ \"attributeId\": \"65e5d876acf3791100000002\", \"attributeName\": \"create role\" }, { \"attributeId\": \"65e5d877acf3791100000003\", \"attributeName\": \"delete role\" }, { \"attributeId\": \"65e5d877acf3791100000004\", \"attributeName\": \"update role\" }, { \"attributeId\": \"65e5d877acf3791100000006\", \"attributeName\": \"create attribute\" }, { \"attributeId\": \"65e5d877acf3791100000007\", \"attributeName\": \"delete attribute\" }, { \"attributeId\": \"65e5d878acf3791100000008\", \"attributeName\": \"update attribute\" }, { \"attributeId\": \"65e5d878acf379110000000a\", \"attributeName\": \"create user\" }, { \"attributeId\": \"65e5d878acf379110000000b\", \"attributeName\": \"delete user\" }, { \"attributeId\": \"65e5d878acf379110000000c\", \"attributeName\": \"update user\" }, { \"attributeId\": \"65e5d879acf379110000000e\", \"attributeName\": \"create page\" }, { \"attributeId\": \"65e5d879acf379110000000f\", \"attributeName\": \"delete page\" }, { \"attributeId\": \"65e5d879acf3791100000010\", \"attributeName\": \"update page\" }, { \"attributeId\": \"65e5d87aacf3791100000012\", \"attributeName\": \"create app settings\" }, { \"attributeId\": \"65e5d87aacf3791100000013\", \"attributeName\": \"update app settings\" }], \"deleted\": false, \"isParent\": false, \"isHidden\": false }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1080,
+        "wires": [
+            [
+                "1583c77ef9b93281"
+            ]
+        ]
+    },
+    {
+        "id": "1583c77ef9b93281",
+        "type": "link call",
+        "z": "bbdd9d9b60f738e3",
+        "name": "insert",
+        "links": [
+            "193774ea3ceea673"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 470,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e30233d158b802d2",
+        "type": "inject",
+        "z": "bbdd9d9b60f738e3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1140,
+        "wires": [
+            [
+                "67dc3552e03d1c55"
+            ]
+        ]
+    },
+    {
+        "id": "67dc3552e03d1c55",
+        "type": "function",
+        "z": "bbdd9d9b60f738e3",
+        "name": "function 599",
+        "func": "msg.collection = \"admin_roles\"\nmsg.query = { _id: objectid('65e5d875b5ecf200117a18d3')}\nmsg.payload = {\n     $push: {\n          permissions: {\n               \"module\": \"User Management\", \"moduleId\": objectid(\"660fc5b3bea7250010865805\"), \"canRead\": true \n      } \n}\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 310,
+        "y": 1140,
+        "wires": [
+            [
+                "ac2afc09c448a589"
+            ]
+        ]
+    },
+    {
+        "id": "ac2afc09c448a589",
+        "type": "link call",
+        "z": "bbdd9d9b60f738e3",
+        "name": "",
+        "links": [
+            "a724f172bc7c2de5"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 500,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "65a2701306f207e9",
         "type": "http in",
         "z": "be827c2e9f2e7979",
@@ -9410,54 +9798,6 @@
         "y": 200,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "0e0d2d3192d03337",
-        "type": "inject",
-        "z": "be827c2e9f2e7979",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 980,
-        "y": 540,
-        "wires": [
-            [
-                "0b72d3a0ed3927e7"
-            ]
-        ]
-    },
-    {
-        "id": "0b72d3a0ed3927e7",
-        "type": "function",
-        "z": "be827c2e9f2e7979",
-        "name": "forTest---delete-it",
-        "func": "msg.payload = {\n    _id: 'lalal',\n    firstname: 'lalalas',\n    lastname: 'laladdadad',\n    email: 'lalal@assasa.sasa',\n};\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1150,
-        "y": 540,
-        "wires": [
-            [
-                "1b52c746852fe177"
-            ]
         ]
     },
     {
