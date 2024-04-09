@@ -4200,7 +4200,7 @@
         "type": "function",
         "z": "291b0c173e143ef0",
         "name": "newDeal",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-deals' : 'deals';\nmsg.payload = {\n    ...msg.fromUI,\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n    owner: objectid(msg.payload.owner),\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-deals' : 'deals';\nmsg.payload = {\n    ...msg.fromUI,\n    dealWithContact: objectid(msg.payload.dealWithContact),\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"createdAt\": new Date,\n    owner: objectid(msg.payload.owner),\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
