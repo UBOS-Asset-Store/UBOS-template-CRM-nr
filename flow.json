@@ -136,9 +136,7 @@
             "a2b1bc579a4c0ced"
         ],
         "x": 14,
-        "y": 719,
-        "w": 932,
-        "h": 122
+        "y": 719
     },
     {
         "id": "398457a4bc6d8725",
@@ -199,9 +197,7 @@
             "94a050d0ca318a97"
         ],
         "x": 14,
-        "y": 1299,
-        "w": 3412,
-        "h": 482
+        "y": 1299
     },
     {
         "id": "b0ef14992c694846",
@@ -355,9 +351,7 @@
             "2f67916e0bc7be15"
         ],
         "x": 14,
-        "y": 879,
-        "w": 1372,
-        "h": 402
+        "y": 879
     },
     {
         "id": "fd9bc368cea45c71",
@@ -612,9 +606,7 @@
             "f0de9e096ea386aa"
         ],
         "x": 14,
-        "y": 39,
-        "w": 1802,
-        "h": 642
+        "y": 39
     },
     {
         "id": "d8d6cfc2c521390d",
@@ -3684,7 +3676,7 @@
         "type": "function",
         "z": "04949f39d52b1544",
         "name": "to mongo",
-        "func": "msg.fromUI = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-lists' : 'lists';\nmsg.query = {\n    _id: msg.fromUI.listID,\n};\n\nmsg.payload = {\n    $addToSet: { contactIDs: { $each: msg.fromUI.contacts } }\n};\n\nreturn msg;\n",
+        "func": "msg.fromUI = msg.payload;\n\nmsg.isDemoON = global.get('isDemoON') === true;\n\nmsg.collection = msg.isDemoON ? 'DEMO-lists' : 'lists';\nmsg.query = {\n    _id: msg.fromUI.listID,\n};\nmsg.fromUI.contacts = msg.fromUI.contacts.map(e => objectid(e))\n\nmsg.payload = {\n    $addToSet: { contactIDs: { $each: msg.fromUI.contacts } }\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
